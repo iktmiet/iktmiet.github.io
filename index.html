@@ -808,7 +808,7 @@
         var currentMoscowTime = new Date(currentDate.getTime() + moscowTimezoneOffset * 60 * 60 * 1000);
         
         // Вычисляем недели от начальной даты в московском времени
-        var weeksElapsed = Math.floor((currentMoscowTime - startDate) / (7 * 24 * 60 * 60 * 1000));
+        var weeksElapsed = Math.floor((currentMoscowTime - startDate) / (7 * 24 * 60 * 60 * 1000)) - 22;
 
         document.getElementById("numeratorCircle").style.display = "none";
         document.getElementById("denominatorCircle").style.display = "none";
