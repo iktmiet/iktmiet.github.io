@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Учебники | ИКТ МИЭТ</title>
+    <link rel="icon" type="image/x-icon" href="logo.ico">
+
+    <style type='text/css'>
+        body {
+            font-family: 'Nunito', sans-serif; /* Заменено 'Arial' на 'Nunito' */
+            background-color: #1e1e1e;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-family: 'Manrope', sans-serif;
+        }
+
+        .footer-text {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 10px;
+            opacity: 0.5; /* Прозрачность 50% */
+        }
+
+        /* Обновленные стили для кнопок */
+        button {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px; /* Скругление углов */
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
+
+        header {
+            text-align: left;
+            padding: 10px;
+            padding-left: 30px;
+            background-color: #333333;
+        }
+
+        .id-container {
+            display: flex;
+            flex-direction: column;
+            margin: 10px;
+        }
+
+        .id-block {
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #333333;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .id-title {
+            text-align: left; 
+            padding: 15px;
+            background-color: #555555;
+            font-size: 16px; /* Размер шрифта заголовка */
+            margin-bottom: 0; /* Убран отступ снизу */
+            font-weight: 600;
+        }
+
+        .id-item {
+            display: flex;
+            justify-content: space-between; /* Равномерное распределение между элементами */
+            align-items: center; /* Центрирование вертикально */
+            padding: 0%;
+            padding-top: 20px;
+            padding-left: 10px;
+            border-bottom: 1px solid #555555;
+        }
+
+
+
+
+        .page-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        button {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px; /* Скругление углов */
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
+
+        .block-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .open-button {
+            background-color: #3498db;
+            color: #ffffff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .additional-button {
+            background-color: #ffffff; /* Цвет неактивной кнопки (белый) */
+            color: #333333;
+
+            transition-timing-function: ease-in-out;
+            transition-duration: 0.1s; 
+        }
+
+        .open-button:hover {
+            background-color: #2980b9;
+        }
+
+        .additional-button:hover {
+            background-color: #c0c0c0;
+        }
+
+        .class-item span {
+            font-size: 11px;
+            display: block;
+        }
+
+        .footer-text {
+            text-align: center;
+            margin-top: 15px;
+            opacity: 0.5; /* Прозрачность 50% */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Учебники</h1>
+        <div>
+            <button id="returnBtn" style="margin-bottom: 20px;" class="additional-button" onclick="returnToBase()">
+                На главную
+            </button>
+        </div>
+    </header>
+
+    <div class="id-container">
+        <div class="id-block">
+            <div class="id-title">Учбеников пока нет.</div>
+
+            <div class="id-item" style="padding:15px;">
+                <!-- <span></span> <-->
+                <span>Как только нам их выдадут, все электронные версии появятся тут.</span>
+                <!-- <i class="material-symbols-outlined time-icon">functions</i> -->
+            </div>
+
+            <!--
+            <div class="id-item">
+                <button id="numerator-btn">Открыть</button>
+            </div>
+            -->
+        </div>
+    </div>
+
+    <!-- Добавьте другие блоки с учебниками и их ссылками -->
+
+    <div class="footer-text">
+        БАЗА ИКТ-11 | МИЭТ 2024
+    </div>
+
+    <script>
+        function returnToBase() {
+            window.location.href = 'index.html';
+        }
+
+        function openBook(link) {
+            window.open(link, '_blank');
+        }
+    </script>
+</body>
+</html>
