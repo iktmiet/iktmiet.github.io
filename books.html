@@ -158,19 +158,19 @@
 
     <div class="id-container">
         <div class="id-block">
-            <div class="id-title">Учбеников пока нет.</div>
+            <div class="id-title">Дифференциальные уравнения</div>
 
             <div class="id-item" style="padding:15px;">
-                <!-- <span></span> <-->
-                <span>Как только нам их выдадут, все электронные версии появятся тут.</span>
-                <!-- <i class="material-symbols-outlined time-icon">functions</i> -->
+                <span>Сборник задач по математике (Ефимов, Поспелов)</span>
+                <span>Том 3</span>
+                <i class="material-symbols-outlined time-icon">functions</i>
             </div>
 
-            <!--
+            
             <div class="id-item">
-                <button id="numerator-btn">Открыть</button>
+                <button id="linkDiff-btn" onClick="openBook(linkDiffBook)">Открыть</button>
             </div>
-            -->
+            
         </div>
     </div>
 
@@ -183,13 +183,15 @@
         <div class="alpha50">ПОСЛЕДНЕЕ ОБНОВЛЕНИЕ: 05.02.2024</div>
         <br />
         <br />
-        ver: 2.0.2 | dev: @eagalts
+        ver: 2.0.4 | dev: @eagalts
     </div>
 
     <script>
         function returnToBase() {
             window.location.href = 'index.html';
         }
+
+        linkDiffBook = "https://orioks.miet.ru/storage/d/1236058/42999ac2082d14ccf2c96cac184a1982d263ec72/%D0%A2%D0%9E%D0%9C%203.pdf"
 
         function openBook(link) {
             window.open(link, '_blank');
