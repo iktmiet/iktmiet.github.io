@@ -1,0 +1,226 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: 'Manrope', sans-serif;
+}
+
+.footer-text {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 10px;
+    opacity: 0.5;
+}
+
+button {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: -10px;
+    margin-bottom: 10px;
+
+    border-radius: 10px;
+}
+
+#numerator-btn {
+    background-color: #007bff; /* Цвет активной кнопки (синий) */
+    color: #ffffff;
+}
+
+#denominator-btn {
+    background-color: #ffffff; /* Цвет неактивной кнопки (белый) */
+    color: #333333;
+}
+
+
+header {
+    text-align: left;
+    padding: 10px;
+    padding-left: 30px;
+    background-color: #333333;
+}
+
+.schedule-container {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.day-block {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #333333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.break-item {
+    padding: 15px;
+    background-color: #444444;
+}
+
+.day-title {
+    text-align: left; 
+    padding: 15px;
+    background-color: #555555;
+    font-weight: 600;
+
+    font-size: 16px; /* Размер шрифта заголовка */
+    margin-bottom: 0; /* Убран отступ снизу */
+}
+
+.weekend-title {
+    text-align: left; 
+    padding: 15px;
+    background-color: #c45555;
+    font-weight: 600;
+
+    font-size: 16px; /* Размер шрифта заголовка */
+    margin-bottom: 0; /* Убран отступ снизу */
+}
+
+.class-item, .break-item {
+    padding: 14px;
+    border-bottom: 1px solid #555555;
+}
+
+.class-item span {
+    font-size: 11px;
+    display: block;
+    padding: 5px;
+}
+
+.class-item strong {
+    font-size: 14px;
+    display: flex;
+
+    align-items: center; /* Центрирование вертикально */
+}
+
+.class-item {
+    display: flex;
+    padding: 15px;
+    border-bottom: 1px solid #555555;
+
+    justify-content: space-between; /* Равномерное распределение между элементами */
+    align-items: center; /* Центрирование вертикально */
+}
+
+.class-item .time-icon {
+    font-size: 20px;
+
+    margin-right: 10px; /* Добавлен отступ между текстом и иконкой */
+}
+
+:root {
+    --lecture: #53e51e;
+    --seminar: #77b9ff;
+    --lab: #ff8c00;
+    --practice: #4fffc4;
+    --event: #ff14ff;
+}
+
+
+.button-container {
+    justify-content: center;
+    position: relative;
+    display: inline-block;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    outline: none;
+}
+
+.inactive-button {
+    background-color: #ffffff; /* Цвет неактивной кнопки (белый) */
+    color: #333333;
+
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.1s; 
+}
+
+.additional-button {
+    background-color: #555555; /* Цвет неактивной кнопки */
+    color: #ffffff;
+
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.1s; 
+}
+
+.additional-button:hover {
+    background-color: #666666;
+}
+
+.active-button {
+    background-color: #007bff; /* Цвет активной кнопки (синий) */
+    color: #ffffff;
+
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.1s; 
+}
+
+.num-notification {
+    width: 12px;
+    height: 12px;
+    background-color: #00c825;
+    position: absolute;
+    border-radius: 50%;
+    
+    top: -13px;
+    right: 154px;
+    display: none; /* Изначально скрыт */
+}
+
+.den-notification {
+    width: 12px;
+    height: 12px;
+    background-color: #00c825;
+    position: absolute;
+    border-radius: 50%;
+
+    top: -13px;
+    right: -2px;
+    display: none; /* Изначально скрыт */
+}
+
+
+.lecture strong, .lecture .time-icon {
+    color: var(--lecture); /* цвет для лекций */
+}
+
+.seminar strong, .seminar .time-icon {
+    color: var(--seminar); /* цвет для семинаров */
+}
+
+.lab strong, .lab .time-icon {
+    color: var(--lab); /* цвет для лабораторных */
+}
+
+.practice strong, .practice .time-icon {
+    color: var(--practice); /* цвет для занятий */
+}
+
+.event strong, .event .time-icon {
+    color: var(--event); /* цвет для событий */
+}
+
+.alpha50 {
+    opacity: 0.5;
+}
