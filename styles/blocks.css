@@ -1,11 +1,13 @@
 .id-container {
     display: flex;
-    flex-direction: column;
-    margin: 10px;
+    flex-wrap: wrap; /* Перенос на новую строку */
+    justify-content: space-between; /* Равномерное распределение блоков по контейнеру */
 }
 
 .id-block {
-    margin-bottom: 20px;
+    flex-grow: 1; /* Расширение блока для заполнения пустых пространств */
+
+    margin: 10px;
     border-radius: 10px;
     overflow: hidden;
     background-color: #333333;

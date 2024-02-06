@@ -129,6 +129,10 @@
             </div>
         </div>
 
+        <!-- init -->
+        <script src="global_var.js"></script>
+        <script src="global_url.js"></script>
+
         <!-- Текст в низу страницы -->
 
         <div class="footer-text" style="padding-bottom: 20px;">
@@ -139,7 +143,6 @@
             <br />
             <div id="version">Версия 2.X.X (...) | dev: @eagalts</div>
 
-            <script src="global_var.js"></script>
             <script>
                 document.getElementById('lastUpdate').innerHTML = `ПОСЛЕДНЕЕ ОБНОВЛЕНИЕ: ${appInfo.lastUpdate}`;
                 document.getElementById('version').innerHTML = `ver: ${appInfo.version} | dev: @eagalts`;
@@ -151,10 +154,10 @@
                 window.location.href = 'index.html';
             }
 
-            var _ORIOKS_link = "https://orioks.miet.ru/"
-            var _MONITOR_link = "https://t.me/orioks_monitoring_bot"
-            var _STUDFL_link = "https://studfile.net/miet/"
-            var _DISCORD_link = "https://discord.gg/GkQTgGtB"
+            var _ORIOKS_link = linksURL.ORIOKS
+            var _MONITOR_link = linksURL.MONITOR
+            var _STUDFL_link = linksURL.STUDFL
+            var _DISCORD_link = linksURL.DISCORD
 
             function openLink(link) {
                 window.open(link, '_blank');

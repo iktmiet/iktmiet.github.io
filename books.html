@@ -30,12 +30,15 @@
             </div>
         </header>
 
-
-        <!---------------------------------------->
-        <!--  ДИФФЕРЕНЦИАЛЬНЫЕ УРАВНЕНИЯ, ТОМ 3 -->
-        <!---------------------------------------->
+        <!-- init -->
+        <script src="global_var.js"></script>
+        <script src="global_url.js"></script>
 
         <div class="id-container">
+            <!---------------------------------------->
+            <!--  ДИФФЕРЕНЦИАЛЬНЫЕ УРАВНЕНИЯ, ТОМ 3 -->
+            <!---------------------------------------->
+            
             <div class="id-block">
                 <div class="id-title">Дифференциальные уравнения</div>
 
@@ -47,6 +50,24 @@
                 
                 <div class="id-item">
                     <button id="linkDiff-btn" onClick="openBook(linkDiffBook)">Открыть</button>
+                </div>
+                
+            </div>
+
+            <!---------------------------------------->
+            <!-- ФИЗИКА / ЛАБАРАТОРНЫЕ РАБОТЫ (ВСЕ) -->
+            <!---------------------------------------->
+
+            <div class="id-block">
+                <div class="id-title">Лабараторные работы по физике</div>
+
+                <div class="id-item" style="padding:15px;">
+                    <span>Электричество и магнетизм</span>
+                    <i class="material-symbols-outlined time-icon">hub</i>
+                </div>
+                
+                <div class="id-item">
+                    <button id="linkDiff-btn" onClick="openBook(linkPhysicsLabs)">Открыть</button>
                 </div>
                 
             </div>
@@ -65,7 +86,10 @@
             }
 
             // Диффуры (Том 3)
-            linkDiffBook = "https://orioks.miet.ru/storage/d/1236058/42999ac2082d14ccf2c96cac184a1982d263ec72/%D0%A2%D0%9E%D0%9C%203.pdf"
+            linkDiffBook = booksURL.mathsTh3
+
+            // Физика, лабараторные
+            linkPhysicsLabs = booksURL.PHYSICS_LABS
 
             function openBook(link) {
                 window.open(link, '_blank');
@@ -85,7 +109,6 @@
             <br />
             <div id="version">Версия 2.X.X (...) | dev: @eagalts</div>
 
-            <script src="global_var.js"></script>
             <script>
                 document.getElementById('lastUpdate').innerHTML = `ПОСЛЕДНЕЕ ОБНОВЛЕНИЕ: ${appInfo.lastUpdate}`;
                 document.getElementById('version').innerHTML = `ver: ${appInfo.version} | dev: @eagalts`;
