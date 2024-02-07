@@ -13,6 +13,7 @@
 
         <!-- СТИЛИ -->
         <link rel="stylesheet" href="styles/main.css" />
+        <link rel="stylesheet" href="styles/modalWindow.css" />
         <link rel="stylesheet" href="styles/legend.css" />
 
         <!-- ИКОНКА -->
@@ -77,6 +78,50 @@
                     }
                 </script>
             </button>
+
+            <button 
+                id="todayBtn" 
+                style="margin-right: 10px; margin-bottom: 20px;" 
+                class="additional-button" 
+                onclick="goToCurrentDay();"
+            >
+                Сегодня
+
+                <script>
+                    function goToCurrentDay() {
+                        // ОПРЕДЕЛЕНИЕ ТЕКУЩЕГО ДНЯ НЕДЕЛИ
+                        var day = new Date().getDay();
+                        var anchorId;
+
+                        switch (day) {
+                            case 1:
+                                anchorId = 'MondayLinkAnchor';
+                                break;
+                            case 2:
+                                anchorId = 'TuesdayLinkAnchor';
+                                break;
+                            case 3:
+                                anchorId = 'WednesdayLinkAnchor';
+                                break;
+                            case 4:
+                                anchorId = 'ThursdayLinkAnchor';
+                                break;
+                            case 5:
+                                anchorId = 'FridayLinkAnchor';
+                                break;
+                            case 6:
+                                anchorId = 'SaturdayLinkAnchor';
+                                break;
+                            case 0:
+                                anchorId = 'SundayLinkAnchor';
+                                break;
+                        }
+
+                        document.getElementById(anchorId).scrollIntoView({ behavior: 'smooth' });
+                    }
+                </script>
+            </button>
+
         </header>
 
         
@@ -98,436 +143,18 @@
         <!--    ЧИСЛИТЕЛЬ   -->
         <!-- -------------- -->
 
+        <script src="scripts/global_numerator_schedule.js"></script>
         <script>
-            var numeratorSchedule = `
-            <!-- Понедельник -->
-                <div class="day-block">
-                    <div class="day-title">ПОНЕДЕЛЬНИК</div>
-
-                    <!-- ПАРА 1 -->
-                    <div class="class-item lecture">
-                        <i class="material-icons time-icon">functions</i>
-                        <strong>Математический анализ</strong>
-                        <span>1201</span>
-                        <span>09:00 - 10:20</span>
-                        <span>Погибельский А.</span>
-                    </div>
-
-                    <!-- ПАРА 2 -->
-                    <div class="class-item practice">
-                        <i class="material-symbols-outlined time-icon">physical_therapy</i>
-                        <strong>Индив./Ком. виды спорта</strong>
-                        <span>5101</span>
-                        <span>10:30 - 11:50</span>
-                        <span>Кафедра физ/вос</span>
-                    </div>
-
-                    <!-- ПЕРЕМЕНА -->
-                    <div class="break-item"><b>Большой перерыв</b><br>11:50 - 12:30</div>
-
-                    <!-- ПАРА 3 -->
-                    <div class="class-item seminar">
-                        <i class="material-symbols-outlined time-icon">function</i>
-                        <strong>Диффер. уравнения</strong>
-                        <span>3302</span>
-                        <span>12:30 - 13:50</span>
-                        <span>Прокофьев А.</span>
-                    </div>
-
-                    <!-- ПАРА 4 -->
-                    <div class="class-item seminar">
-                        <i class="material-symbols-outlined time-icon">translate</i>
-                        <strong>Иностранный язык                                         </strong>
-                        <span>3242</span>
-                        <span>14:00 - 15:20</span>
-                        <span>Юрченко Е.И.</span>
-                    </div>
-
-                    <!-- ПАРА 5 -->
-                    <div class="class-item lab">
-                        <i class="material-symbols-outlined time-icon">devices</i>
-                        <strong>КП по мат. анализу</strong>
-                        <span>3127</span>
-                        <span>15:30 - 16:50</span>
-                        <span>Егоров П. Е.</span>
-                    </div>
-                </div>
-
-
-
-                
-                <!-- ВТОРНИК -->
-                <div class="day-block">
-                    <div class="day-title">ВТОРНИК</div>
-
-                    <!-- ПАРА 1 -->
-                    <div class="class-item lab">
-                        <i class="material-icons time-icon">hub</i>
-                        <strong>Физика, электричество</strong>
-                        <span>3335 А</span>
-                        <span>09:00 - 10:20</span>
-                        <span>Зыков | Королёва</span>
-                    </div>
-
-                    <!-- ПАРА 2 -->
-                    <div class="class-item seminar">
-                        <i class="material-symbols-outlined time-icon">functions</i>
-                        <strong>Математический анализ</strong>
-                        <span>3240</span>
-                        <span>10:30 - 11:50</span>
-                        <span>Погибельский А.</span>
-                    </div>
-
-                    <!-- ПАРА 3 -->
-                    <div class="class-item lecture">
-                        <i class="material-symbols-outlined time-icon">function</i>
-                        <strong>Диффер. уравнения</strong>
-                        <span>1204</span>
-                        <span>12:00 - 13:20</span>
-                        <span>Романова Е. Л.</span>
-                    </div>
-
-                    <!-- ПЕРЕМЕНА -->
-                    <div class="break-item"><b>Большой перерыв</b><br>13:20 - 14:00</div>
-
-                    <!-- ПАРА 4 -->
-                    <div class="class-item lecture">
-                        <i class="material-symbols-outlined time-icon">code_blocks</i>
-                        <strong>Программирование</strong>
-                        <span>1205</span>
-                        <span>14:00 - 15:20</span>
-                        <span>Дорогова Е.Г.</span>
-                    </div>
-
-                    <!-- ПАРА 5 -->
-                    <div class="class-item lecture">
-                        <i class="material-symbols-outlined time-icon">code_blocks</i>
-                        <strong>Программирование</strong>
-                        <span>1205</span>
-                        <span>15:30 - 16:50</span>
-                        <span>Дорогова Е.Г.</span>
-                    </div>
-                </div>
-
-
-
-                <!-- СРЕДА -->
-                <div class="day-block">
-                    <div class="day-title">СРЕДА</div>
-
-                    <!-- ПАРА 1 -->
-                    <div class="class-item lecture">
-                        <i class="material-icons time-icon">history_edu</i>
-                        <strong>История РФ (лекция)</strong>
-                        <span>4203</span>
-                        <span>09:00 - 10:20</span>
-                        <span>Лутошкин С.А.</span>
-                    </div>
-
-                    <!-- ПАРА 2 -->
-                    <div class="class-item practice">
-                        <i class="material-symbols-outlined time-icon">physical_therapy</i>
-                        <strong>Инд/Ком. виды спорта</strong>
-                        <span>5101</span>
-                        <span>10:30 - 11:50</span>
-                        <span>Кафедра физ/вос</span>
-                    </div>
-
-                    <!-- ПЕРЕМЕНА -->
-                    <div class="break-item"><b>Большой перерыв</b><br>11:50 - 12:30</div>
-
-                    <!-- ПАРА 3 -->
-                    <div class="class-item lecture">
-                        <i class="material-symbols-outlined time-icon">hub</i>
-                        <strong>Физика, эл-во, оптика</strong>
-                        <span>1202</span>
-                        <span>12:30 - 13:50</span>
-                        <span>Жаринова Н.Н.</span>
-                    </div>
-
-                    <!-- ПАРА 4 -->
-                    <div class="class-item seminar">
-                        <i class="material-symbols-outlined time-icon">history_edu</i>
-                        <strong>История РФ (семинар)</strong>
-                        <span>4109</span>
-                        <span>14:00 - 15:20</span>
-                        <span>Лутошкин С.А.</span>
-                    </div>
-
-                    <!-- ПАРА 5 -->
-                    <div class="class-item seminar">
-                        <i class="material-symbols-outlined time-icon">translate</i>
-                        <strong>Иностранный язык                                         </strong>
-                        <span>3242</span>
-                        <span>15:00 - 16:50</span>
-                        <span>Юрченко Е.И.</span>
-                    </div>
-                </div>
-
-
-
-                <!-- ЧЕТВЕРГ -->
-                <div class="day-block">
-                    <div class="weekend-title">ЧЕТВЕРГ</div>
-
-                    <!-- УВЦ -->
-                    <div class="class-item practice">
-                        <i class="material-icons time-icon">military_tech</i>
-                        <strong>Военная подготовка</strong>
-                        <span>УВЦ 3</span>
-                        <span>09:00 - 18:20</span>
-                        <span>[6]</span>
-                    </div>
-                </div>
-
-
-
-
-                <!-- ПЯТНИЦА -->
-                <div class="day-block">
-                    <div class="day-title">ПЯТНИЦА</div>
-
-                    <!-- ПАРА 1 -->
-                    <div class="class-item seminar">
-                        <i class="material-icons time-icon">code</i>
-                        <strong>Программирование</strong>
-                        <span>3128</span>
-                        <span>09:00 - 10:20</span>
-                        <span>Доронина А. А.</span>
-                    </div>
-
-                    <!-- ПАРА 2 -->
-                    <div class="class-item seminar">
-                        <i class="material-symbols-outlined time-icon">functions</i>
-                        <strong>Математический анализ</strong>
-                        <span>3220</span>
-                        <span>10:30 - 11:50</span>
-                        <span>Погибельский А.А.</span>
-                    </div>
-                </div>
-
-
-                <!-- СУББОТА -->
-                <div class="day-block">
-                    <div class="weekend-title">СУББОТА</div>
-                    <div class="class-item lecture">В этот день пар нет.</div>
-                </div>
-
-                <!-- ВОСКРЕСЕНЬЕ -->
-                <div class="day-block">
-                    <div class="weekend-title">ВОСКРЕСЕНЬЕ</div>
-                    <div class="class-item lecture">В этот день пар нет.</div>
-                </div>
-            `;
+            var numeratorSchedule = NUMERATOR_SCHEDULE;
         </script>
 
         <!-- -------------- -->
         <!--   ЗНАМЕНАТЕЛЬ  -->
         <!-- -------------- -->
 
+        <script src="scripts/global_denominator_schedule.js"></script>
         <script>
-            var denominatorSchedule = `
-                <!-- Понедельник -->
-                <div class="day-block">
-                    <div class="day-title">ПОНЕДЕЛЬНИК</div>
-
-                    <!-- ПАРА 1 -->
-                    <div class="class-item lecture">
-                        <i class="material-icons time-icon">functions</i>
-                        <strong>Математический анализ</strong>
-                        <span>1201</span>
-                        <span>09:00 - 10:20</span>
-                        <span>Погибельский А.</span>
-                    </div>
-
-                    <!-- ПАРА 2 -->
-                    <div class="class-item practice">
-                        <i class="material-symbols-outlined time-icon">physical_therapy</i>
-                        <strong>Индив./Ком. виды спорта</strong>
-                        <span>5101</span>
-                        <span>10:30 - 11:50</span>
-                        <span>Кафедра физ/вос</span>
-                    </div>
-
-                    <!-- ПЕРЕМЕНА -->
-                    <div class="break-item"><b>Большой перерыв</b><br>11:50 - 12:30</div>
-
-                    <!-- ПАРА 3 -->
-                    <div class="class-item seminar">
-                        <i class="material-symbols-outlined time-icon">function</i>
-                        <strong>Диффер. уравнения</strong>
-                        <span>3302</span>
-                        <span>12:30 - 13:50</span>
-                        <span>Прокофьев А.</span>
-                    </div>
-
-                    <!-- ПАРА 4 -->
-                    <div class="class-item lab">
-                        <i class="material-symbols-outlined time-icon">devices</i>
-                        <strong>КП по мат. анализу</strong>
-                        <span>3118</span>
-                        <span>14:00 - 15:20</span>
-                        <span>Егоров П. Е.</span>
-                    </div>
-                </div>
-
-
-                <!-- ВТОРНИК -->
-                <div class="day-block">
-                    <div class="day-title">ВТОРНИК</div>
-
-                    <!-- ПАРА 1 -->
-                    <div class="class-item lab">
-                        <i class="material-icons time-icon">hub</i>
-                        <strong>Физика. Электричество</strong>
-                        <span>3335 А</span>
-                        <span>09:00 - 10:20</span>
-                        <span>Зыков | Королёва</span>
-                    </div>
-
-                    <!-- ПАРА 2 -->
-                    <div class="class-item seminar">
-                        <i class="material-symbols-outlined time-icon">functions</i>
-                        <strong>Математический анализ</strong>
-                        <span>3240</span>
-                        <span>10:30 - 11:50</span>
-                        <span>Погибельский А.</span>
-                    </div>
-                    
-                    <!-- ПАРА 3 -->
-                    <div class="class-item lecture">
-                        <i class="material-symbols-outlined time-icon">function</i>
-                        <strong>Диффер. уравнения</strong>
-                        <span>1204</span>
-                        <span>12:00 - 13:20</span>
-                        <span>Романова Е.Л.</span>
-                    </div>
-
-                    <!-- ПЕРЕМЕНА -->
-                    <div class="break-item"><b>Большой перерыв</b><br>13:20 - 14:00</div>
-
-                    <!-- ПАРА 4 -->
-                    <div class="class-item seminar">
-                        <i class="material-symbols-outlined time-icon">code_blocks</i>
-                        <strong>Физика, эл-во, оптика</strong>
-                        <span>3240</span>
-                        <span>14:00 - 15:20</span>
-                        <span>Федоренко И.В.</span>
-                    </div>
-                </div>
-
-
-
-                <!-- СРЕДА -->
-                <div class="day-block">
-                    <div class="day-title">СРЕДА</div>
-
-                    <!-- ПАРА 1 -->
-                    <div class="class-item lecture">
-                        <i class="material-icons time-icon">history_edu</i>
-                        <strong>История РФ (лекция)</strong>
-                        <span>4203</span>
-                        <span>09:00 - 10:20</span>
-                        <span>Лутошкин С.А.</span>
-                    </div>
-
-                    <!-- ПАРА 2 -->
-                    <div class="class-item practice">
-                        <i class="material-symbols-outlined time-icon">physical_therapy</i>
-                        <strong>Индив./Ком. виды спорта</strong>
-                        <span>5101</span>
-                        <span>10:30 - 11:50</span>
-                        <span>Кафедра физ/вос</span>
-                    </div>
-
-                    <!-- ПЕРЕМЕНА -->
-                    <!-- 
-                    <div class="break-item"><b>Большой перерыв</b><br>12:00 - 12:40</div>
-                    -->
-
-                    <!-- ПАРА 3 -->
-                    <div class="class-item lecture">
-                        <i class="material-symbols-outlined time-icon">hub</i>
-                        <strong>Физика, эл-во, оптика</strong>
-                        <span>1202</span>
-                        <span>12:00 - 13:20</span>
-                        <span>Жаринова Н.Н.</span>
-                    </div>
-
-                    <!-- ПАРА 4 -->
-                    <div class="class-item seminar">
-                        <i class="material-symbols-outlined time-icon">history_edu</i>
-                        <strong>История РФ (семинар)</strong>
-                        <span>3303</span>
-                        <span>14:00 - 15:20</span>
-                        <span>Лутошкин С.А.</span>
-                    </div>
-
-                    <!-- ПАРА 5 -->
-                    <div class="class-item seminar">
-                        <i class="material-symbols-outlined time-icon">translate</i>
-                        <strong>Иностранный язык                                         </strong>
-                        <span>3242</span>
-                        <span>15:00 - 16:50</span>
-                        <span>Юрченко Е.И.</span>
-                    </div>
-                </div>
-
-
-
-                <!-- ЧЕТВЕРГ -->
-                <div class="day-block">
-                    <div class="weekend-title">ЧЕТВЕРГ</div>
-
-                    <!-- УВЦ -->
-                    <div class="class-item practice">
-                        <i class="material-icons time-icon">military_tech</i>
-                        <strong>Военная подготовка</strong>
-                        <span>УВЦ 3</span>
-                        <span>09:00 - 18:20</span>
-                        <span>[6]</span>
-                    </div>
-                </div>
-
-
-
-
-                <!-- ПЯТНИЦА -->
-                <div class="day-block">
-                    <div class="day-title">ПЯТНИЦА</div>
-
-                    <!-- ПАРА 1 -->
-                    <div class="class-item lab">
-                        <i class="material-icons time-icon">laptop_windows</i>
-                        <strong>Практикум по C</strong>
-                        <span>3127</span>
-                        <span>09:00 - 10:20</span>
-                        <span>Доронина А. А.</span>
-                    </div>
-
-                    <!-- ПАРА 2 -->
-                    <div class="class-item lab">
-                        <i class="material-icons time-icon">laptop_windows</i>
-                        <strong>Практикум по C</strong>
-                        <span>3127</span>
-                        <span>10:30 - 11:50</span>
-                        <span>Доронина А. А.</span>
-                    </div>
-                </div>
-
-
-                <!-- СУББОТА -->
-                <div class="day-block">
-                    <div class="weekend-title">СУББОТА</div>
-                    <div class="class-item lecture">В этот день пар нет.</div>
-                </div>
-
-                <!-- ВОСКРЕСЕНЬЕ -->
-                <div class="day-block">
-                    <div class="weekend-title">ВОСКРЕСЕНЬЕ</div>
-                    <div class="class-item lecture">В этот день пар нет.</div>
-                </div>
-            `;
+            var denominatorSchedule = DENOMINATOR_SCHEDULE;
         </script>
 
         <!-- ----------------- -->
@@ -536,40 +163,8 @@
         <!--   ТЕКУЩЕЙ НЕДЕЛИ  -->
         <!-- ----------------- -->
 
-        <script>
-        // Скрипт для определения текущей недели по московскому времени
-        document.addEventListener("DOMContentLoaded", function() {
-            var startDate = new Date("2023-08-28"); // Дата начала отсчёта
-            var currentDate = new Date(); // Текущая дата
-            var moscowTimezoneOffset = 3; // UTC+3 (Московское время)
-            
-            // Получаем текущее московское время
-            var currentMoscowTime = new Date(currentDate.getTime() + moscowTimezoneOffset * 60 * 60 * 1000);
-            
-            // Вычисляем недели от начальной даты в московском времени
-            var weeksElapsed = Math.floor((currentMoscowTime - startDate) / (7 * 24 * 60 * 60 * 1000)) - 22;
-
-            document.getElementById("numeratorCircle").style.display = "none";
-            document.getElementById("denominatorCircle").style.display = "none";
-
-            var typeOfWeek = 'Подождите...';
-            if (weeksElapsed % 2 === 1) {
-                typeOfWeek = 'Числитель';
-                document.getElementById("numeratorCircle").style.display = 'block';
-            }
-            else {
-                typeOfWeek = 'Знаменатель';
-                document.getElementById("denominatorCircle").style.display = 'block';
-            }
-
-            // Обновляем текст элемента с номером недели
-            document.getElementById("weekLegend").textContent = "Сейчас: " + weeksElapsed + " неделя | " + typeOfWeek;
-
-            // Проверка четности и вызов changeSchedule
-            if (weeksElapsed % 2 === 1) {changeSchedule('numerator');}
-            else {changeSchedule('denominator');}
-        });
-        </script>
+        <script src="scripts/getCurrentWeek.js"></script>
+        <script>document.addEventListener("DOMContentLoaded", function() {getCurrentWeek();});</script>
 
         <!-- ----------------- -->
         <!--   ОТОБР. ЛЕГЕНДЫ  -->
@@ -591,7 +186,7 @@
 
         <!-- ----------------- -->
 
-
+        <script src="scripts/modal_window.js"></script>
         <div class="schedule-container">
             <!-- ----------------- -->
             <!--     ИНФОРМАЦИЯ    -->
@@ -604,11 +199,28 @@
                 </div>
 
                 <div class="class-item event">
-                    <span style="font-size:13px;">Состоится в ПЯТНИЦУ, 16 ФЕВРАЛЯ с 13:00 до 17:00.<br /><br />
-                    Проводится в студгородке, ул. Юности, 11. Новый комплект учебников выдается только после сдачи книг за первый семестр!
-                        <br /> <br />
-                    Иметь при себе: студенческий билет, электронный пропуск, ручку, сумку.
-                    </span>
+                        <button 
+                            onclick="openModal()" 
+                            style="margin-right: 10px; margin-bottom: 0px; margin-top: 0px;" 
+                            class="additional-button">
+                                Подробнее...
+                        </button>
+
+                        <div id="myModal" class="modal">
+                            <div class="modal-content">
+                                <span style="font-size:16px;">
+                                    <b>Состоится в ПЯТНИЦУ, 16 ФЕВРАЛЯ с 13:00 до 17:00.</b>
+                                    <br /><br />
+                                    Проводится в студгородке, ул. Юности, 11. Новый комплект учебников выдается только после сдачи книг за первый семестр!
+                                    <br /> <br />
+                                    Иметь при себе: студенческий билет, электронный пропуск, ручку, сумку.
+                                </span>
+                                
+                                <button onclick="closeModal()" style="margin-right: 10px; margin-bottom: 0px; margin-top: 10px;" >
+                                        Закрыть
+                                </button>
+                            </div>
+                        </div>
                 </div>
             </div>
         
@@ -694,7 +306,6 @@
             window.addEventListener('load', loadRandomAnekdot);
         </script>
 
-
         <!-- Текст в низу страницы -->
 
         <div class="footer-text" style="padding-bottom: 20px;">
@@ -705,7 +316,7 @@
             <br />
             <div id="version">Версия 2.X.X (...) | dev: @eagalts</div>
 
-            <script src="global_var.js"></script>
+            <script src="scripts/global_var.js"></script>
             <script>
                 document.getElementById('lastUpdate').innerHTML = `ПОСЛЕДНЕЕ ОБНОВЛЕНИЕ: ${appInfo.lastUpdate}`;
                 document.getElementById('version').innerHTML = `ver: ${appInfo.version} | dev: @eagalts`;

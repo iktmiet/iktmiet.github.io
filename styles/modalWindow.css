@@ -1,0 +1,38 @@
+.modal-content {
+    background-color: #323232;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 15px;
+    width: 80%;
+}
+/* Анимация открытия модального окна */
+@keyframes openModal {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* Анимация закрытия модального окна */
+@keyframes closeModal {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+
+/* Применение анимации к модальному окну */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  animation: openModal 0.3s forwards; /* Применение анимации открытия */
+}
+
+/* Применение анимации к закрытию модального окна */
+.close {
+  animation: closeModal 0.3s forwards; /* Применение анимации закрытия */
+}

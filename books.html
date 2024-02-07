@@ -31,8 +31,8 @@
         </header>
 
         <!-- init -->
-        <script src="global_var.js"></script>
-        <script src="global_url.js"></script>
+        <script src="scripts/global_var.js"></script>
+        <script src="scripts/global_url.js"></script>
 
         <div class="id-container">
             <!---------------------------------------->
@@ -69,7 +69,42 @@
                 <div class="id-item">
                     <button id="linkDiff-btn" onClick="openBook(linkPhysicsLabs)">Открыть</button>
                 </div>
+            </div>
+
+            <!---------------------------------------->
+            <!-- МАТЕМАТИЧЕСКИЙ АНАЛИЗ / ЗАД. ТОМ 2 -->
+            <!---------------------------------------->
+
+            <div class="id-block">
+                <div class="id-title">Математический анализ</div>
+
+                <div class="id-item" style="padding:15px;">
+                    <span>Сборник задач по математике</span>
+                    <span>Том 2</span>
+                    <i class="material-symbols-outlined time-icon">functions</i>
+                </div>
                 
+                <div class="id-item">
+                    <button id="linkDiff-btn" onClick="openBook(linkMathBook)">Открыть</button>
+                </div>
+            </div>
+
+
+            <!---------------------------------------->
+            <!-- МАТЕМАТИЧЕСКИЙ АНАЛИЗ / ВИДЕО ЛЕКЦ -->
+            <!---------------------------------------->
+
+            <div class="id-block">
+                <div class="id-title">Математический анализ</div>
+
+                <div class="id-item" style="padding:15px;">
+                    <span>Сборник видео-лекций по курсу</span>
+                    <i class="material-symbols-outlined time-icon">functions</i>
+                </div>
+                
+                <div class="id-item">
+                    <button id="linkDiff-btn" onClick="openBook(VIDEO_MATH_LINK)">Открыть</button>
+                </div>
             </div>
         </div>
 
@@ -90,6 +125,12 @@
 
             // Физика, лабараторные
             linkPhysicsLabs = booksURL.PHYSICS_LABS
+
+            // Матанализ (Том 2)
+            linkMathBook = booksURL.mathsTh2
+
+            // Матанализ видео
+            VIDEO_MATH_LINK = booksURL.VIDEO_MATH_LINK
 
             function openBook(link) {
                 window.open(link, '_blank');
