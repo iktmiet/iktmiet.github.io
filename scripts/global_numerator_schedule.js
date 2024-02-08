@@ -37,7 +37,7 @@ NUMERATOR_SCHEDULE = `
         <!-- ПАРА 4 -->
         <div class="class-item seminar">
             <i class="material-symbols-outlined time-icon">translate</i>
-            <strong>Иностранный язык                                         </strong>
+            <strong>Иностранный язык</strong>
             <span>3242</span>
             <span>14:00 - 15:20</span>
             <span>Юрченко Е.И.</span>
@@ -64,7 +64,7 @@ NUMERATOR_SCHEDULE = `
         <!-- ПАРА 1 -->
         <div class="class-item lab">
             <i class="material-icons time-icon">hub</i>
-            <strong>Физика, электричество</strong>
+            <strong>Физика. Электромагнетизм</strong>
             <span>3335 А</span>
             <span>09:00 - 10:20</span>
             <span>Зыков | Королёва</span>
@@ -141,7 +141,7 @@ NUMERATOR_SCHEDULE = `
         <!-- ПАРА 3 -->
         <div class="class-item lecture">
             <i class="material-symbols-outlined time-icon">hub</i>
-            <strong>Физика, эл-во, оптика</strong>
+            <strong>Физика. Электромагнетизм</strong>
             <span>1202</span>
             <span>12:30 - 13:50</span>
             <span>Жаринова Н.Н.</span>
