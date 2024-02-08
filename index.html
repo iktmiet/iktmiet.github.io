@@ -17,8 +17,8 @@
         <link rel="stylesheet" href="styles/legend.css" />
 
         <!-- ИКОНКА -->
-        <link rel="icon"          type="image/x-icon" href="logo.ico">
-        <link rel="shortcut icon" type="image/x-icon" href="logo.ico">
+        <link rel="icon"          type="image/x-icon" href="./icons/logo.ico">
+        <link rel="shortcut icon" type="image/x-icon" href="./icons/logo.ico">
     </head>
 
     <body>
@@ -29,7 +29,7 @@
 
             if (!isNotFirstVisit) {
                 // Если это первое посещение, переадресовываем на hi.html
-                window.location.href = 'hi';
+                window.location.href = 'welcome';
                 // Устанавливаем флаг о том, что страница была открыта
                 localStorage.setItem('isNotFirstVisit', 'true');
             }
@@ -209,13 +209,25 @@
 
                         <div id="myModal" class="modal">
                             <div class="modal-content">
-                                <span style="font-size:16px;">
+                                <span style="font-size:18px;color:rgb(173, 162, 244);">
                                     <b>Состоится в ПЯТНИЦУ, 16 ФЕВРАЛЯ с 13:00 до 17:00.</b>
-                                    <br /><br />
-                                    Проводится в студгородке, ул. Юности, 11. Новый комплект учебников выдается только после сдачи книг за первый семестр!
-                                    <br /> <br />
+                                </span>
+
+                                <br />
+
+                                <span style="font-size:16px;">
+                                    Проводится в библиотеке студгородка. Студгородок находится по адресу ул. Юности, 11, библиотека расположена напротив лестницы в 11 корпус. 
+                                </span>
+                                
+                                <span style="font-size:16px; color:rgb(255, 175, 175);">
+                                    <b>Новый комплект учебников выдается только после сдачи книг за первый семестр!</b>
+                                </span>
+
+                                <span style="font-size:16px;">
                                     Иметь при себе: студенческий билет, электронный пропуск, ручку, сумку.
                                 </span>
+
+                                <br />
                                 
                                 <button onclick="closeModal()" style="margin-right: 10px; margin-bottom: 0px; margin-top: 10px;" >
                                         Закрыть
