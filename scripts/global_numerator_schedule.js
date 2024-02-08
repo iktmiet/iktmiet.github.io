@@ -64,7 +64,7 @@ NUMERATOR_SCHEDULE = `
         <!-- ПАРА 1 -->
         <div class="class-item lab">
             <i class="material-icons time-icon">hub</i>
-            <strong>Физика. Электромагнетизм</strong>
+            <strong>Физика. Электричество</strong>
             <span>3335 А</span>
             <span>09:00 - 10:20</span>
             <span>Зыков | Королёва</span>
@@ -141,7 +141,7 @@ NUMERATOR_SCHEDULE = `
         <!-- ПАРА 3 -->
         <div class="class-item lecture">
             <i class="material-symbols-outlined time-icon">hub</i>
-            <strong>Физика. Электромагнетизм</strong>
+            <strong>Физика. Электричество</strong>
             <span>1202</span>
             <span>12:30 - 13:50</span>
             <span>Жаринова Н.Н.</span>

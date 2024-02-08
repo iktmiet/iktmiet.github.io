@@ -51,7 +51,7 @@ DENOMINATOR_SCHEDULE = `
     <!-- ПАРА 1 -->
     <div class="class-item lab">
         <i class="material-icons time-icon">hub</i>
-        <strong>Физика. Электромагнетизм</strong>
+        <strong>Физика. Электричество</strong>
         <span>3335 А</span>
         <span>09:00 - 10:20</span>
         <span>Зыков | Королёва</span>
@@ -81,7 +81,7 @@ DENOMINATOR_SCHEDULE = `
     <!-- ПАРА 4 -->
     <div class="class-item seminar">
         <i class="material-symbols-outlined time-icon">code_blocks</i>
-        <strong>Физика. Электромагнетизм</strong>
+        <strong>Физика. Электричество</strong>
         <span>3240</span>
         <span>14:00 - 15:20</span>
         <span>Федоренко И.В.</span>
@@ -118,7 +118,7 @@ DENOMINATOR_SCHEDULE = `
     <!-- ПАРА 3 -->
     <div class="class-item lecture">
         <i class="material-symbols-outlined time-icon">hub</i>
-        <strong>Физика. Электромагнетизм</strong>
+        <strong>Физика. Электричество</strong>
         <span>1202</span>
         <span>12:00 - 13:20</span>
         <span>Жаринова Н.Н.</span>
