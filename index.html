@@ -28,7 +28,7 @@
             var isNotFirstVisit = localStorage.getItem('isNotFirstVisit');
 
             if (!isNotFirstVisit) {
-                // Если это первое посещение, переадресовываем на hi.html
+                // Если это первое посещение, переадресовываем
                 window.location.href = 'welcome';
                 // Устанавливаем флаг о том, что страница была открыта
                 localStorage.setItem('isNotFirstVisit', 'true');
@@ -66,7 +66,7 @@
                 📚
                 <script>
                     function redirectToBooksPage() {
-                        window.location.href = 'books.html';
+                        window.location.href = 'books';
                     }
                 </script>
             </button>
@@ -75,7 +75,7 @@
                 🔗
                 <script>
                     function redirectToLinksPage() {
-                        window.location.href = 'links.html';
+                        window.location.href = 'links';
                     }
                 </script>
             </button>
