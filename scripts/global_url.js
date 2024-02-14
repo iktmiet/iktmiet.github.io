@@ -2,7 +2,8 @@ window.linksURL = {
     ORIOKS: "https://orioks.miet.ru/",
     MONITOR: "https://t.me/orioks_monitoring_bot",
     STUDFL: "https://studfile.net/miet/",
-    DISCORD: "https://discord.gg/GkQTgGtB"
+    DISCORD: "https://discord.gg/GkQTgGtB",
+    FEDORENKO: "http://iv-fedorenko.ru/index73.htm"
 }
 
 window.booksURL = {

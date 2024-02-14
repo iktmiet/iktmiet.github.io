@@ -68,6 +68,8 @@ header {
 .break-item {
     padding: 15px;
     background-color: #444444;
+
+    display: flex;
 }
 
 .day-title {

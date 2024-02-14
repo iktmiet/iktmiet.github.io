@@ -23,7 +23,16 @@ NUMERATOR_SCHEDULE = `
         </div>
 
         <!-- ПЕРЕМЕНА -->
-        <div class="break-item"><b>Большой перерыв</b><br>11:50 - 12:30</div>
+        <div class="break-item">
+            <div style="padding-right: 15px;">
+                <i class="material-symbols-outlined time-icon">schedule</i>
+            </div>
+
+            <div>
+                <b>Большой перерыв</b>
+                <br>11:50 - 12:30
+            </div>
+        </div>
 
         <!-- ПАРА 3 -->
         <div class="class-item seminar">
@@ -89,7 +98,16 @@ NUMERATOR_SCHEDULE = `
         </div>
 
         <!-- ПЕРЕМЕНА -->
-        <div class="break-item"><b>Большой перерыв</b><br>13:20 - 14:00</div>
+        <div class="break-item">
+            <div style="padding-right: 15px;">
+                <i class="material-symbols-outlined time-icon">schedule</i>
+            </div>
+
+            <div>
+                <b>Большой перерыв</b>
+                <br>13:20 - 14:00
+            </div>
+        </div>
 
         <!-- ПАРА 4 -->
         <div class="class-item lecture">
@@ -136,7 +154,16 @@ NUMERATOR_SCHEDULE = `
         </div>
 
         <!-- ПЕРЕМЕНА -->
-        <div class="break-item"><b>Большой перерыв</b><br>11:50 - 12:30</div>
+        <div class="break-item">
+            <div style="padding-right: 15px;">
+                <i class="material-symbols-outlined time-icon">schedule</i>
+            </div>
+
+            <div>
+                <b>Большой перерыв</b>
+                <br>11:50 - 12:30
+            </div>
+        </div>
 
         <!-- ПАРА 3 -->
         <div class="class-item lecture">
@@ -161,7 +188,7 @@ NUMERATOR_SCHEDULE = `
             <i class="material-symbols-outlined time-icon">translate</i>
             <strong>Иностранный язык                                         </strong>
             <span>3242</span>
-            <span>15:00 - 16:50</span>
+            <span>15:30 - 16:50</span>
             <span>Юрченко Е.И.</span>
         </div>
     </div>
