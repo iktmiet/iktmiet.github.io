@@ -15,6 +15,11 @@
         <link rel="stylesheet" href="styles/main.css" />
         <link rel="stylesheet" href="styles/modalWindow.css" />
         <link rel="stylesheet" href="styles/legend.css" />
+        <link rel="stylesheet" href="styles/stories.css" />
+
+        <!-- СКРИПТЫ -->
+        <script src="scripts/stories.js"></script>
+        <script src="scripts/global_stories.js"></script>
 
         <!-- ИКОНКА -->
         <link rel="icon"          type="image/x-icon" href="./icons/logo.ico">
@@ -192,48 +197,44 @@
             <!-- ----------------- -->
             <!--     ИНФОРМАЦИЯ    -->
             <!-- ----------------- -->
-            <div class="day-block">
-                <div class="day-title">ИНФОРМАЦИЯ</div>
-
-                <div class="class-item event">
-                    <strong style="font-size:17px;">📚 Получение учебников на второй семестр</strong>
+            <script>
+                checkViews('BooksStory')
+            </script>
+            
+            <div class="day-block" style="border-radius: 24px;">
+                <div class="story unviewed" onclick="openStoriesPage('BooksStory')" data-story-id="BooksStory">
+                    <i class="material-symbols-outlined time-icon" style="font-size: 36px; color: black;">book_5</i>
                 </div>
+            </div>
 
-                <div class="class-item event">
-                        <button 
-                            onclick="openModal()" 
-                            style="margin-right: 10px; margin-bottom: 0px; margin-top: 0px;" 
-                            class="additional-button">
-                                Подробнее...
-                        </button>
 
-                        <div id="myModal" class="modal">
-                            <div class="modal-content">
-                                <span style="font-size:18px;color:rgb(173, 162, 244);">
-                                    <b>Состоится в ПЯТНИЦУ, 16 ФЕВРАЛЯ с 13:00 до 17:00.</b>
-                                </span>
 
-                                <br />
 
-                                <span style="font-size:16px;">
-                                    Проводится в библиотеке студгородка. Студгородок находится по адресу ул. Юности, 11, библиотека расположена напротив лестницы в 11 корпус. 
-                                </span>
-                                
-                                <span style="font-size:16px; color:rgb(255, 175, 175);">
-                                    <b>Новый комплект учебников выдается только после сдачи книг за первый семестр!</b>
-                                </span>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span style="font-size:18px;color:rgb(173, 162, 244);">
+                        <b>Состоится в ПЯТНИЦУ, 16 ФЕВРАЛЯ с 13:00 до 17:00.</b>
+                    </span>
 
-                                <span style="font-size:16px;">
-                                    Иметь при себе: студенческий билет, электронный пропуск, ручку, сумку.
-                                </span>
+                    <br />
 
-                                <br />
-                                
-                                <button onclick="closeModal()" style="margin-right: 10px; margin-bottom: 0px; margin-top: 10px;" >
-                                        Закрыть
-                                </button>
-                            </div>
-                        </div>
+                    <span style="font-size:16px;">
+                        Проводится в библиотеке студгородка. Студгородок находится по адресу ул. Юности, 11, библиотека расположена напротив лестницы в 11 корпус. 
+                    </span>
+                    
+                    <span style="font-size:16px; color:rgb(255, 175, 175);">
+                        <b>Новый комплект учебников выдается только после сдачи книг за первый семестр!</b>
+                    </span>
+
+                    <span style="font-size:16px;">
+                        Иметь при себе: студенческий билет, электронный пропуск, ручку, сумку.
+                    </span>
+
+                    <br />
+                    
+                    <button onclick="closeModal()" style="margin-right: 10px; margin-bottom: 0px; margin-top: 10px;" >
+                            Закрыть
+                    </button>
                 </div>
             </div>
         

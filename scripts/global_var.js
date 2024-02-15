@@ -1,4 +1,4 @@
 window.appInfo = {
-    version: "2.3.5",
-    lastUpdate: "14.02.2024"
+    version: "2.4.0",
+    lastUpdate: "15.02.2024"
 };

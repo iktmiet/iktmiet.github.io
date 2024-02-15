@@ -1,60 +1,88 @@
-<!--
-
-    ДЕМО-ВЕРСИЯ ИСТОРИЙ НА САЙТЕ
-    В РАЗРАБОТКЕ
-
--->
-
 <!DOCTYPE html>
-<html lang="en">
-<head>
-     <!-- ШРИФТЫ -->
-     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap">
-     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap">
-     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">  
-     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-     
-     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-     <title>ИКТ МИЭТ</title>
+<html lang="ru">
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap">
+        <meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, user-scalable=no">
 
-     <!-- СТИЛИ -->
-     <link rel="stylesheet" href="styles/main.css" />
-     <link rel="stylesheet" href="styles/modalWindow.css" />
-     <link rel="stylesheet" href="styles/legend.css" />
+        <title>ИКТ МИЭТ</title>
 
-     <!-- ИКОНКА -->
-     <link rel="icon"          type="image/x-icon" href="./icons/logo.ico">
-     <link rel="shortcut icon" type="image/x-icon" href="./icons/logo.ico">
-    
+        <!-- СТИЛИ -->
+        <link rel="stylesheet" href="styles/stories.css" />
+        <link rel="stylesheet" href="styles/welcomeScreen.css" />
 
-    <style>
-        .story {
-            width: 75px;
-            height: 75px;
-            border-radius: 50%;
-            
-            background: linear-gradient(45deg, #f7a9c7, #bea1fd);
+        <!-- ИКОНКА -->
+        <link rel="icon" type="image/x-icon" href="./icons/logo.ico">
 
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            margin: 20px;
-            cursor: pointer;
-        }
-    </style>
-</head>
-<body>
-    <div class="story" onclick="openStory('1')">
-        <i class="material-symbols-outlined time-icon" style="font-size: 30px; color: black;">book_5</i>
-    </div>
-    <p>Stories</p>
+        <!-- СКРИПТЫ -->
+        <script src="scripts/stories.js"></script>
+        <script src="scripts/global_stories.js"></script>
+        <script src="scripts/welcome_screen.js"></script>
+    </head>
+    <body>
+        <script>
+            window.onload = function() {
+                storiesLoad(BooksStory, window)
+            };
+        </script>
 
-    <script>
-        function openStory(storyId) {
+        <div class="slide-indicator">
+            <!-- Индикаторы слайдов -->
+            <div class="indicator-dot active" onclick="goToSlide(0)"></div>
+            <div class="indicator-dot" onclick="goToSlide(1)"></div>
+            <div class="indicator-dot" onclick="goToSlide(2)"></div>
+            <div class="indicator-dot" onclick="goToSlide(3)"></div>
+            <div class="indicator-dot" onclick="goToSlide(4)"></div>
+        </div>
 
-        }
-    </script>
-</body>
+        <div class="slide-container">
+            <!-- Слайд 1 -->
+            <div class="slide">
+                <img src="wscreen/slide1_image.png" id="img_current1">
+                <div class="slide-text">
+                    <p id="slide1">Текст слайда №1</p>
+                </div>
+            </div>
+
+            <!-- Слайд 2 -->
+            <div class="slide">
+                <img src="wscreen/slide1_image.png" id="img_current2">
+                <div class="slide-text">
+                    <p id="slide2">Текст слайда №2</p>
+                </div>
+            </div>
+
+            <!-- Слайд 3 -->
+            <div class="slide">
+                <img src="wscreen/slide3_image.png" id="img_current3">
+                <div class="slide-text">
+                    <p id="slide3">Текст слайда №3</p>
+                </div>
+            </div>
+
+            <!-- Слайд 4 -->
+            <div class="slide">
+                <img src="wscreen/slide4_image.png" id="img_current4">
+                <div class="slide-text">
+                    <p id="slide4">Текст слайда №4</p>
+                </div>
+            </div>
+
+            <!-- Слайд 5 -->
+            <div class="slide">
+                <img src="wscreen/slide5_image.png" id="img_current5">
+                <div class="slide-text">
+                    <p id="slide5">Текст слайда №5</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-buttons">
+            <div class="nav-button" onclick="prevSlide()">&#10094;</div>
+            <div class="nav-button" onclick="nextSlide()">&#10095;</div>
+        </div>
+
+        <button class="footer-button" onclick="redirectToBase()">Закрыть</button>
+
+        <script src="scripts/welcome_screen.js"></script>
+    </body>
 </html>
