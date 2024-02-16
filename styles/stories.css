@@ -30,12 +30,4 @@
 
 
 @media screen and (min-width: 600px) {
-    .slide-text {
-        width: 100%;
-        font-size: 58px;
-        background-color: #1e1e1e;
-        padding: 10px;
-        box-sizing: border-box;
-        padding: 50px;
-    }
 }
