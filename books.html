@@ -11,9 +11,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
         <title>Учебники | ИКТ МИЭТ</title>
     
+        <!-- PWA -->
+        <link rel="manifest" href="manifest.json">
+        <link rel="import" href="meta.html">
+
         <!-- СТИЛИ -->
         <link rel="stylesheet" href="styles/main.css" />
         <link rel="stylesheet" href="styles/blocks.css" />
+        <link rel="stylesheet" href="styles/legend.css" />
+        <link rel="stylesheet" href="styles/schedule.css" />
     
         <!-- ИКОНКА -->
         <link rel="icon" type="image/x-icon" href="./icons/logo.ico">
@@ -34,32 +40,37 @@
         <script src="scripts/global_var.js"></script>
         <script src="scripts/global_url.js"></script>
 
+        <!-- ЛЕГЕНДА -->
+        <!-- О БОГИНЕ МЕЧЕЙ-->
+
+        <p style="padding-left: 15px;">Условные обозначения:</p>
+        <div class='my-legend'>
+            <div class='legend-scale'>
+                <ul class='legend-labels'>
+                    <li><span style='background:var(--lecture);'></span>Учебник</li>
+                </ul>
+                <ul class='legend-labels'>
+                    <li><span style='background:var(--seminar);'></span>Задачник / пособие</li>
+                </ul>
+                <ul class='legend-labels'>
+                    <li><span style='background:var(--lab);'></span>Доп. материалы</li>
+                </ul>
+            </div>
+        </div>
+
         <div class="id-container">
 
-            <!---------------------------------------->
-            <!--  INFO -->
-            <!---------------------------------------->
-            
-            <div class="id-block">
-                <div class="id-title"><b style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">ИНФОРМАЦИЯ</b></div>
-
-                <div class="id-item" style="padding:15px;">
-                    <span>Электронные версии выданных учебников появятся тут совсем скоро.</span>
-                    <i class="material-symbols-outlined time-icon" style="color: cyan">info</i>
-                </div>
-                
-            </div>
             <!---------------------------------------->
             <!--  ДИФФЕРЕНЦИАЛЬНЫЕ УРАВНЕНИЯ, ТОМ 3 -->
             <!---------------------------------------->
             
             <div class="id-block">
-                <div class="id-title">Дифференциальные уравнения</div>
+                <div class="id-title" style="color:var(--seminar);">Дифференциальные уравнения</div>
 
                 <div class="id-item" style="padding:15px;">
+                    <i class="material-symbols-outlined time-icon" style="color:var(--seminar);">function</i>
                     <span>Сборник задач по математике</span>
                     <span>Том 3</span>
-                    <i class="material-symbols-outlined time-icon">function</i>
                 </div>
                 
                 <div class="id-item">
@@ -69,19 +80,39 @@
             </div>
 
             <!---------------------------------------->
-            <!-- ФИЗИКА / ЛАБАРАТОРНЫЕ РАБОТЫ (ВСЕ) -->
+            <!-- ДИФФЕРЕНЦИАЛЬНЫЕ УРАВНЕНИЯ, Л.Э.Э. -->
             <!---------------------------------------->
 
             <div class="id-block">
-                <div class="id-title">Лабараторные работы по физике</div>
+                <div class="id-title" style="color:var(--lecture);">Дифференциальные уравнения</div>
 
                 <div class="id-item" style="padding:15px;">
-                    <span>Электричество и магнетизм</span>
-                    <i class="material-symbols-outlined time-icon">hub</i>
+                    <i class="material-symbols-outlined time-icon" style="color:var(--lecture);">function</i>
+                    <span>Л. Э. Эльсгольц</span>
+                    <span>Учебник (8 изд.)</span>
+                </div>
+                
+                <div class="id-item" style="padding:19px;">
+                    <span>Электронная версия учебника отсутствует.</span>
+                    <i class="material-symbols-outlined time-icon" style="color: rgb(255, 111, 0)">info</i>
+                </div>
+            </div>
+
+            <!---------------------------------------->
+            <!-- ДИФФЕРЕНЦИАЛЬНЫЕ УРАВНЕНИЯ, ЗАДАЧИ -->
+            <!---------------------------------------->
+
+            <div class="id-block">
+                <div class="id-title" style="color:var(--seminar);">Дифференциальные уравнения</div>
+
+                <div class="id-item" style="padding:15px;">
+                    <i class="material-symbols-outlined time-icon" style="color:var(--seminar);">function</i>
+                    <span>А. Ф. Филиппов</span>
+                    <span>Сборник задач</span>
                 </div>
                 
                 <div class="id-item">
-                    <button id="linkDiff-btn" onClick="openBook(linkPhysicsLabs)">Открыть</button>
+                    <button id="linkDiff-btn" onClick="openBook(booksURL.MATH_TASKS_DIFF)">Открыть</button>
                 </div>
             </div>
 
@@ -90,16 +121,105 @@
             <!---------------------------------------->
 
             <div class="id-block">
-                <div class="id-title">Математический анализ</div>
+                <div class="id-title" style="color:var(--seminar);">Математический анализ</div>
 
                 <div class="id-item" style="padding:15px;">
+                    <i class="material-symbols-outlined time-icon" style="color:var(--seminar);">functions</i>
                     <span>Сборник задач по математике</span>
                     <span>Том 2</span>
-                    <i class="material-symbols-outlined time-icon">functions</i>
                 </div>
                 
                 <div class="id-item">
                     <button id="linkDiff-btn" onClick="openBook(linkMathBook)">Открыть</button>
+                </div>
+            </div>
+
+            <!---------------------------------------->
+            <!-- РЯДЫ / ТЕОРИЯ И ПРАКТИКА / 2015 Г. -->
+            <!---------------------------------------->
+
+            <div class="id-block">
+                <div class="id-title" style="color:var(--seminar);">Ряды: теория и практика</div>
+
+                <div class="id-item" style="padding:15px;">
+                    <i class="material-symbols-outlined time-icon" style="color:var(--seminar);">functions</i>
+                    <span>Учебно-методическое пособие</span>
+                </div>
+                
+                <div class="id-item">
+                    <button id="linkDiff-btn" onClick="openBook(booksURL.MATH_PWRQUE)">Открыть</button>
+                </div>
+            </div>
+
+            <!---------------------------------------->
+            <!-- ФИЗИКА / КУРС ОБЩЕЙ ФИ-КИ САВЕЛЬЕВ -->
+            <!---------------------------------------->
+
+            <div class="id-block">
+                <div class="id-title" style="color:var(--lecture);">Курс общей физики</div>
+
+                <div class="id-item" style="padding:15px;">
+                    <i class="material-symbols-outlined time-icon" style="color:var(--lecture);">hub</i>
+                    <span>И. В. Савельев</span>
+                    <span>Учебник</span>
+                    <span>Том 2</span>
+                </div>
+                
+                <div class="id-item">
+                    <button id="linkDiff-btn" onClick="openBook(booksURL.PHYSICS_BOOKT2)">Открыть</button>
+                </div>
+            </div>
+
+            <!---------------------------------------->
+            <!-- ФИЗИКА / ЭЛЕКТРОМАГНЕТИЗМ / СБ. В. -->
+            <!---------------------------------------->
+
+            <div class="id-block">
+                <div class="id-title" style="color:var(--seminar);">Электричество и магнетизм</div>
+
+                <div class="id-item" style="padding:15px;">
+                    <i class="material-symbols-outlined time-icon" style="color:var(--seminar);">hub</i>
+                    <span>И. Н. Горбатый</span>
+                    <span>Сборник вопросов</span>
+                </div>
+                
+                <div class="id-item">
+                    <button id="linkDiff-btn" onClick="openBook(booksURL.PHYSICS_QUE1)">Открыть</button>
+                </div>
+            </div>
+
+            <!---------------------------------------->
+            <!-- ФИЗИКА / ЭЛЕКТРОМАГНЕТИЗМ / ПОСОБ. -->
+            <!---------------------------------------->
+
+            <div class="id-block">
+                <div class="id-title" style="color:var(--seminar);">Электричество и магнетизм</div>
+
+                <div class="id-item" style="padding:15px;">
+                    <i class="material-symbols-outlined time-icon" style="color:var(--seminar);">hub</i>
+                    <span>Г. Н. Гайдуков</span>
+                    <span>Пособие для СР</span>
+                </div>
+                
+                <div class="id-item">
+                    <button id="linkDiff-btn" onClick="openBook(booksURL.PHYSICS_POSSR)">Открыть</button>
+                </div>
+            </div>
+
+            <!---------------------------------------->
+            <!-- ФИЗИКА / ЛАБАРАТОРНЫЕ РАБОТЫ (ВСЕ) -->
+            <!---------------------------------------->
+
+            <div class="id-block">
+                <div class="id-title" style="color:var(--lab);">Лабараторные работы по физике</div>
+
+                <div class="id-item" style="padding:15px;">
+                    <i class="material-symbols-outlined time-icon" style="color:var(--lab);">hub</i>
+                    <span>Электричество и магнетизм</span>
+                </div>
+                
+                <div class="id-item">
+                    <button id="linkDiff-btn" onClick="openBook(linkPhysicsLabs)">Открыть</button>
                 </div>
             </div>
 
@@ -109,11 +229,11 @@
             <!---------------------------------------->
 
             <div class="id-block">
-                <div class="id-title">Математический анализ</div>
+                <div class="id-title" style="color:var(--lab);">Математический анализ</div>
 
                 <div class="id-item" style="padding:15px;">
+                    <i class="material-symbols-outlined time-icon" style="color:var(--lab);">functions</i>
                     <span>Сборник видео-лекций по курсу</span>
-                    <i class="material-symbols-outlined time-icon">functions</i>
                 </div>
                 
                 <div class="id-item">

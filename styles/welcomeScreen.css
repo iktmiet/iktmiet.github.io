@@ -63,7 +63,9 @@ body {
     font-size: 24px;
     color: #ffffff; /* Белый цвет для кнопок */
     opacity: 0;
-}
+
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}   
 
 .footer-button {
     position: absolute;

@@ -1,3 +1,10 @@
+header {
+    text-align: left;
+    padding: 10px;
+    padding-left: 30px;
+    background-color: #333333;
+}
+
 body {
     font-family: 'Nunito', sans-serif;
     background-color: #1e1e1e;
@@ -8,13 +15,6 @@ body {
 
 h1 {
     font-family: 'Manrope', sans-serif;
-}
-
-.footer-text {
-    text-align: center;
-    margin-top: 10px;
-    font-size: 10px;
-    opacity: 0.5;
 }
 
 button {
@@ -30,6 +30,13 @@ button {
     border-radius: 10px;
 }
 
+.footer-text {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 10px;
+    opacity: 0.5;
+}
+
 #numerator-btn {
     background-color: #007bff; /* Цвет активной кнопки (синий) */
     color: #ffffff;
@@ -38,107 +45,6 @@ button {
 #denominator-btn {
     background-color: #ffffff; /* Цвет неактивной кнопки (белый) */
     color: #333333;
-}
-
-
-header {
-    text-align: left;
-    padding: 10px;
-    padding-left: 30px;
-    background-color: #333333;
-}
-
-.schedule-container {
-    display: flex;
-    flex-wrap: wrap; /* Перенос на новую строку */
-    justify-content: space-between; /* Равномерное распределение блоков по контейнеру */
-}
-
-.day-block {
-    flex-grow: 1; /* Расширение блока для заполнения пустых пространств */
-
-    margin-bottom: 20px;
-    margin: 10px;
-    border-radius: 12px;
-    overflow: hidden;
-    background-color: #333333;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.break-item {
-    padding: 15px;
-    background-color: #444444;
-
-    display: flex;
-}
-
-.day-title {
-    text-align: left; 
-    padding: 15px;
-    background-color: #555555;
-    font-weight: 600;
-
-    font-size: 16px; /* Размер шрифта заголовка */
-    margin-bottom: 0; /* Убран отступ снизу */
-}
-
-/* Медиа-запрос для устройств с шириной экрана до 767px (мобильные устройства) */
-@media (max-width: 767px) {
-    .day-block {
-        width: 100%; /* Блоки должны занимать всю ширину */
-        margin-bottom: 10px; /* Дополнительный отступ между блоками на мобильных устройствах */
-    }
-}
-
-.weekend-title {
-    text-align: left; 
-    padding: 15px;
-    background-color: #c45555;
-    font-weight: 600;
-
-    font-size: 16px; /* Размер шрифта заголовка */
-    margin-bottom: 0; /* Убран отступ снизу */
-}
-
-.class-item, .break-item {
-    padding: 14px;
-    border-bottom: 1px solid #555555;
-}
-
-.class-item span {
-    font-size: 11px;
-    display: block;
-    padding: 5px;
-}
-
-.class-item strong {
-    font-size: 14px;
-    display: flex;
-
-    align-items: center; /* Центрирование вертикально */
-}
-
-.class-item {
-    display: flex;
-    padding: 15px;
-    border-bottom: 1px solid #555555;
-
-    justify-content: space-between; /* Равномерное распределение между элементами */
-    align-items: center; /* Центрирование вертикально */
-}
-
-.class-item .time-icon {
-    font-size: 20px;
-
-    margin-right: 10px; /* Добавлен отступ между текстом и иконкой */
-}
-
-:root {
-    --lecture: #53e51e;
-    --seminar: #77b9ff;
-    --lab: #ff8c00;
-    --practice: #4fffc4;
-    --event: #ff67ff;
 }
 
 
@@ -189,6 +95,7 @@ header {
     transition-duration: 0.1s; 
 }
 
+
 .num-notification {
     width: 12px;
     height: 12px;
@@ -213,26 +120,6 @@ header {
     display: none; /* Изначально скрыт */
 }
 
-
-.lecture strong, .lecture .time-icon {
-    color: var(--lecture); /* цвет для лекций */
-}
-
-.seminar strong, .seminar .time-icon {
-    color: var(--seminar); /* цвет для семинаров */
-}
-
-.lab strong, .lab .time-icon {
-    color: var(--lab); /* цвет для лабораторных */
-}
-
-.practice strong, .practice .time-icon {
-    color: var(--practice); /* цвет для занятий */
-}
-
-.event strong, .event .time-icon {
-    color: var(--event); /* цвет для событий */
-}
 
 .alpha50 {
     opacity: 0.5;
