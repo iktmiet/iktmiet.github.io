@@ -14,6 +14,10 @@ function getCurrentWeek() {
     document.getElementById("denominatorCircle").style.display = "none";
 
     var typeOfWeek = 'Подождите...';
+    if (currentDate.getDay() === 0) {
+        weeksElapsed += 1;
+    }
+
     if (weeksElapsed % 2 === 1) {
         typeOfWeek = 'Числитель';
         document.getElementById("numeratorCircle").style.display = 'block';
@@ -24,7 +28,11 @@ function getCurrentWeek() {
     }
 
     // Обновляем текст элемента с номером недели
-    document.getElementById("weekLegend").textContent = "Сейчас: " + weeksElapsed + " неделя | " + typeOfWeek;
+    if (currentDate.getDay() === 0) {
+        document.getElementById("weekLegend").innerHTML = '<b style="color: cyan">Завтра ' + weeksElapsed + "-я неделя</b> | <b>" + typeOfWeek + "</b>";
+    } else {    
+        document.getElementById("weekLegend").textContent = "Сейчас: " + weeksElapsed + " неделя | " + typeOfWeek;
+    }
 
     // Проверка четности и вызов changeSchedule
     if (weeksElapsed % 2 === 1) {changeSchedule('numerator');}

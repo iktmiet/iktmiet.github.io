@@ -96,13 +96,15 @@
 }
 
 .day-title {
-    text-align: left; 
     padding: 15px;
     background-color: #555555;
     font-weight: 600;
 
     font-size: 16px; /* Размер шрифта заголовка */
     margin-bottom: 0; /* Убран отступ снизу */
+
+    display: flex;
+    justify-content: space-between; /* Равномерное распределение блоков по контейнеру */
 }
 
 

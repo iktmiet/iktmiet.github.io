@@ -203,19 +203,33 @@
             <!--     ИНФОРМАЦИЯ    -->
             <!-- ----------------- -->
             <script>
-                checkViews('BooksStory')
+                checkViews('pwaStory')
+                checkViews('Stories')
             </script>
             
-            <!--
-            <div class="day-block" style="border-radius: 24px;">
-                <div class="story unviewed" onclick="openStoriesPage('BooksStory')" data-story-id="BooksStory">
-                    <i class="material-symbols-outlined time-icon" style="font-size: 36px; color: black;">book_5</i>
+            <div class="stories-block">
+                <div 
+                    class="story unviewed" 
+                    onclick="openStoriesPage('Stories')" 
+                    data-story-id="Stories"
+                    style="background: linear-gradient(45deg, #a9c2f7, #a1fdc4);"
+                >
+                    <i class="material-symbols-outlined time-icon" style="font-size: 36px; color: black;">kid_star</i>
+                </div>
+                
+                <div 
+                    class="story unviewed" 
+                    onclick="openStoriesPage('pwaStory')" 
+                    data-story-id="pwaStory"
+                    style="background: linear-gradient(45deg, #f7a9c7, #bea1fd);"
+                >
+                    <i class="material-symbols-outlined time-icon" style="font-size: 36px; color: black;">arrow_downward</i>
                 </div>
             </div>
-            --!>
 
 
 
+            <!---
             <div id="myModal" class="modal">
                 <div class="modal-content">
                     <span style="font-size:18px;color:rgb(173, 162, 244);">

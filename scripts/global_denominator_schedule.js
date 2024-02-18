@@ -2,7 +2,10 @@ DENOMINATOR_SCHEDULE = `
     <!-- Понедельник -->
     <a id="MondayLinkAnchor"></a>
     <div class="day-block">
-        <div class="day-title">ПОНЕДЕЛЬНИК</div>
+        <div class="day-title">
+            <span>ПОНЕДЕЛЬНИК</span>
+            <div style="font-weight: 50; font-size:14px;">4 ПАРЫ</div>
+        </div>
 
         <!-- ПАРА 1 -->
         <div class="class-item lecture">
@@ -54,10 +57,14 @@ DENOMINATOR_SCHEDULE = `
     </div>
 
 
+
     <!-- ВТОРНИК -->
     <a id="TuesdayLinkAnchor"></a>
     <div class="day-block">
-        <div class="day-title">ВТОРНИК</div>
+        <div class="day-title">
+            <span>ВТОРНИК</span>
+            <div style="font-weight: 50; font-size:14px;">4 ПАРЫ</div>
+        </div>
 
         <!-- ПАРА 1 -->
         <div class="class-item lab">
@@ -114,7 +121,10 @@ DENOMINATOR_SCHEDULE = `
     <!-- СРЕДА -->
     <a id="WednesdayLinkAnchor"></a>
     <div class="day-block">
-        <div class="day-title">СРЕДА</div>
+        <div class="day-title">
+            <span>СРЕДА</span>
+            <div style="font-weight: 50; font-size:14px;">5 ПАР</div>
+        </div>
 
         <!-- ПАРА 1 -->
         <div class="class-item lecture">
@@ -198,23 +208,17 @@ DENOMINATOR_SCHEDULE = `
     <!-- ПЯТНИЦА -->
     <a id="FridayLinkAnchor"></a>
     <div class="day-block">
-        <div class="day-title">ПЯТНИЦА</div>
+        <div class="day-title">
+            <span>ПЯТНИЦА</span>
+            <div style="font-weight: 50; font-size:14px;">2 ПАРЫ</div>
+        </div>
 
         <!-- ПАРА 1 -->
         <div class="class-item lab">
             <i class="material-icons time-icon">laptop_windows</i>
             <strong>Практикум по C</strong>
             <span>3127</span>
-            <span>09:00 - 10:20</span>
-            <span>Доронина А. А.</span>
-        </div>
-
-        <!-- ПАРА 2 -->
-        <div class="class-item lab">
-            <i class="material-icons time-icon">laptop_windows</i>
-            <strong>Практикум по C</strong>
-            <span>3127</span>
-            <span>10:30 - 11:50</span>
+            <span>09:00 - 11:50</span>
             <span>Доронина А. А.</span>
         </div>
     </div>

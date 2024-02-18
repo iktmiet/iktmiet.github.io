@@ -24,8 +24,18 @@
     </head>
     <body>
         <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const urlParams = new URLSearchParams(window.location.search);
+                const story = urlParams.get('story');
+                if (story) {
+                    storiesLoad(story, window)
+                }
+            });
+
             window.onload = function() {
-                storiesLoad(BooksStory, window)
+                if (!story) {
+                    window.location.replace("index");
+                }
             };
         </script>
 
