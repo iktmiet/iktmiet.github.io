@@ -10,7 +10,7 @@ function openStoriesPage(currentStory) {
 
     localStorage.setItem(currentStory, 'true');
 
-    const urlBase = 'https://iktmiet.github.io/beta/stories';
+    const urlBase = 'https://iktmiet.github.io/stories';
 
     const url = new URL(urlBase);
     const params = new URLSearchParams({ story: currentStory });
