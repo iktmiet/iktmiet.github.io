@@ -128,9 +128,9 @@ body {
     to {
       width: 160px;
     }
-  }
+}
   
-  @media screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
     .slide-text {
         position: absolute;
         top: 0;
@@ -155,8 +155,15 @@ body {
     
         width: 15%;
     }
+
+    .slide img {
+        width: 70%;
+        height: 100%;
+        object-fit: cover; 
+        padding-left: 30%;
+    }
 }
-  
+
 
 .alpha {
     opacity: 0.3;
