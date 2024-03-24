@@ -221,7 +221,14 @@ DENOMINATOR_SCHEDULE = `
             <span>09:00 - 11:50</span>
             <span>Доронина А. А.</span>
         </div>
-    </div>
+
+        <!-- ЗАПИСЬ -->
+        <div class="class-item lab">
+            <button id="recordLRButton" style="margin-top:10px;" class="active-button" onClick="openRecordLink()">
+                Запись на сдачу ЛР
+            </button>
+        </div>
+    </div>  
 
 
     <!-- СУББОТА -->

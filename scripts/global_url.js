@@ -3,7 +3,9 @@ window.linksURL = {
     MONITOR: "https://t.me/orioks_monitoring_bot",
     STUDFL: "https://studfile.net/miet/",
     DISCORD: "https://discord.gg/GkQTgGtB",
-    FEDORENKO: "http://iv-fedorenko.ru/index73.htm"
+    FEDORENKO: "http://iv-fedorenko.ru/index73.htm",
+    SCHEDULE: "https://miet.ru/schedule/",
+    TGSCHEDULE: "https://t.me/schedule_MIET_bot"
 }
 
 window.booksURL = {
@@ -15,5 +17,6 @@ window.booksURL = {
     PHYSICS_QUE1: "https://drive.google.com/file/d/1k3iI1uFALLwou2C1xyvyT4-ezHdvJ0qF/view?usp=sharing",
     PHYSICS_POSSR: "https://drive.google.com/file/d/1uEnPdgg7013CscriELoS06bN0AVyETBU/view?usp=sharing",
     MATH_PWRQUE: "https://drive.google.com/file/d/1G7SYZwWLQTUWcT65zkhqtNtRHpWBw08U/view?usp=sharing",
+    PHYS_GORBATYI: "https://drive.google.com/file/d/1YwjQNgaqRbQuP4YcKEinx4NvKyhC415I/view?usp=sharing",
     VIDEO_MATH_LINK: "https://drive.google.com/drive/folders/1EJb3egZdPGLBZZienu_DFDdcT8vZsRgX"
 }

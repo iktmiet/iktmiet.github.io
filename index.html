@@ -163,6 +163,12 @@
         <!--   ЗНАМЕНАТЕЛЬ  -->
         <!-- -------------- -->
 
+        <script>
+            function openRecordLink() {
+                window.open('https://docs.google.com/forms/d/e/1FAIpQLScDCEhx35cwP3-Pzh72DMrtTYK7R3yXQdOjTg-eMOhWbUQUnQ/viewform', '_blank');
+            }
+        </script>
+
         <script src="scripts/global_denominator_schedule.js"></script>
         <script>
             var denominatorSchedule = DENOMINATOR_SCHEDULE;
@@ -203,20 +209,31 @@
             <!--     ИНФОРМАЦИЯ    -->
             <!-- ----------------- -->
             <script>
+                checkViews('updateStory')
+                checkViews('urlStory')
                 checkViews('pwaStory')
-                checkViews('Stories')
             </script>
             
             <div class="stories-block">
                 <div 
                     class="story unviewed" 
-                    onclick="openStoriesPage('Stories')" 
-                    data-story-id="Stories"
-                    style="background: linear-gradient(45deg, #a9c2f7, #a1fdc4);"
+                    onclick="openStoriesPage('updateStory')" 
+                    data-story-id="updateStory"
+                    style="background: linear-gradient(45deg, #a9f7f3, #d2fda1);"
                 >
-                    <i class="material-symbols-outlined time-icon" style="font-size: 36px; color: black;">kid_star</i>
+                    <i class="material-symbols-outlined time-icon" style="font-size: 36px; color: black;">update</i>
                 </div>
-                
+
+                <div 
+                    class="story unviewed" 
+                    onclick="openStoriesPage('urlStory')" 
+                    data-story-id="urlStory"
+                    style="background: linear-gradient(45deg, #a9b0f7, #cca1fd);"
+                >
+                    <i class="material-symbols-outlined time-icon" style="font-size: 36px; color: black;">link</i>
+                </div>
+
+
                 <div 
                     class="story unviewed" 
                     onclick="openStoriesPage('pwaStory')" 

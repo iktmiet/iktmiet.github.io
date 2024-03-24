@@ -87,21 +87,41 @@
                 </div>
             </div>
 
-                        <!-- ФЕДОРЕНКО -->
-                        <div class="id-block">
-                            <div class="id-title">
-                                <div style="width: 25px; height:25px; border-radius: 30%; background-color: rgb(139, 0, 0); border-color: rgb(139, 0, 0);">
-                                    <span style="text-align: center; padding:5.75px;">Ф</span></div>
-                                <span>Сайт Федоренко И. В.</span>
-                            </div>
-            
-                            <div class="id-item" style="padding:15px;">
-                                <span>Сайт Федоренко со всеми материалами для курса физики.</span>
-                                <button style="margin-bottom: 0px; margin-top: 0px" id="fedorenkoBTN" onclick="openLink(_FEDORENKO_link)">
-                                        Перейти
-                                </button>
-                            </div>
-                        </div>
+            <!-- ФЕДОРЕНКО -->
+            <div class="id-block">
+                <div class="id-title">
+                    <div style="width: 25px; height:25px; border-radius: 30%; background-color: rgb(139, 0, 0); border-color: rgb(139, 0, 0);">
+                        <span style="text-align: center; padding:5.75px;">Ф</span></div>
+                    <span>Сайт Федоренко И. В.</span>
+                </div>
+
+                <div class="id-item" style="padding:15px;">
+                    <span>Сайт Федоренко со всеми материалами для курса физики.</span>
+                    <button style="margin-bottom: 0px; margin-top: 0px" id="fedorenkoBTN" onclick="openLink(_FEDORENKO_link)">
+                            Перейти
+                    </button>
+                </div>
+            </div>
+
+            <!-- MIET SCHEDULE -->
+            <div class="id-block">
+                <div class="id-title">
+                    <img 
+                        src="https://vuz24.ru/storage/editor_upload/PR9mmSVGtXUx1KopIY75.png" 
+                        loading="lazy" 
+                        width="25" height="25" 
+                        style="border-radius: 30%; background-color: white;"
+                    />
+                    <span>Расписание МИЭТ</span>
+                </div>
+
+                <div class="id-item" style="padding:15px;">
+                    <span>Сайт МИЭТ'а с актуальным расписанием для остальных групп.</span>
+                    <button style="margin-bottom: 0px; margin-top: 0px" id="fedorenkoBTN" onclick="openLink(_SCHEDULE_link)">
+                            Перейти
+                    </button>
+                </div>
+            </div>
 
             <!-- DISCORD -->
             <div class="id-block">
@@ -148,6 +168,29 @@
                     </button>
                 </div>
             </div>
+
+            <!-- TG SCHEDULE -->
+            <div class="id-block">
+                <div class="id-title">
+                    <img 
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc2sDsoW4lnkmrjVU98pH763lbCh9nIX1Hs2dnEMYGDo9DP18r8fAw0KL3_T077GXHhys&usqp=CAU" 
+                        loading="lazy" 
+                        width="25" height="25" 
+                        style="border-radius: 30%; background-color: white;"
+                    />
+                    <span>Бот в Telegram для расписания</span>
+                </div>
+
+                <div class="id-item" style="padding:15px;">
+                    <span>Бот в Telegram для просмотра расписания групп и преподавателей, а также с возможностью подписки на уведомления о начале пары.</span>
+                    <button 
+                        style="margin-bottom: 0px; margin-top: 0px" 
+                        id="orioksBTN" 
+                        onclick="openLink(_TGSCHEDULE_link)">
+                            Перейти
+                    </button>
+                </div>
+            </div>
         </div>
 
         <!-- init -->
@@ -180,6 +223,8 @@
             var _STUDFL_link = linksURL.STUDFL
             var _DISCORD_link = linksURL.DISCORD
             var _FEDORENKO_link = linksURL.FEDORENKO
+            var _SCHEDULE_link = linksURL.SCHEDULE
+            var _TGSCHEDULE_link = linksURL.TGSCHEDULE
 
             function openLink(link) {
                 window.open(link, '_blank');
