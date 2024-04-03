@@ -66,4 +66,21 @@ window.comStory = {
     TEXT_5: "Компенсация за 9 мая - 6 июня (четверг, по расписанию - числитель)."
 }
 
-window.currentStoriesAvailable = {updateStory, urlStory, pwaStory, comStory}
+window.scheduleStory = {
+    IMAGE_1: "stories/default/time.png",
+    TEXT_1: "<b>Появилось расписание учёбы и сессии.</b> Вот оно вкратце:",
+    
+    IMAGE_2: "stories/ment_cal_al/sch_c1s2sl1.png",
+    TEXT_2: "В <b>мае</b> учимся весь месяц, кроме 1 и 9 числа. 31 мая - отработка за февраль.",
+
+    IMAGE_3: "stories/ment_cal_al/sch_c1s2sl2.png",
+    TEXT_3: "В <b>июне</b> учимся две недели - с 03.06 по 16.06. 5, 6 и 7 июня - отработки.",
+
+    IMAGE_4: "stories/ment_cal_al/sch_c1s2sl3.png",
+    TEXT_4: "Оставшиеся две недели июня, с 17 по 30 число включительно, будет сессия.",
+
+    IMAGE_5: "stories/ment_cal_al/sch_c1s2sl4.png",
+    TEXT_5: "Вот, что сдаём в сессию:"
+}
+
+window.currentStoriesAvailable = {updateStory, urlStory, pwaStory, comStory, scheduleStory}
