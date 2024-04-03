@@ -49,4 +49,21 @@ window.urlStory = {
     TEXT_5: "Чтобы не потерять новую короткую ссылку, можете сделать скриншот экрана."
 }
 
-window.currentStoriesAvailable = {updateStory, urlStory, pwaStory}
+window.comStory = {
+    IMAGE_1: "stories/default/warning.png",
+    TEXT_1: "<b>Опубликована информация по компенсационным учебным дням.</b>",
+    
+    IMAGE_2: "stories/ment_cal_jm/cal_sl1.png",
+    TEXT_2: "Компенсация за 23 февраля - 31 мая (пятница, по расписанию - числитель).",
+
+    IMAGE_3: "stories/ment_cal_jm/cal_sl2.png",
+    TEXT_3: "Компенсация за 8 марта - 7 июня (пятница, по расписанию - числитель).",
+
+    IMAGE_4: "stories/ment_cal_jm/cal_sl3.png",
+    TEXT_4: "Компенсация за 1 мая - 5 июня (среда, по расписанию - числитель).",
+
+    IMAGE_5: "stories/ment_cal_jm/cal_sl4.png",
+    TEXT_5: "Компенсация за 9 мая - 6 июня (четверг, по расписанию - числитель)."
+}
+
+window.currentStoriesAvailable = {updateStory, urlStory, pwaStory, comStory}

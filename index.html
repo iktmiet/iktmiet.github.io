@@ -209,12 +209,23 @@
             <!--     ИНФОРМАЦИЯ    -->
             <!-- ----------------- -->
             <script>
+                checkViews('comStory')
                 checkViews('updateStory')
                 checkViews('urlStory')
                 checkViews('pwaStory')
             </script>
             
             <div class="stories-block">
+                <div 
+                    class="story unviewedBn" 
+                    onclick="openStoriesPage('comStory')" 
+                    data-story-id="comStory"
+                    style="background: linear-gradient(45deg, #f7a9ca, #fda1a1);"
+                >
+                    <i class="material-symbols-outlined time-icon" style="font-size: 36px; color: black;">event</i>
+                </div>
+
+                <!--
                 <div 
                     class="story unviewed" 
                     onclick="openStoriesPage('updateStory')" 
@@ -223,6 +234,7 @@
                 >
                     <i class="material-symbols-outlined time-icon" style="font-size: 36px; color: black;">update</i>
                 </div>
+            -->
 
                 <div 
                     class="story unviewed" 
@@ -233,7 +245,7 @@
                     <i class="material-symbols-outlined time-icon" style="font-size: 36px; color: black;">link</i>
                 </div>
 
-
+<!--
                 <div 
                     class="story unviewed" 
                     onclick="openStoriesPage('pwaStory')" 
@@ -242,6 +254,7 @@
                 >
                     <i class="material-symbols-outlined time-icon" style="font-size: 36px; color: black;">arrow_downward</i>
                 </div>
+-->
             </div>
 
 
