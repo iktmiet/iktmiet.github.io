@@ -28,7 +28,7 @@
 
     <body>
         <header>
-            <h1>Учебники</h1>
+            <h1>  Учебники</h1>
             <div>
                 <button id="returnBtn" style="margin-bottom: 20px;" class="additional-button" onclick="returnToBase()">
                     На главную
@@ -237,7 +237,17 @@
                 </div>
                 
                 <div class="id-item">
-                    <button id="linkDiff-btn" onClick="openBook(linkPhysicsLabs)">Открыть</button>
+                    <button id="linkDiff-btn" onClick="openBook(linkPhysicsLabsEl)">Открыть</button>
+                </div>
+                
+                
+                <div class="id-item" style="padding:15px;">
+                    <i class="material-symbols-outlined time-icon" style="color:var(--lab);">airwave</i>
+                    <span>Волновая оптика</span>
+                </div>
+                
+                <div class="id-item">
+                    <button id="linkDiff-btn" onClick="openBook(linkPhysicsLabsOp)">Открыть</button>
                 </div>
             </div>
 
@@ -276,7 +286,8 @@
             linkDiffBook = booksURL.mathsTh3
 
             // Физика, лабараторные
-            linkPhysicsLabs = booksURL.PHYSICS_LABS
+            linkPhysicsLabsEl = booksURL.PHYSICS_LABS_EL
+            linkPhysicsLabsOp = booksURL.PHYSICS_LABS_OP
 
             // Матанализ (Том 2)
             linkMathBook = booksURL.mathsTh2
