@@ -4,10 +4,11 @@ NUMERATOR_SCHEDULE = `
     <div class="day-block">
         <div class="day-title">
             <span>ПОНЕДЕЛЬНИК</span>
-            <div style="font-weight: 50; font-size:14px;">6 ПАР</div>
+            <div style="font-weight: 50; font-size:14px;">5 ПАР</div>
         </div>
 
         <!-- ПАРА 1 -->
+		<!--
         <div class="class-item lecture">
             <i class="material-icons time-icon">functions</i>
             <strong>Математический анализ</strong>
@@ -15,6 +16,7 @@ NUMERATOR_SCHEDULE = `
             <span>09:00 - 10:20</span>
             <span>Погибельский А.</span>
         </div>
+		-->
 
         <!-- ПАРА 2 -->
         <div class="class-item practice">
@@ -82,10 +84,11 @@ NUMERATOR_SCHEDULE = `
     <div class="day-block">
     <div class="day-title">
         <span>ВТОРНИК</span>
-        <div style="font-weight: 50; font-size:14px;">5 ПАР</div>
+        <div style="font-weight: 50; font-size:14px;">1 ПАРА</div>
     </div>
 
         <!-- ПАРА 1 -->
+		<!--
         <div class="class-item lab">
             <i class="material-symbols-outlined time-icon" style="color:var(--lab);">airwave</i>
             <strong>Физика. Волн. оптика.</strong>
@@ -93,8 +96,9 @@ NUMERATOR_SCHEDULE = `
             <span>09:00 - 10:20</span>
             <span>Зыков | Королёва</span>
         </div>
-
-        <!-- ПАРА 2 -->
+		-->
+        
+		<!-- ПАРА 2 -->
         <div class="class-item seminar">
             <i class="material-symbols-outlined time-icon">functions</i>
             <strong>Математический анализ</strong>
@@ -104,6 +108,7 @@ NUMERATOR_SCHEDULE = `
         </div>
 
         <!-- ПАРА 3 -->
+		<!--
         <div class="class-item lecture">
             <i class="material-symbols-outlined time-icon">function</i>
             <strong>Диффер. уравнения</strong>
@@ -111,8 +116,10 @@ NUMERATOR_SCHEDULE = `
             <span>12:00 - 13:20</span>
             <span>Романова Е. Л.</span>
         </div>
+		-->
 
         <!-- ПЕРЕМЕНА -->
+		<!--
         <div class="break-item">
             <div style="padding-right: 15px;">
                 <i class="material-symbols-outlined time-icon">schedule</i>
@@ -123,17 +130,21 @@ NUMERATOR_SCHEDULE = `
                 <br>13:20 - 14:00
             </div>
         </div>
+		-->
 
         <!-- ПАРА 4 -->
+		<!--
         <div class="class-item lecture">
             <i class="material-symbols-outlined time-icon">code_blocks</i>
             <strong>Программирование</strong>
             <span>1205</span>
             <span>14:00 - 15:20</span>
             <span>Дорогова Е.Г.</span>
-        </div>
+        </div> 
+		-->
 
         <!-- ПАРА 5 -->
+		<!--
         <div class="class-item lecture">
             <i class="material-symbols-outlined time-icon">code_blocks</i>
             <strong>Программирование</strong>
@@ -141,6 +152,7 @@ NUMERATOR_SCHEDULE = `
             <span>15:30 - 16:50</span>
             <span>Дорогова Е.Г.</span>
         </div>
+		-->
     </div>
 
 

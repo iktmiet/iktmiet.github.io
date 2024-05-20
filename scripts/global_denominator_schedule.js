@@ -63,10 +63,11 @@ DENOMINATOR_SCHEDULE = `
     <div class="day-block">
         <div class="day-title">
             <span>ВТОРНИК</span>
-            <div style="font-weight: 50; font-size:14px;">4 ПАРЫ</div>
+            <div style="font-weight: 50; font-size:14px;">2 ПАРЫ</div>
         </div>
 
         <!-- ПАРА 1 -->
+		<!--
         <div class="class-item lab">
             <i class="material-symbols-outlined time-icon" style="color:var(--lab);">airwave</i>
             <strong>Физика. Волн. оптика.</strong>
@@ -74,6 +75,7 @@ DENOMINATOR_SCHEDULE = `
             <span>09:00 - 10:20</span>
             <span>Зыков | Королёва</span>
         </div>
+		-->
 
         <!-- ПАРА 2 -->
         <div class="class-item seminar">
@@ -85,6 +87,7 @@ DENOMINATOR_SCHEDULE = `
         </div>
         
         <!-- ПАРА 3 -->
+		<!--
         <div class="class-item lecture">
             <i class="material-symbols-outlined time-icon">function</i>
             <strong>Диффер. уравнения</strong>
@@ -92,9 +95,21 @@ DENOMINATOR_SCHEDULE = `
             <span>12:00 - 13:20</span>
             <span>Романова Е.Л.</span>
         </div>
+		-->
+		
+		<div class="break-item">
+            <div style="padding-right: 15px;">
+                <i class="material-symbols-outlined time-icon">schedule</i>
+            </div>
+
+            <div>
+                <b>Окно (1 пара, 2 ч.)</b>
+                <br>12:00 - 14:00
+            </div>
+        </div>
 
         <!-- ПЕРЕМЕНА -->
-        
+        <!--
         <div class="break-item">
             <div style="padding-right: 15px;">
                 <i class="material-symbols-outlined time-icon">schedule</i>
@@ -105,6 +120,7 @@ DENOMINATOR_SCHEDULE = `
                 <br>13:20 - 14:00
             </div>
         </div>
+		-->
 
         <!-- ПАРА 4 -->
         <div class="class-item seminar">
