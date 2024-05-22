@@ -204,6 +204,20 @@
         <!-- ----------------- -->
 
         <script src="scripts/modal_window.js"></script>
+
+        <div class="schedule-container">
+            <div class="stories-block">
+                <div 
+                    class="story unviewedBn" 
+                    data-story-id="ban"
+                    style="background: url('https://iktmiet.github.io/banUser.png');
+                        background-size: contain;
+                        aspect-ratio: 1/1;"
+                > </div>
+                <span style="color:#FFF000; display: flex; justify-content: right; align-items: center; font-weight: 800;">ВНИМАНИЕ! Доступ на сайт Дмитрию Сумину запрещён!</span>
+            </div>
+        </div>
+
         <div class="schedule-container">
             <!-- ----------------- -->
             <!--     ИНФОРМАЦИЯ    -->
@@ -212,7 +226,6 @@
                 checkViews('comStory')
                 checkViews('scheduleStory')
                 checkViews('updateStory')
-                //checkViews('pwaStory')
             </script>
             
             <div class="stories-block">
@@ -225,17 +238,6 @@
                     <i class="material-symbols-outlined time-icon" style="font-size: 36px; color: black;">event</i>
                 </div>
 
-                <!--
-                <div 
-                    class="story unviewed" 
-                    onclick="openStoriesPage('updateStory')" 
-                    data-story-id="updateStory"
-                    style="background: linear-gradient(45deg, #a9f7f3, #d2fda1);"
-                >
-                    <i class="material-symbols-outlined time-icon" style="font-size: 36px; color: black;">update</i>
-                </div>
-            -->
-
                 <div 
                     class="story unviewed" 
                     onclick="openStoriesPage('scheduleStory')" 
@@ -243,45 +245,6 @@
                     style="background: linear-gradient(45deg, #acf7a9, #a1e3fd);"
                 >
                     <i class="material-symbols-outlined time-icon" style="font-size: 36px; color: black;">schedule</i>
-                </div>
-
-<!--
-                <div 
-                    class="story unviewed" 
-                    onclick="openStoriesPage('pwaStory')" 
-                    data-story-id="pwaStory"
-                    style="background: linear-gradient(45deg, #f7a9c7, #bea1fd);"
-                >
-                    <i class="material-symbols-outlined time-icon" style="font-size: 36px; color: black;">arrow_downward</i>
-                </div>
--->
-</div>
-            <!---
-            <div id="myModal" class="modal">
-                <div class="modal-content">
-                    <span style="font-size:18px;color:rgb(173, 162, 244);">
-                        <b>Состоится в ПЯТНИЦУ, 16 ФЕВРАЛЯ с 13:00 до 17:00.</b>
-                    </span>
-
-                    <br />
-
-                    <span style="font-size:16px;">
-                        Проводится в библиотеке студгородка. Студгородок находится по адресу ул. Юности, 11, библиотека расположена напротив лестницы в 11 корпус. 
-                    </span>
-                    
-                    <span style="font-size:16px; color:rgb(255, 175, 175);">
-                        <b>Новый комплект учебников выдается только после сдачи книг за первый семестр!</b>
-                    </span>
-
-                    <span style="font-size:16px;">
-                        Иметь при себе: студенческий билет, электронный пропуск, ручку, сумку.
-                    </span>
-
-                    <br />
-                    
-                    <button onclick="closeModal()" style="margin-right: 10px; margin-bottom: 0px; margin-top: 10px;" >
-                            Закрыть
-                    </button>
                 </div>
             </div>
         
