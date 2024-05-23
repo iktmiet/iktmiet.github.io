@@ -214,7 +214,7 @@
                         background-size: contain;
                         aspect-ratio: 1/1;"
                 > </div>
-                <span style="color:#FFF000; display: flex; justify-content: right; align-items: center; font-weight: 800;">ВНИМАНИЕ! Доступ на сайт Дмитрию Сумину запрещён!</span>
+                <span style="color:#fff; display: flex; justify-content: right; align-items: center; font-weight: 800;">ВНИМАНИЕ! Доступ на сайт Дмитрию Сумину запрещён!</span>
             </div>
         </div>
 
@@ -245,6 +245,20 @@
                     style="background: linear-gradient(45deg, #acf7a9, #a1e3fd);"
                 >
                     <i class="material-symbols-outlined time-icon" style="font-size: 36px; color: black;">schedule</i>
+                </div>
+            </div>
+
+            <div class="schedule-container">
+                <div class="stories-block" style="border:3px solid #fff000">
+                    <span style="display: flex; justify-content: right; align-items: center; margin-left:30px; font-weight: 800;">Расписание сессии и экзаменов уже доступно.</span>
+                    <button id="sessionBtn" style="display: flex; margin:30px; margin-left: 30px; justify-content: right; align-items: center;" class="active-button" onclick="redirectToSessionPage()">
+                    Открыть
+                    <script>
+                        function redirectToSessionPage() {
+                            window.location.href = 'session/index.html';
+                        }
+                    </script>
+                </button>
                 </div>
             </div>
         

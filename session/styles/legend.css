@@ -1,0 +1,46 @@
+.my-legend {
+    display: flex; /* Добавлено для размещения в строку */
+    justify-content: space-between; /* Распределение элементов в строке */
+}
+
+.my-legend .legend-title {
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 90%;
+}
+
+.my-legend .legend-scale ul {
+    margin: 0; /* Изменено с 15px на 0 */
+    padding: 0;
+    list-style: none;
+    display: flex; /* Добавлено для размещения в строку */
+}
+
+.my-legend .legend-scale ul li {
+    font-size: 80%;
+    list-style: none;
+    margin-left: 15px; /* Добавлен отступ между элементами */
+    line-height: 18px;
+    margin-bottom: 2px;
+}
+
+.my-legend ul.legend-labels li span {
+    display: block;
+    float: left;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    margin-right: 5px;
+    margin-left: 0;
+}
+
+.my-legend .legend-source {
+    font-size: 70%;
+    color: #999;
+    clear: both;
+} 
+
+.my-legend a {
+    color: #777;
+}
