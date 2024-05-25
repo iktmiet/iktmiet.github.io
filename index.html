@@ -21,6 +21,7 @@
         <link rel="stylesheet" href="styles/legend.css" />
         <link rel="stylesheet" href="styles/stories.css" />
         <link rel="stylesheet" href="styles/schedule.css" />
+        <link rel="stylesheet" href="styles/blocks.css" />
 
         <!-- СКРИПТЫ -->
         <script src="scripts/stories.js"></script>
@@ -356,6 +357,162 @@
             // Загрузка случайного анекдота при загрузке страницы
             window.addEventListener('load', loadRandomAnekdot);
         </script>
+
+
+        <div class="id-container">
+            <!-- РАДИО РЕСПУБЛИКА -->
+            <div class="id-block">
+                <div class="id-title">
+                    <img 
+                        src="https://top-radio.pro/assets/image/radio/180/radio-respublika-lnr.jpg" 
+                        loading="lazy" 
+                        width="25" height="25" 
+                        style="border-radius: 50%;"
+                    />
+                    <span>Радио РЕСПУБЛИКА</span>
+                </div>
+
+                <div class="id-item" style="padding:15px;">
+                    <audio id="rep_radio-player" src="https://radio.gtrklnr.ru:8443/republic.fm" preload="auto"></audio>
+
+                    <button id="rep_play-btn" style="margin:10px;" class="inactive-button">Слушать</button>
+                    <button id="rep_stop-btn" style="margin:10px;display: none;" class="active-button" disabled>Стоп</button>
+                    
+                    <input id="rep_volume-slider" style="margin-left: 10px;" type="range" min="0" max="1" step="0.01" value="0.5">
+                    
+                    <script>
+                      const rep_audio = document.getElementById('rep_radio-player');
+                      const rep_playBtn = document.getElementById('rep_play-btn');
+                      const rep_stopBtn = document.getElementById('rep_stop-btn');
+                      const rep_volumeSlider = document.getElementById('rep_volume-slider');
+                    
+                      rep_playBtn.addEventListener('click', () => {
+                        rep_audio.play();
+                        rep_playBtn.disabled = true;
+                        rep_playBtn.style.display = "none";
+                        rep_stopBtn.style.display = "block";
+                        rep_stopBtn.disabled = false;
+                      });
+                    
+                      rep_stopBtn.addEventListener('click', () => {
+                        rep_audio.pause();
+                        rep_playBtn.disabled = false;
+                        rep_playBtn.style.display = "block";
+                        rep_stopBtn.style.display = "none";
+                        rep_stopBtn.disabled = true;
+                      });
+                    
+                      rep_volumeSlider.addEventListener('input', (e) => {
+                        rep_audio.volume = e.target.value;
+                      });
+                    </script>
+                    
+                    <style>
+                      #volume-slider {
+                        width: 100px;
+                      }
+                    </style>
+                </div>
+            </div>
+
+            <!-- РАДИО ПАПИНО -->
+            <div class="id-block">
+                <div class="id-title">
+                    <img 
+                        src="https://top-radio.ru/assets/image/radio/180/papino-radio.png" 
+                        loading="lazy" 
+                        width="25" height="25" 
+                        style="border-radius: 50%;"
+                    />
+                    <span>ПАПИНО радио</span>
+                </div>
+
+                <div class="id-item" style="padding:15px;">
+                    <audio id="pap_radio-player" src="https://a1.radioheart.ru:9001/RH53662" preload="auto"></audio>
+
+                    <button id="pap_play-btn" style="margin:10px;" class="inactive-button">Слушать</button>
+                    <button id="pap_stop-btn" style="margin:10px;display: none;" class="active-button" disabled>Стоп</button>
+                    
+                    <input id="pap_volume-slider" style="margin-left: 10px;" type="range" min="0" max="1" step="0.1" value="1">
+                    
+                    <script>
+                      const pap_audio = document.getElementById('pap_radio-player');
+                      const pap_playBtn = document.getElementById('pap_play-btn');
+                      const pap_stopBtn = document.getElementById('pap_stop-btn');
+                      const pap_volumeSlider = document.getElementById('pap_volume-slider');
+                    
+                      pap_playBtn.addEventListener('click', () => {
+                        pap_audio.play();
+                        pap_playBtn.disabled = true;
+                        pap_playBtn.style.display = "none";
+                        pap_stopBtn.style.display = "block";
+                        pap_stopBtn.disabled = false;
+                      });
+                    
+                      pap_stopBtn.addEventListener('click', () => {
+                        pap_audio.pause();
+                        pap_playBtn.disabled = false;
+                        pap_playBtn.style.display = "block";
+                        pap_stopBtn.style.display = "none";
+                        pap_stopBtn.disabled = true;
+                      });
+                    
+                      pap_volumeSlider.addEventListener('input', (e) => {
+                        pap_audio.volume = e.target.value;
+                      });
+                    </script>
+                </div>
+            </div>
+
+            <!-- РАДИО СТОЛИЦА -->
+            <div class="id-block">
+                <div class="id-title">
+                    <img 
+                        src="https://top-radio.ru/assets/image/radio/180/stolicha100.jpg" 
+                        loading="lazy" 
+                        width="25" height="25" 
+                        style="border-radius: 50%;"
+                    />
+                    <span>Радио Столица Донецк</span>
+                </div>
+
+                <div class="id-item" style="padding:15px;">
+                    <audio id="stl_radio-player" src="https://a1.radioheart.ru:9001/RH58197" preload="auto"></audio>
+
+                    <button id="stl_play-btn" style="margin:10px;" class="inactive-button">Слушать</button>
+                    <button id="stl_stop-btn" style="margin:10px;display: none;" class="active-button" disabled>Стоп</button>
+                    
+                    <input id="stl_volume-slider" style="margin-left: 10px;" type="range" min="0" max="1" step="0.1" value="1">
+                    
+                    <script>
+                      const stl_audio = document.getElementById('stl_radio-player');
+                      const stl_playBtn = document.getElementById('stl_play-btn');
+                      const stl_stopBtn = document.getElementById('stl_stop-btn');
+                      const stl_volumeSlider = document.getElementById('stl_volume-slider');
+                    
+                      stl_playBtn.addEventListener('click', () => {
+                        stl_audio.play();
+                        stl_playBtn.disabled = true;
+                        stl_playBtn.style.display = "none";
+                        stl_stopBtn.style.display = "block";
+                        stl_stopBtn.disabled = false;
+                      });
+                    
+                      stl_stopBtn.addEventListener('click', () => {
+                        stl_audio.pause();
+                        stl_playBtn.disabled = false;
+                        stl_playBtn.style.display = "block";
+                        stl_stopBtn.style.display = "none";
+                        stl_stopBtn.disabled = true;
+                      });
+                    
+                      stl_volumeSlider.addEventListener('input', (e) => {
+                        stl_audio.volume = e.target.value;
+                      });
+                    </script>
+                </div>
+            </div>
+        </div>
 
         <!-- Текст в низу страницы -->
 
