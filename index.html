@@ -169,6 +169,18 @@
             }
         </script>
 
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <video id="my-video" src="video.mp4" width="300" controls loop></video>
+
+        <br />
+        
+        <button onclick="closeModal()" style="margin-right: 10px; margin-bottom: 0px; margin-top: 10px;" >
+                Закрыть
+        </button>
+    </div>
+</div>
+
         <script src="scripts/global_denominator_schedule.js"></script>
         <script>
             var denominatorSchedule = DENOMINATOR_SCHEDULE;
@@ -213,6 +225,7 @@
                     style="background: url('https://iktmiet.github.io/banUser.png');
                         background-size: contain;
                         aspect-ratio: 1/1;"
+                    onclick="openModal()" 
                 > </div>
                 <span style="color:#fff; display: flex; justify-content: right; align-items: center; font-weight: 800;">ВНИМАНИЕ! Доступ на сайт Дмитрию Сумину запрещён!</span>
             </div>
