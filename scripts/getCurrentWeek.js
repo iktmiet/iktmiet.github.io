@@ -10,9 +10,6 @@ function getCurrentWeek() {
     // Вычисляем недели от начальной даты в московском времени
     var weeksElapsed = Math.floor((currentMoscowTime - startDate) / (7 * 24 * 60 * 60 * 1000)) - 22;
 
-    document.getElementById("numeratorCircle").style.display = "none";
-    document.getElementById("denominatorCircle").style.display = "none";
-
     var typeOfWeek = 'Подождите...';
     if (currentDate.getDay() === 0) {
         weeksElapsed += 1;
@@ -20,11 +17,9 @@ function getCurrentWeek() {
 
     if (weeksElapsed % 2 === 1) {
         typeOfWeek = 'Числитель';
-        document.getElementById("numeratorCircle").style.display = 'block';
     }
     else {
         typeOfWeek = 'Знаменатель';
-        document.getElementById("denominatorCircle").style.display = 'block';
     }
 
     // Обновляем текст элемента с номером недели
@@ -35,6 +30,6 @@ function getCurrentWeek() {
     }
 
     // Проверка четности и вызов changeSchedule
-    if (weeksElapsed % 2 === 1) {changeSchedule('numerator');}
+    if (weeksElapsed < 20) {changeSchedule('numerator');}
     else {changeSchedule('denominator');}
 }

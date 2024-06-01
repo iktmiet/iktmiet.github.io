@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-        <title>ИКТ МИЭТ</title>
+        <title>Сессия | ИКТ-11 МИЭТ</title>
     
         <!-- PWA -->
         <link rel="manifest" href="manifest.json">
@@ -17,11 +17,9 @@
 
         <!-- СТИЛИ -->
         <link rel="stylesheet" href="styles/main.css" />
-        <link rel="stylesheet" href="styles/modalWindow.css" />
         <link rel="stylesheet" href="styles/legend.css" />
-        <link rel="stylesheet" href="styles/stories.css" />
         <link rel="stylesheet" href="styles/schedule.css" />
-        <link rel="stylesheet" href="styles/blocks.css" />
+        <link rel="stylesheet" href="styles/blocks.css">
 
         <!-- СКРИПТЫ -->
         <script src="scripts/stories.js"></script>
@@ -33,37 +31,24 @@
     </head>
 
     <body>
-        <!-- Запуск приветственного окна при первом запуске приложения -->
-        <script>
-            // Проверяем, была ли страница уже открыта
-            var isNotFirstVisit = localStorage.getItem('isNotFirstVisit');
-
-            if (!isNotFirstVisit) {
-                // Если это первое посещение, переадресовываем
-                window.location.href = 'welcome';
-                // Устанавливаем флаг о том, что страница была открыта
-                localStorage.setItem('isNotFirstVisit', 'true');
-            }
-        </script>
-
         <!-- ------ -->
         <!-- ХЕАДЕР -->
         <!-- ------ -->
 
         <header>
-            <h1>Расписание</h1>
+            <h1 style="color:#ffd0d0">Сессия</h1>
 
             <!-- Кнопки (верхний блок) -->
 
             <div class="button-container">
-                <button style="margin-right:5px" id="numeratorBtn" class="active-button" onclick="changeSchedule('numerator')">
-                    Числитель
-                    <span id="numeratorCircle" class="num-notification"></span>
+                <button id="numeratorBtn" class="active-button" onclick="changeSchedule('numerator')">
+                    <span style="display:none" id="numeratorCircle" class="num-notification"></span>
+                    Зачёты, пересдачи
                 </button>
 
-                <button style="margin-left: 5px;" id="denominatorBtn" class="inactive-button" onclick="changeSchedule('denominator')">
-                    Знаменатель
-                    <span id="denominatorCircle" class="den-notification"></span>
+                <button id="denominatorBtn" class="inactive-button" onclick="changeSchedule('denominator')">
+                    <span style="display:none" id="denominatorCircle" class="den-notification"></span>
+                    Экзамены
                 </button>
             </div>
 
@@ -73,7 +58,7 @@
 
             <!-- Кнопки (нижний блок) -->
 
-            <button id="booksBtn" style="margin-right: 10px; margin-bottom: 20px;" class="additional-button" onclick="redirectToBooksPage()">
+            <button id="booksBtn" style="margin-right: 5px; margin-bottom: 10px;" class="additional-button" onclick="redirectToBooksPage()">
                 📚
                 <script>
                     function redirectToBooksPage() {
@@ -82,7 +67,7 @@
                 </script>
             </button>
 
-            <button id="linksBtn" style="margin-right: 10px; margin-bottom: 20px;" class="additional-button" onclick="redirectToLinksPage()">
+            <button id="linksBtn" style="margin-right: 5px; margin-bottom: 10px;" class="additional-button" onclick="redirectToLinksPage()">
                 🔗
                 <script>
                     function redirectToLinksPage() {
@@ -91,9 +76,18 @@
                 </script>
             </button>
 
+            <button id="candleBtn" style="margin-right: 5px; margin-bottom: 10px;" class="additional-button" onclick="redirectToCandlePage()">
+                🕯️
+                <script>
+                    function redirectToCandlePage() {
+                        window.location.href = 'https://new.online-chasovnya.ru/svechi-online/index.html';
+                    }
+                </script>
+            </button>
+
             <button 
                 id="todayBtn" 
-                style="margin-right: 10px; margin-bottom: 20px;" 
+                style="margin-right:0px; margin-bottom: 10px;" 
                 class="additional-button" 
                 onclick="goToCurrentDay();"
             >
@@ -102,32 +96,10 @@
                 <script>
                     function goToCurrentDay() {
                         // ОПРЕДЕЛЕНИЕ ТЕКУЩЕГО ДНЯ НЕДЕЛИ
-                        var day = new Date().getDay();
-                        var anchorId;
-
-                        switch (day) {
-                            case 1:
-                                anchorId = 'MondayLinkAnchor';
-                                break;
-                            case 2:
-                                anchorId = 'TuesdayLinkAnchor';
-                                break;
-                            case 3:
-                                anchorId = 'WednesdayLinkAnchor';
-                                break;
-                            case 4:
-                                anchorId = 'ThursdayLinkAnchor';
-                                break;
-                            case 5:
-                                anchorId = 'FridayLinkAnchor';
-                                break;
-                            case 6:
-                                anchorId = 'SaturdayLinkAnchor';
-                                break;
-                            case 0:
-                                anchorId = 'SundayLinkAnchor';
-                                break;
-                        }
+                        var day = new Date().getDate();
+                        var anchorId = day;
+						
+						console.log(anchorId);
 
                         document.getElementById(anchorId).scrollIntoView({ behavior: 'smooth' });
                     }
@@ -164,24 +136,6 @@
         <!--   ЗНАМЕНАТЕЛЬ  -->
         <!-- -------------- -->
 
-        <script>
-            function openRecordLink() {
-                window.open('https://docs.google.com/forms/d/e/1FAIpQLScDCEhx35cwP3-Pzh72DMrtTYK7R3yXQdOjTg-eMOhWbUQUnQ/viewform', '_blank');
-            }
-        </script>
-
-<div id="myModal" class="modal">
-    <div class="modal-content">
-        <video id="my-video" src="video.mp4" width="300" controls loop></video>
-
-        <br />
-        
-        <button onclick="closeModal()" style="margin-right: 10px; margin-bottom: 0px; margin-top: 10px;" >
-                Закрыть
-        </button>
-    </div>
-</div>
-
         <script src="scripts/global_denominator_schedule.js"></script>
         <script>
             var denominatorSchedule = DENOMINATOR_SCHEDULE;
@@ -203,9 +157,11 @@
         <div class='my-legend'>
             <div class='legend-scale'>
                 <ul class='legend-labels'>
-                    <li><span style='background:var(--lecture);'></span>Лекция</li>
-                    <li><span style='background:var(--seminar);'></span>Семинар</li>
-                    <li><span style='background:var(--lab);'></span>Лабораторная</li>
+                    <li><span style='background:var(--lecture);'></span>Экзамен</li>
+                    <li><span style='background:var(--practice);'></span>Конс.</li>
+                    <li><span style='background:var(--seminar);'></span>Зачёт</li>
+                    <li><span style='background:var(--event);'></span>Сем.</li>
+                    <li><span style='background:var(--lab);'></span>Пересд.</li>
                 </ul>
             </div>
         </div>
@@ -215,67 +171,6 @@
         <!--  БЛОК РАСПИСАНИЯ  -->
 
         <!-- ----------------- -->
-
-        <script src="scripts/modal_window.js"></script>
-
-        <div class="schedule-container">
-            <div class="stories-block">
-                <div 
-                    class="story unviewedBn" 
-                    data-story-id="ban"
-                    style="background: url('https://iktmiet.github.io/banUser.png');
-                        background-size: contain;
-                        aspect-ratio: 1/1;"
-                    onclick="openModal()" 
-                > </div>
-                <span style="color:#fff; display: flex; justify-content: right; align-items: center; font-weight: 800;">ВНИМАНИЕ! Доступ на сайт Дмитрию Сумину запрещён!</span>
-            </div>
-        </div>
-
-        <div class="schedule-container">
-            <!-- ----------------- -->
-            <!--     ИНФОРМАЦИЯ    -->
-            <!-- ----------------- -->
-            <script>
-                checkViews('comStory')
-                checkViews('scheduleStory')
-                checkViews('updateStory')
-            </script>
-            
-            <div class="stories-block">
-                <div 
-                    class="story unviewed" 
-                    onclick="openStoriesPage('comStory')" 
-                    data-story-id="comStory"
-                    style="background: linear-gradient(45deg, #FC6, #FCC);"
-                >
-                    <i class="material-symbols-outlined time-icon" style="font-size: 36px; color: black;">event</i>
-                </div>
-
-                <div 
-                    class="story unviewed" 
-                    onclick="openStoriesPage('scheduleStory')" 
-                    data-story-id="scheduleStory"
-                    style="background: linear-gradient(45deg, #acf7a9, #a1e3fd);"
-                >
-                    <i class="material-symbols-outlined time-icon" style="font-size: 36px; color: black;">schedule</i>
-                </div>
-            </div>
-
-            <div class="schedule-container">
-                <div class="stories-block" style="border:3px solid #fff000">
-                    <span style="display: flex; justify-content: right; align-items: center; margin-left:30px; font-weight: 800;">Расписание сессии и экзаменов уже доступно.</span>
-                    <button id="sessionBtn" style="display: flex; margin:30px; margin-left: 30px; justify-content: right; align-items: center;" class="active-button" onclick="redirectToSessionPage()">
-                    Открыть
-                    <script>
-                        function redirectToSessionPage() {
-                            window.location.href = 'session/index.html';
-                        }
-                    </script>
-                </button>
-                </div>
-            </div>
-        
             <!-- ----------------- -->
             <!--     РАСПИСАНИЕ    -->
             <!--     НА НЕДЕЛЮ     -->
@@ -291,8 +186,8 @@
                     var denominatorBtn = document.getElementById("denominatorBtn");
                     var scheduleContainer = document.getElementById("scheduleContainer");
                     
+                    // 18-19 недели
                     if (scheduleType === 'numerator') {
-                        // Изменения для Числителя
                         numeratorBtn.classList.remove("inactive-button");
                         numeratorBtn.classList.add("active-button");
                         denominatorBtn.classList.remove("active-button");
@@ -300,8 +195,8 @@
                         
                         scheduleContainer.innerHTML = numeratorSchedule;
 
+                    // экзамены
                     } else if (scheduleType === 'denominator') {
-                        // Изменения для Знаменателя
                         numeratorBtn.classList.remove("active-button");
                         numeratorBtn.classList.add("inactive-button");
                         denominatorBtn.classList.remove("inactive-button");
@@ -358,17 +253,13 @@
             window.addEventListener('load', loadRandomAnekdot);
         </script>
 
+        <!-- РАДИО -->
 
         <div class="id-container">
             <!-- РАДИО РЕСПУБЛИКА -->
             <div class="id-block">
                 <div class="id-title">
-                    <img 
-                        src="https://top-radio.pro/assets/image/radio/180/radio-respublika-lnr.jpg" 
-                        loading="lazy" 
-                        width="25" height="25" 
-                        style="border-radius: 50%;"
-                    />
+                    <img src="https://top-radio.pro/assets/image/radio/180/radio-respublika-lnr.jpg" loading="lazy" width="25" height="25" style="border-radius: 50%;">
                     <span>Радио РЕСПУБЛИКА</span>
                 </div>
 
@@ -376,41 +267,41 @@
                     <audio id="rep_radio-player" src="https://radio.gtrklnr.ru:8443/republic.fm" preload="auto"></audio>
 
                     <button id="rep_play-btn" style="margin:10px;" class="inactive-button">Слушать</button>
-                    <button id="rep_stop-btn" style="margin:10px;display: none;" class="active-button" disabled>Стоп</button>
+                    <button id="rep_stop-btn" style="margin:10px;display: none;" class="active-button" disabled="">Стоп</button>
                     
                     <input id="rep_volume-slider" style="margin-left: 10px;" type="range" min="0" max="1" step="0.01" value="0.5">
                     
                     <script>
-                      const rep_audio = document.getElementById('rep_radio-player');
-                      const rep_playBtn = document.getElementById('rep_play-btn');
-                      const rep_stopBtn = document.getElementById('rep_stop-btn');
-                      const rep_volumeSlider = document.getElementById('rep_volume-slider');
+                    const rep_audio = document.getElementById('rep_radio-player');
+                    const rep_playBtn = document.getElementById('rep_play-btn');
+                    const rep_stopBtn = document.getElementById('rep_stop-btn');
+                    const rep_volumeSlider = document.getElementById('rep_volume-slider');
                     
-                      rep_playBtn.addEventListener('click', () => {
+                    rep_playBtn.addEventListener('click', () => {
                         rep_audio.play();
                         rep_playBtn.disabled = true;
                         rep_playBtn.style.display = "none";
                         rep_stopBtn.style.display = "block";
                         rep_stopBtn.disabled = false;
-                      });
+                    });
                     
-                      rep_stopBtn.addEventListener('click', () => {
+                    rep_stopBtn.addEventListener('click', () => {
                         rep_audio.pause();
                         rep_playBtn.disabled = false;
                         rep_playBtn.style.display = "block";
                         rep_stopBtn.style.display = "none";
                         rep_stopBtn.disabled = true;
-                      });
+                    });
                     
-                      rep_volumeSlider.addEventListener('input', (e) => {
+                    rep_volumeSlider.addEventListener('input', (e) => {
                         rep_audio.volume = e.target.value;
-                      });
+                    });
                     </script>
                     
                     <style>
-                      #volume-slider {
+                    #volume-slider {
                         width: 100px;
-                      }
+                    }
                     </style>
                 </div>
             </div>
@@ -418,12 +309,7 @@
             <!-- РАДИО ПАПИНО -->
             <div class="id-block">
                 <div class="id-title">
-                    <img 
-                        src="https://top-radio.ru/assets/image/radio/180/papino-radio.png" 
-                        loading="lazy" 
-                        width="25" height="25" 
-                        style="border-radius: 50%;"
-                    />
+                    <img src="https://top-radio.ru/assets/image/radio/180/papino-radio.png" loading="lazy" width="25" height="25" style="border-radius: 50%;">
                     <span>ПАПИНО радио</span>
                 </div>
 
@@ -431,35 +317,35 @@
                     <audio id="pap_radio-player" src="https://a1.radioheart.ru:9001/RH53662" preload="auto"></audio>
 
                     <button id="pap_play-btn" style="margin:10px;" class="inactive-button">Слушать</button>
-                    <button id="pap_stop-btn" style="margin:10px;display: none;" class="active-button" disabled>Стоп</button>
+                    <button id="pap_stop-btn" style="margin:10px;display: none;" class="active-button" disabled="">Стоп</button>
                     
                     <input id="pap_volume-slider" style="margin-left: 10px;" type="range" min="0" max="1" step="0.1" value="1">
                     
                     <script>
-                      const pap_audio = document.getElementById('pap_radio-player');
-                      const pap_playBtn = document.getElementById('pap_play-btn');
-                      const pap_stopBtn = document.getElementById('pap_stop-btn');
-                      const pap_volumeSlider = document.getElementById('pap_volume-slider');
+                    const pap_audio = document.getElementById('pap_radio-player');
+                    const pap_playBtn = document.getElementById('pap_play-btn');
+                    const pap_stopBtn = document.getElementById('pap_stop-btn');
+                    const pap_volumeSlider = document.getElementById('pap_volume-slider');
                     
-                      pap_playBtn.addEventListener('click', () => {
+                    pap_playBtn.addEventListener('click', () => {
                         pap_audio.play();
                         pap_playBtn.disabled = true;
                         pap_playBtn.style.display = "none";
                         pap_stopBtn.style.display = "block";
                         pap_stopBtn.disabled = false;
-                      });
+                    });
                     
-                      pap_stopBtn.addEventListener('click', () => {
+                    pap_stopBtn.addEventListener('click', () => {
                         pap_audio.pause();
                         pap_playBtn.disabled = false;
                         pap_playBtn.style.display = "block";
                         pap_stopBtn.style.display = "none";
                         pap_stopBtn.disabled = true;
-                      });
+                    });
                     
-                      pap_volumeSlider.addEventListener('input', (e) => {
+                    pap_volumeSlider.addEventListener('input', (e) => {
                         pap_audio.volume = e.target.value;
-                      });
+                    });
                     </script>
                 </div>
             </div>
@@ -467,12 +353,7 @@
             <!-- РАДИО СТОЛИЦА -->
             <div class="id-block">
                 <div class="id-title">
-                    <img 
-                        src="https://top-radio.ru/assets/image/radio/180/stolicha100.jpg" 
-                        loading="lazy" 
-                        width="25" height="25" 
-                        style="border-radius: 50%;"
-                    />
+                    <img src="https://top-radio.ru/assets/image/radio/180/stolicha100.jpg" loading="lazy" width="25" height="25" style="border-radius: 50%;">
                     <span>Радио Столица Донецк</span>
                 </div>
 
@@ -480,35 +361,35 @@
                     <audio id="stl_radio-player" src="https://a1.radioheart.ru:9001/RH58197" preload="auto"></audio>
 
                     <button id="stl_play-btn" style="margin:10px;" class="inactive-button">Слушать</button>
-                    <button id="stl_stop-btn" style="margin:10px;display: none;" class="active-button" disabled>Стоп</button>
+                    <button id="stl_stop-btn" style="margin:10px;display: none;" class="active-button" disabled="">Стоп</button>
                     
                     <input id="stl_volume-slider" style="margin-left: 10px;" type="range" min="0" max="1" step="0.1" value="1">
                     
                     <script>
-                      const stl_audio = document.getElementById('stl_radio-player');
-                      const stl_playBtn = document.getElementById('stl_play-btn');
-                      const stl_stopBtn = document.getElementById('stl_stop-btn');
-                      const stl_volumeSlider = document.getElementById('stl_volume-slider');
+                    const stl_audio = document.getElementById('stl_radio-player');
+                    const stl_playBtn = document.getElementById('stl_play-btn');
+                    const stl_stopBtn = document.getElementById('stl_stop-btn');
+                    const stl_volumeSlider = document.getElementById('stl_volume-slider');
                     
-                      stl_playBtn.addEventListener('click', () => {
+                    stl_playBtn.addEventListener('click', () => {
                         stl_audio.play();
                         stl_playBtn.disabled = true;
                         stl_playBtn.style.display = "none";
                         stl_stopBtn.style.display = "block";
                         stl_stopBtn.disabled = false;
-                      });
+                    });
                     
-                      stl_stopBtn.addEventListener('click', () => {
+                    stl_stopBtn.addEventListener('click', () => {
                         stl_audio.pause();
                         stl_playBtn.disabled = false;
                         stl_playBtn.style.display = "block";
                         stl_stopBtn.style.display = "none";
                         stl_stopBtn.disabled = true;
-                      });
+                    });
                     
-                      stl_volumeSlider.addEventListener('input', (e) => {
+                    stl_volumeSlider.addEventListener('input', (e) => {
                         stl_audio.volume = e.target.value;
-                      });
+                    });
                     </script>
                 </div>
             </div>

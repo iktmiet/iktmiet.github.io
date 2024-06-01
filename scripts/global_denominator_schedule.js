@@ -1,263 +1,127 @@
 DENOMINATOR_SCHEDULE = `
-    <!-- Понедельник -->
-    <a id="MondayLinkAnchor"></a>
+<!-- 17 ИЮНЯ -->
+    <a id="17"></a>
     <div class="day-block">
-        <div class="day-title">
-            <span>ПОНЕДЕЛЬНИК</span>
-            <div style="font-weight: 50; font-size:14px;">4 ПАРЫ</div>
+        <div class="day-title" style="background:var(--practice)">
+            <span style="color:#000;">17 ИЮНЯ | ПОНЕДЕЛЬНИК</span>
         </div>
-
-        <!-- ПАРА 1 -->
-        <div class="class-item lecture">
-            <i class="material-icons time-icon">functions</i>
-            <strong>Математический анализ</strong>
-            <span>1201</span>
-            <span>09:00 - 10:20</span>
-            <span>Погибельский А.</span>
-        </div>
-
-        <!-- ПАРА 2 -->
         <div class="class-item practice">
-            <i class="material-symbols-outlined time-icon">physical_therapy</i>
-            <strong>Индив./Ком. виды спорта</strong>
-            <span>5101</span>
-            <span>10:30 - 11:50</span>
-            <span>Кафедра физ/вос</span>
-        </div>
-
-        <!-- ПЕРЕМЕНА -->
-        <div class="break-item">
-            <div style="padding-right: 15px;">
-                <i class="material-symbols-outlined time-icon">schedule</i>
-            </div>
-
-            <div>
-                <b>Большой перерыв</b>
-                <br>11:50 - 12:30
-            </div>
-        </div>
-
-        <!-- ПАРА 3 -->
-        <div class="class-item seminar">
-            <i class="material-symbols-outlined time-icon">function</i>
-            <strong>Диффер. уравнения</strong>
-            <span>3302</span>
-            <span>12:30 - 13:50</span>
-            <span>Прокофьев А.</span>
-        </div>
-
-        <!-- ПАРА 4 -->
-        <div class="class-item lab">
-            <i class="material-symbols-outlined time-icon">devices</i>
-            <strong>КП по мат. анализу</strong>
-            <span>3118</span>
-            <span>14:00 - 15:20</span>
-            <span>Егоров П. Е.</span>
+            <i class="material-symbols-outlined time-icon">hub</i>
+            <strong>Консультация по физике</strong>
+            <span>ауд. ХХХХ</span> <!-- Аудитория -->
+            <span>15:00</span> <!-- Время -->
         </div>
     </div>
-
-
-
-    <!-- ВТОРНИК -->
-    <a id="TuesdayLinkAnchor"></a>
+    
+    <!-- 18 ИЮНЯ -->
+    <a id="18"></a>
     <div class="day-block">
-        <div class="day-title">
-            <span>ВТОРНИК</span>
-            <div style="font-weight: 50; font-size:14px;">2 ПАРЫ</div>
-        </div>
+        <div class="weekend-title">18 ИЮНЯ | ВТОРНИК</div>
+        <div class="class-item lecture">В этот день ничего нет.</div>
+    </div>
 
-        <!-- ПАРА 1 -->
-		<!--
-        <div class="class-item lab">
-            <i class="material-symbols-outlined time-icon" style="color:var(--lab);">airwave</i>
-            <strong>Физика. Волн. оптика.</strong>
-            <span>3327</span>
-            <span>09:00 - 10:20</span>
-            <span>Зыков | Королёва</span>
+    <!-- 19 ИЮНЯ -->
+    <a id="19"></a>
+    <div class="day-block">
+        <div class="day-title" style="background:#2daa00;">
+            <span>19 ИЮНЯ | СРЕДА</span>
         </div>
-		-->
-
-        <!-- ПАРА 2 -->
-        <div class="class-item seminar">
-            <i class="material-symbols-outlined time-icon">functions</i>
-            <strong>Математический анализ</strong>
-            <span>3240</span>
-            <span>10:30 - 11:50</span>
-            <span>Погибельский А.</span>
-        </div>
-        
-        <!-- ПАРА 3 -->
-		<!--
         <div class="class-item lecture">
-            <i class="material-symbols-outlined time-icon">function</i>
-            <strong>Диффер. уравнения</strong>
-            <span>1204</span>
-            <span>12:00 - 13:20</span>
-            <span>Романова Е.Л.</span>
-        </div>
-		-->
-		
-		<div class="break-item">
-            <div style="padding-right: 15px;">
-                <i class="material-symbols-outlined time-icon">schedule</i>
-            </div>
-
-            <div>
-                <b>Окно (1 пара, 2 ч.)</b>
-                <br>12:00 - 14:00
-            </div>
-        </div>
-
-        <!-- ПЕРЕМЕНА -->
-        <!--
-        <div class="break-item">
-            <div style="padding-right: 15px;">
-                <i class="material-symbols-outlined time-icon">schedule</i>
-            </div>
-
-            <div>
-                <b>Большой перерыв</b>
-                <br>13:20 - 14:00
-            </div>
-        </div>
-		-->
-
-        <!-- ПАРА 4 -->
-        <div class="class-item seminar">
-            <i class="material-symbols-outlined time-icon">airwave</i>
-            <strong>Физика. Волн. оптика.</strong>
-            <span>3240</span>
-            <span>14:00 - 15:20</span>
-            <span>Федоренко И.В.</span>
+            <i class="material-symbols-outlined time-icon">hub</i>
+            <strong>Экзамен по физике</strong>
+            <span>ауд. ХХХХ</span> <!-- Аудитория -->
+            <span>09:00</span> <!-- Время -->
         </div>
     </div>
+    
+<!-- 20 ИЮНЯ -->
+<a id="20"></a>
+<div class="day-block">
+    <div class="weekend-title">20 ИЮНЯ | ЧЕТВЕРГ</div>
+    <div class="class-item lecture">В этот день ничего нет.</div>
+</div>
 
-
-
-    <!-- СРЕДА -->
-    <a id="WednesdayLinkAnchor"></a>
+<!-- 21 ИЮНЯ -->
+    <a id="21"></a>
     <div class="day-block">
-        <div class="day-title">
-            <span>СРЕДА</span>
-            <div style="font-weight: 50; font-size:14px;">5 ПАР</div>
-        </div>
-
-        <!-- ПАРА 1 -->
-        <div class="class-item lecture">
-            <i class="material-icons time-icon">history_edu</i>
-            <strong>История РФ (лекция)</strong>
-            <span>4203</span>
-            <span>09:00 - 10:20</span>
-            <span>Лутошкин С.А.</span>
-        </div>
-
-        <!-- ПАРА 2 -->
-        <div class="class-item practice">
-            <i class="material-symbols-outlined time-icon">physical_therapy</i>
-            <strong>Индив./Ком. виды спорта</strong>
-            <span>5101</span>
-            <span>10:30 - 11:50</span>
-            <span>Кафедра физ/вос</span>
-        </div>
-
-        <!-- ПЕРЕМЕНА -->
-        
-        <div class="break-item">
-            <div style="padding-right: 15px;">
-                <i class="material-symbols-outlined time-icon">schedule</i>
-            </div>
-
-            <div>
-                <b>Большой перерыв</b>
-                <br>11:50 - 12:30
-            </div>
-        </div>
-
-        <!-- ПАРА 3 -->
-        <div class="class-item lecture">
-            <i class="material-symbols-outlined time-icon">airwave</i>
-            <strong>Физика. Электричество</strong>
-            <span>1202</span>
-            <span>12:30 - 13:50</span>
-            <span>Федоренко И.В.</span>
-        </div>
-
-        <!-- ПАРА 4 -->
-        <div class="class-item seminar">
-            <i class="material-symbols-outlined time-icon">history_edu</i>
-            <strong>История РФ (семинар)</strong>
-            <span>3303</span>
-            <span>14:00 - 15:20</span>
-            <span>Лутошкин С.А.</span>
-        </div>
-
-        <!-- ПАРА 5 -->
-        <div class="class-item seminar">
-            <i class="material-symbols-outlined time-icon">translate</i>
-            <strong>Иностранный язык                                         </strong>
-            <span>3242</span>
-            <span>15:30 - 16:50</span>
-            <span>Юрченко Е.И.</span>
-        </div>
+        <div class="weekend-title">21 ИЮНЯ | ПЯТНИЦА</div>
+        <div class="class-item lecture">В этот день ничего нет.</div>
     </div>
 
-
-
-    <!-- ЧЕТВЕРГ -->
-    <a id="ThursdayLinkAnchor"></a>
-    <div class="day-block">
-        <div class="weekend-title">ЧЕТВЕРГ</div>
-
-        <!-- УВЦ -->
-        <div class="class-item practice">
-            <i class="material-icons time-icon">military_tech</i>
-            <strong>Военная подготовка</strong>
-            <span>УВЦ 3</span>
-            <span>09:00 - 18:20</span>
-            <span>[6]</span>
-        </div>
+<!-- 22 ИЮНЯ -->
+<a id="22"></a>
+<div class="day-block">
+    <div class="day-title" style="background:var(--practice)">
+        <span style="color:#000;">22 ИЮНЯ | СУББОТА</span>
     </div>
-
-
-
-
-    <!-- ПЯТНИЦА -->
-    <a id="FridayLinkAnchor"></a>
-    <div class="day-block">
-        <div class="day-title">
-            <span>ПЯТНИЦА</span>
-            <div style="font-weight: 50; font-size:14px;">2 ПАРЫ</div>
-        </div>
-
-        <!-- ПАРА 1 -->
-        <div class="class-item lab">
-            <i class="material-icons time-icon">laptop_windows</i>
-            <strong>Практикум по C</strong>
-            <span>3127</span>
-            <span>09:00 - 11:50</span>
-            <span>Доронина А. А.</span>
-        </div>
-
-        <!-- ЗАПИСЬ -->
-        <div class="class-item lab">
-            <button id="recordLRButton" style="margin-top:10px;" class="active-button" onClick="openRecordLink()">
-                Запись на сдачу ЛР
-            </button>
-        </div>
-    </div>  
-
-
-    <!-- СУББОТА -->
-    <a id="SaturdayLinkAnchor"></a>
-    <div class="day-block">
-        <div class="weekend-title">СУББОТА</div>
-        <div class="class-item lecture">В этот день пар нет.</div>
+    <div class="class-item practice">
+        <i class="material-symbols-outlined time-icon">functions</i>
+        <strong>Консультация по мат. анализу</strong>
+        <span>ауд. ХХХХ</span> <!-- Аудитория -->
+        <span>15:00</span> <!-- Время -->
     </div>
+</div>
 
-    <!-- ВОСКРЕСЕНЬЕ -->
-    <a id="SundayLinkAnchor"></a>
+<!-- 23 ИЮНЯ -->
+    <a id="23"></a>
     <div class="day-block">
-        <div class="weekend-title">ВОСКРЕСЕНЬЕ</div>
-        <div class="class-item lecture">В этот день пар нет.</div>
+        <div class="weekend-title">23 ИЮНЯ | ВОСКРЕСЕНЬЕ</div>
+        <div class="class-item lecture">В этот день ничего нет.</div>
+    </div>
+	
+<!-- 24 ИЮНЯ -->
+<a id="24"></a>
+<div class="day-block">
+    <div class="day-title" style="background:#2daa00;">
+        24 ИЮНЯ | ПОНЕДЕЛЬНИК
+    </div>
+    <div class="class-item lecture">
+        <i class="material-symbols-outlined time-icon">functions</i>
+        <strong>Экзамен по мат. анализу</strong>
+        <span>ауд. ХХХХ</span> <!-- Аудитория -->
+        <span>09:00</span> <!-- Время -->
+    </div>
+</div>
+	
+<!-- 25 ИЮНЯ -->
+    <a id="25"></a>
+    <div class="day-block">
+        <div class="weekend-title">25 ИЮНЯ | ВТОРНИК</div>
+        <div class="class-item lecture">В этот день ничего нет.</div>
+    </div>
+	
+<!-- 26 ИЮНЯ -->
+    <a id="26"></a>
+    <div class="day-block">
+        <div class="weekend-title">26 ИЮНЯ | СРЕДА</div>
+        <div class="class-item lecture">В этот день ничего нет.</div>
+    </div>
+	
+<!-- 27 ИЮНЯ -->
+    <a id="27"></a>
+    <div class="day-block">
+        <div class="weekend-title">27 ИЮНЯ | ЧЕТВЕРГ</div>
+        <div class="class-item lecture">В этот день ничего нет.</div>
+    </div>
+	
+<!-- 28 ИЮНЯ -->
+    <a id="28"></a>
+    <div class="day-block">
+        <div class="weekend-title">28 ИЮНЯ | ПЯТНИЦА</div>
+        <div class="class-item lecture">В этот день ничего нет.</div>
+    </div>
+	
+<!-- 29 ИЮНЯ -->
+    <a id="29"></a>
+    <div class="day-block">
+        <div class="weekend-title">29 ИЮНЯ | СУББОТА</div>
+        <div class="class-item lecture">В этот день ничего нет.</div>
+    </div>
+	
+<!-- 30 ИЮНЯ -->
+    <a id="30"></a>
+    <div class="day-block">
+        <div class="weekend-title">30 ИЮНЯ | ВОСКРЕСЕНЬЕ</div>
+        <div class="class-item lecture">В этот день ничего нет.</div>
     </div>
 `;
