@@ -176,7 +176,7 @@
                     window.open('https://docs.google.com/forms/d/e/1FAIpQLScDCEhx35cwP3-Pzh72DMrtTYK7R3yXQdOjTg-eMOhWbUQUnQ/viewform', '_blank');
                 }
             </script>
-            
+
             <!-- ----------------- -->
             <!--     РАСПИСАНИЕ    -->
             <!--     НА НЕДЕЛЮ     -->
@@ -270,7 +270,7 @@
                 </div>
 
                 <div class="id-item" style="padding:15px;">
-                    <audio id="rep_radio-player" src="https://radio.gtrklnr.ru:8443/republic.fm" preload="auto"></audio>
+                    <audio id="rep_radio-player" preload="auto"></audio>
 
                     <button id="rep_play-btn" style="margin:10px;" class="inactive-button">Слушать</button>
                     <button id="rep_stop-btn" style="margin:10px;display: none;" class="active-button" disabled="">Стоп</button>
@@ -284,6 +284,7 @@
                     const rep_volumeSlider = document.getElementById('rep_volume-slider');
                     
                     rep_playBtn.addEventListener('click', () => {
+                        rep_audio.src="https://radio.gtrklnr.ru:8443/republic.fm";
                         rep_audio.play();
                         rep_playBtn.disabled = true;
                         rep_playBtn.style.display = "none";
@@ -293,6 +294,8 @@
                     
                     rep_stopBtn.addEventListener('click', () => {
                         rep_audio.pause();
+                        rep_audio.currentTime = 0;
+                        rep_audio.src=""
                         rep_playBtn.disabled = false;
                         rep_playBtn.style.display = "block";
                         rep_stopBtn.style.display = "none";
@@ -320,7 +323,7 @@
                 </div>
 
                 <div class="id-item" style="padding:15px;">
-                    <audio id="pap_radio-player" src="https://a1.radioheart.ru:9001/RH53662" preload="auto"></audio>
+                    <audio id="pap_radio-player" preload="auto"></audio>
 
                     <button id="pap_play-btn" style="margin:10px;" class="inactive-button">Слушать</button>
                     <button id="pap_stop-btn" style="margin:10px;display: none;" class="active-button" disabled="">Стоп</button>
@@ -334,6 +337,7 @@
                     const pap_volumeSlider = document.getElementById('pap_volume-slider');
                     
                     pap_playBtn.addEventListener('click', () => {
+                        pap_audio.src="https://a1.radioheart.ru:9001/RH53662";
                         pap_audio.play();
                         pap_playBtn.disabled = true;
                         pap_playBtn.style.display = "none";
@@ -343,6 +347,8 @@
                     
                     pap_stopBtn.addEventListener('click', () => {
                         pap_audio.pause();
+                        pap_audio.currentTime = 0;
+                        pap_audio.src="";
                         pap_playBtn.disabled = false;
                         pap_playBtn.style.display = "block";
                         pap_stopBtn.style.display = "none";
@@ -364,7 +370,7 @@
                 </div>
 
                 <div class="id-item" style="padding:15px;">
-                    <audio id="stl_radio-player" src="https://a1.radioheart.ru:9001/RH58197" preload="auto"></audio>
+                    <audio id="stl_radio-player" preload="auto"></audio>
 
                     <button id="stl_play-btn" style="margin:10px;" class="inactive-button">Слушать</button>
                     <button id="stl_stop-btn" style="margin:10px;display: none;" class="active-button" disabled="">Стоп</button>
@@ -378,6 +384,7 @@
                     const stl_volumeSlider = document.getElementById('stl_volume-slider');
                     
                     stl_playBtn.addEventListener('click', () => {
+                        stl_audio.src="https://a1.radioheart.ru:9001/RH58197";
                         stl_audio.play();
                         stl_playBtn.disabled = true;
                         stl_playBtn.style.display = "none";
@@ -387,6 +394,8 @@
                     
                     stl_stopBtn.addEventListener('click', () => {
                         stl_audio.pause();
+                        stl_audio.currentTime = 0;
+                        stl_audio.src="";
                         stl_playBtn.disabled = false;
                         stl_playBtn.style.display = "block";
                         stl_stopBtn.style.display = "none";
