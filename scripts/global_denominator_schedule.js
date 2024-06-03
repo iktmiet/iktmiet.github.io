@@ -33,6 +33,22 @@ DENOMINATOR_SCHEDULE = `
             <span>09:00</span> <!-- Время -->
         </div>
     </div>
+
+    <!-- 19 ИЮНЯ -->
+    <a id="19a"></a>
+    <div class="day-block">
+        <div class="day-title" style="background:var(--lab)">
+            <span>19 ИЮНЯ | СРЕДА</span>
+        </div>
+        <!-- ПАРА 1 -->
+        <div class="class-item lab">
+            <i class="material-icons time-icon">laptop_windows</i>
+            <strong>Консультация по ПЯВУ</strong>
+            <span>ауд. ХХХХ</span>
+            <span>неизвестно</span>
+            <span>Доронина А. А.</span>
+        </div>
+    </div>
     
 <!-- 20 ИЮНЯ -->
 <a id="20"></a>
@@ -93,8 +109,15 @@ DENOMINATOR_SCHEDULE = `
 <!-- 26 ИЮНЯ -->
     <a id="26"></a>
     <div class="day-block">
-        <div class="weekend-title">26 ИЮНЯ | СРЕДА</div>
-        <div class="class-item lecture">В этот день ничего нет.</div>
+        <div class="weekend-title" style="background:var(--lab)">26 ИЮНЯ | СРЕДА</div>
+        <!-- ПАРА 1 -->
+        <div class="class-item lab">
+            <i class="material-icons time-icon">laptop_windows</i>
+            <strong>Консультация по ПЯВУ</strong>
+            <span>ауд. ХХХХ</span>
+            <span>неизвестно</span>
+            <span>Доронина А. А.</span>
+        </div>
     </div>
 	
 <!-- 27 ИЮНЯ -->

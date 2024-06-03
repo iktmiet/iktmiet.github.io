@@ -6,44 +6,6 @@ NUMERATOR_SCHEDULE = `
     <div class="class-item lecture">Обратите внимание: информация предварительная и, вероятно, будет обновляться.<br/><br/>Следите за обновлениями на сайте.</div>
 </div>
 
-<!-- 1 ИЮНЯ -->
-<a id="1"></a>
-<div class="day-block">
-    <div class="weekend-title">1 ИЮНЯ | СУББОТА</div>
-    <div class="class-item lecture">В этот день ничего нет.</div>
-</div>
-
-<!-- 2 ИЮНЯ -->
-<a id="2"></a>
-<div class="day-block">
-    <div class="weekend-title">2 ИЮНЯ | ВОСКРЕСЕНЬЕ</div>
-    <div class="class-item lecture">В этот день ничего нет.</div>
-</div>
-
-<!-- 3 ИЮНЯ -->
-<a id="3"></a>
-<div class="day-block">
-    <div class="day-title">
-        <span>3 ИЮНЯ | ПОНЕДЕЛЬНИК</span>
-    </div>
-
-    <div class="class-item event">
-        <i class="material-symbols-outlined time-icon" style="color:var(--event);">function</i>
-        <strong>[3] Диф.уравн-я</strong>
-        <span>3302</span>
-        <span>12:30 - 13:50</span>
-        <span>Прокофьев</span>
-    </div>
-
-    <div class="class-item event">
-        <i class="material-symbols-outlined time-icon" style="color:var(--event);">devices</i>
-        <strong>[4] КП по матану</strong>
-        <span>3118</span>
-        <span>14:00 - 15:20</span>
-        <span>Егоров П. Е.</span>
-    </div>
-</div>
-
 <!-- 4 ИЮНЯ -->
 <a id="4"></a>
 <div class="day-block">
@@ -79,12 +41,15 @@ NUMERATOR_SCHEDULE = `
         <span>Пересдачи КР и долгов</span>
     </div>
 
-    <div class="class-item lab">
-        <i class="material-symbols-outlined time-icon" style="color:var(--lab);">functions</i>
-        <strong>[5] Дифференциальные ур-я</strong>
-        <span>4204 (м)</span>
-        <span>15:30 - 16:50</span>
-        <span>Пересдачи КР (ПМ-2.)</span>
+    <div class="break-item">
+        <div style="padding-right: 15px;">
+            <i class="material-symbols-outlined time-icon">schedule</i>
+        </div>
+
+        <div>
+            <b>Окно (1 пара, 1 ч. 40 мин.)</b>
+            <br>15:20 - 17:00
+        </div>
     </div>
 
     <div class="class-item lab">
@@ -112,17 +77,6 @@ NUMERATOR_SCHEDULE = `
         <span><b>ДИФФ-ЫЙ ЗАЧЁТ</b></span>
     </div>
 
-    <div class="break-item">
-        <div style="padding-right: 15px;">
-            <i class="material-symbols-outlined time-icon">schedule</i>
-        </div>
-
-        <div>
-            <b>Окно (3 пары, 5 ч. 10 мин.)</b>
-            <br>10:20 - 15:30
-        </div>
-    </div>
-
     <!-- ПАРА 4 -->
     <!--
     <div class="class-item event">
@@ -133,15 +87,6 @@ NUMERATOR_SCHEDULE = `
         <span>Лутошкин С.А.</span>
     </div>
     -->
-
-    <!-- ПАРА 5 -->
-    <div class="class-item seminar" style="background:var(--seminar); color:#000000">
-        <i class="material-symbols-outlined time-icon" style="color:#000000;">translate</i>
-        <strong style="color:#000000;"><b>[5] Иностранный язык (зачёт)</b></strong>
-        <span>3242</span>
-        <span>15:30 - 16:50</span>
-        <span><b>ДИФФ-ЫЙ ЗАЧЁТ</b></span>
-    </div>
 </div>
 
 <div class="day-block">
@@ -179,6 +124,31 @@ NUMERATOR_SCHEDULE = `
             <button id="recordLRButton" style="margin-top:10px;" class="active-button" onclick="openRecordLink()">
                 Запись на сдачу ЛР
             </button>
+        </div>
+
+        <div class="class-item lab">
+            <i class="material-symbols-outlined time-icon" style="color:var(--lab);">functions</i>
+            <strong>[1] Дифференциальные ур-я</strong>
+            <span>3301</span>
+            <span>09:00 - 10:20</span>
+            <span>Пересдачи КР (ПМ-22)</span>
+        </div>
+
+        <div class="class-item lab">
+            <i class="material-symbols-outlined time-icon" style="color:var(--lab);">functions</i>
+            <strong>[3] Дифференциальные ур-я</strong>
+            <span>3304</span>
+            <span>12:00 / 12:30</span>
+            <span>Пересдачи КР (ПМ-21)</span>
+        </div>
+
+        <!-- ПАРА 5 -->
+        <div class="class-item practice" style="background:var(--practice); color:#000000">
+            <i class="material-symbols-outlined time-icon" style="color:#000000;">translate</i>
+            <strong style="color:#000000;"><b>Иностранный язык</b></strong>
+            <span>3229/3347</span>
+            <span>09:00 - 12:00</span>
+            <span><b>КОНСУЛЬТАЦИЯ</b></span>
         </div>
     </div>
 	
