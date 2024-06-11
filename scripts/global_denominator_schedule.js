@@ -44,8 +44,6 @@ DENOMINATOR_SCHEDULE = `
         <div class="class-item lab">
             <i class="material-icons time-icon">laptop_windows</i>
             <strong>Консультация по ПЯВУ</strong>
-            <span>ауд. ХХХХ</span>
-            <span>неизвестно</span>
             <span>Доронина А. А.</span>
         </div>
     </div>
@@ -60,8 +58,14 @@ DENOMINATOR_SCHEDULE = `
 <!-- 21 ИЮНЯ -->
     <a id="21"></a>
     <div class="day-block">
-        <div class="weekend-title">21 ИЮНЯ | ПЯТНИЦА</div>
-        <div class="class-item lecture">В этот день ничего нет.</div>
+        <div class="weekend-title" style="background:var(--lab)">21 ИЮНЯ | ПЯТНИЦА</div>
+        <!-- ПАРА 1 -->
+        <div class="class-item lab">
+            <i class="material-icons time-icon">book</i>
+            <strong>Пересдача (История РФ)</strong>
+            <span>10:00 - 13:00</span>
+            <span>Лутошкин С. А.</span>
+        </div>
     </div>
 
 <!-- 22 ИЮНЯ -->
@@ -102,8 +106,15 @@ DENOMINATOR_SCHEDULE = `
 <!-- 25 ИЮНЯ -->
     <a id="25"></a>
     <div class="day-block">
-        <div class="weekend-title">25 ИЮНЯ | ВТОРНИК</div>
-        <div class="class-item lecture">В этот день ничего нет.</div>
+        <div class="day-title" style="background:var(--seminar);color:black;">25 ИЮНЯ | ВТОРНИК</div>
+        <!-- ПАРА 1 -->
+        <div class="class-item seminar">
+            <i class="material-icons time-icon">translate</i>
+            <strong>Зачёт (Иностранный язык)</strong>
+            <span>ауд. 3347</span>
+            <span>10:00 - 13:00</span>
+            <span>Юрченко Е. И.</span>
+        </div>
     </div>
 	
 <!-- 26 ИЮНЯ -->
@@ -114,8 +125,6 @@ DENOMINATOR_SCHEDULE = `
         <div class="class-item lab">
             <i class="material-icons time-icon">laptop_windows</i>
             <strong>Консультация по ПЯВУ</strong>
-            <span>ауд. ХХХХ</span>
-            <span>неизвестно</span>
             <span>Доронина А. А.</span>
         </div>
     </div>
