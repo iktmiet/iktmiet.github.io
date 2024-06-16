@@ -37,7 +37,7 @@ DENOMINATOR_SCHEDULE = `
     <!-- 19 ИЮНЯ -->
     <a id="19a"></a>
     <div class="day-block">
-        <div class="day-title" style="background:var(--lab)">
+        <div class="day-title">
             <span>19 ИЮНЯ | СРЕДА</span>
         </div>
         <!-- ПАРА 1 -->
@@ -58,7 +58,7 @@ DENOMINATOR_SCHEDULE = `
 <!-- 21 ИЮНЯ -->
     <a id="21"></a>
     <div class="day-block">
-        <div class="weekend-title" style="background:var(--lab)">21 ИЮНЯ | ПЯТНИЦА</div>
+        <div class="day-title">21 ИЮНЯ | ПЯТНИЦА</div>
         <!-- ПАРА 1 -->
         <div class="class-item lab">
             <i class="material-icons time-icon">book</i>
@@ -106,7 +106,7 @@ DENOMINATOR_SCHEDULE = `
 <!-- 25 ИЮНЯ -->
     <a id="25"></a>
     <div class="day-block">
-        <div class="day-title" style="background:var(--seminar);color:black;">25 ИЮНЯ | ВТОРНИК</div>
+        <div class="day-title">25 ИЮНЯ | ВТОРНИК</div>
         <!-- ПАРА 1 -->
         <div class="class-item seminar">
             <i class="material-icons time-icon">translate</i>
@@ -120,7 +120,7 @@ DENOMINATOR_SCHEDULE = `
 <!-- 26 ИЮНЯ -->
     <a id="26"></a>
     <div class="day-block">
-        <div class="weekend-title" style="background:var(--lab)">26 ИЮНЯ | СРЕДА</div>
+        <div class="day-title">26 ИЮНЯ | СРЕДА</div>
         <!-- ПАРА 1 -->
         <div class="class-item lab">
             <i class="material-icons time-icon">laptop_windows</i>
