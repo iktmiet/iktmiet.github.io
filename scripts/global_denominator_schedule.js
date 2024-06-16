@@ -8,7 +8,7 @@ DENOMINATOR_SCHEDULE = `
         <div class="class-item practice">
             <i class="material-symbols-outlined time-icon">hub</i>
             <strong>Консультация по физике</strong>
-            <span>ауд. ХХХХ</span> <!-- Аудитория -->
+            <span>ауд. 1202</span> <!-- Аудитория -->
             <span>15:00</span> <!-- Время -->
         </div>
     </div>
@@ -29,7 +29,7 @@ DENOMINATOR_SCHEDULE = `
         <div class="class-item lecture">
             <i class="material-symbols-outlined time-icon">hub</i>
             <strong>Экзамен по физике</strong>
-            <span>ауд. ХХХХ</span> <!-- Аудитория -->
+            <span>ауд. 1202</span> <!-- Аудитория -->
             <span>09:00</span> <!-- Время -->
         </div>
     </div>
@@ -77,7 +77,7 @@ DENOMINATOR_SCHEDULE = `
     <div class="class-item practice">
         <i class="material-symbols-outlined time-icon">functions</i>
         <strong>Консультация по мат. анализу</strong>
-        <span>ауд. ХХХХ</span> <!-- Аудитория -->
+        <span>ауд. 3230</span> <!-- Аудитория -->
         <span>15:00</span> <!-- Время -->
     </div>
 </div>
@@ -98,7 +98,7 @@ DENOMINATOR_SCHEDULE = `
     <div class="class-item lecture">
         <i class="material-symbols-outlined time-icon">functions</i>
         <strong>Экзамен по мат. анализу</strong>
-        <span>ауд. ХХХХ</span> <!-- Аудитория -->
+        <span>ауд. 3230</span> <!-- Аудитория -->
         <span>09:00</span> <!-- Время -->
     </div>
 </div>
