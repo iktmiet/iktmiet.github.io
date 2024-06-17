@@ -2,8 +2,8 @@ DENOMINATOR_SCHEDULE = `
 <!-- 17 ИЮНЯ -->
     <a id="17"></a>
     <div class="day-block">
-        <div class="day-title" style="background:var(--practice)">
-            <span style="color:#000;">17 ИЮНЯ | ПОНЕДЕЛЬНИК</span>
+        <div class="day-title">
+            <span>17 ИЮНЯ | ПОНЕДЕЛЬНИК</span>
         </div>
         <div class="class-item practice">
             <i class="material-symbols-outlined time-icon">hub</i>
