@@ -43,7 +43,9 @@ DENOMINATOR_SCHEDULE = `
         <!-- ПАРА 1 -->
         <div class="class-item lab">
             <i class="material-icons time-icon">laptop_windows</i>
-            <strong>Консультация по ПЯВУ</strong>
+            <strong>Лабы по Си (досдачи)</strong>
+            <span>14:00 - 16:50</span>
+            <span>ауд. 3112</span>
             <span>Доронина А. А.</span>
         </div>
     </div>
@@ -65,6 +67,14 @@ DENOMINATOR_SCHEDULE = `
             <strong>Пересдача (История РФ)</strong>
             <span>10:00 - 13:00</span>
             <span>Лутошкин С. А.</span>
+        </div>
+
+        <div class="class-item lab">
+            <i class="material-icons time-icon">laptop_windows</i>
+            <strong>Лабы по Си (досдачи)</strong>
+            <span>14:00 - 16:50</span>
+            <span>ауд. 3112</span>
+            <span>Доронина А. А.</span>
         </div>
     </div>
 
@@ -120,13 +130,8 @@ DENOMINATOR_SCHEDULE = `
 <!-- 26 ИЮНЯ -->
     <a id="26"></a>
     <div class="day-block">
-        <div class="day-title">26 ИЮНЯ | СРЕДА</div>
-        <!-- ПАРА 1 -->
-        <div class="class-item lab">
-            <i class="material-icons time-icon">laptop_windows</i>
-            <strong>Консультация по ПЯВУ</strong>
-            <span>Доронина А. А.</span>
-        </div>
+        <div class="weekend-title">26 ИЮНЯ | СРЕДА</div>
+    <div class="class-item lecture">В этот день ничего нет.</div>
     </div>
 	
 <!-- 27 ИЮНЯ -->
@@ -139,15 +144,25 @@ DENOMINATOR_SCHEDULE = `
 <!-- 28 ИЮНЯ -->
     <a id="28"></a>
     <div class="day-block">
-        <div class="weekend-title">28 ИЮНЯ | ПЯТНИЦА</div>
-        <div class="class-item lecture">В этот день ничего нет.</div>
+        <div class="day-title">28 ИЮНЯ | ПЯТНИЦА</div>
+        <div class="class-item lab">
+            <i class="material-symbols-outlined time-icon">hub</i>
+            <strong>Пересдача по физике</strong>
+            <span>ауд. 1202</span> <!-- Аудитория -->
+            <span>с 10:00</span> <!-- Время -->
+        </div>
     </div>
 	
 <!-- 29 ИЮНЯ -->
     <a id="29"></a>
     <div class="day-block">
-        <div class="weekend-title">29 ИЮНЯ | СУББОТА</div>
-        <div class="class-item lecture">В этот день ничего нет.</div>
+        <div class="day-title">29 ИЮНЯ | СУББОТА</div>
+        <div class="class-item lab">
+            <i class="material-symbols-outlined time-icon">hub</i>
+            <strong>Пересдача по физике</strong>
+            <span>ауд. 1202</span> <!-- Аудитория -->
+            <span>с 10:00</span> <!-- Время -->
+        </div>
     </div>
 	
 <!-- 30 ИЮНЯ -->
