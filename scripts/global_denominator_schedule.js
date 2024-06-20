@@ -23,7 +23,7 @@ DENOMINATOR_SCHEDULE = `
     <!-- 19 ИЮНЯ -->
     <a id="19"></a>
     <div class="day-block">
-        <div class="day-title" style="background:#2daa00;">
+        <div class="day-title">
             <span>19 ИЮНЯ | СРЕДА</span>
         </div>
         <div class="class-item lecture">
