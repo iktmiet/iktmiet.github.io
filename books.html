@@ -1,0 +1,225 @@
+<!DOCTYPE html> 
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <!-- ШРИФТЫ -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">  
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <title>Учебники | ИКТ МИЭТ</title>
+    
+        <!-- PWA -->
+        <link rel="manifest" href="manifest.json">
+        <link rel="import" href="meta.html">
+
+        <!-- СТИЛИ -->
+        <link rel="stylesheet" href="styles/main.css" />
+        <link rel="stylesheet" href="styles/blocks.css" />
+        <link rel="stylesheet" href="styles/legend.css" />
+        <link rel="stylesheet" href="styles/schedule.css" />
+    
+        <!-- ИКОНКА -->
+        <link rel="icon" type="image/x-icon" href="./icons/logo.ico">
+    </head>
+    </head>
+
+    <body>
+        <header>
+            <h1>Учебники</h1>
+            <div>
+                <button id="returnBtn" style="margin-bottom: 20px;" class="additional-button" onclick="returnToBase()">
+                    На главную
+                </button>
+            </div>
+        </header>
+
+        <!-- init -->
+        <script src="scripts/global_var.js"></script>
+        <script src="scripts/global_url.js"></script>
+
+        <!-- ЛЕГЕНДА -->
+        <!-- О БОГИНЕ МЕЧЕЙ-->
+
+        <p style="padding-left: 15px;">Условные обозначения:</p>
+        <div class='my-legend'>
+            <div class='legend-scale'>
+                <ul class='legend-labels'>
+                    <li><span style='background:var(--lecture);'></span>Учебник</li>
+                </ul>
+                <ul class='legend-labels'>
+                    <li><span style='background:var(--seminar);'></span>Задачник / пособие</li>
+                </ul>
+                <ul class='legend-labels'>
+                    <li><span style='background:var(--lab);'></span>Доп. материалы</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="id-container">
+
+            <!---------------------------------------->
+            <div class="id-block">
+                <div class="id-title" style="color:var(--lecture);">Электронная библиотека</div>
+                
+                <div class="id-item" style="padding:19px;">
+                    <span>Электроных версий учебников пока нет. Возвращайтесь позже.</span>
+                    <i class="material-symbols-outlined time-icon" style="color: rgb(255, 111, 0)">info</i>
+                </div>
+            </div>
+
+            <!---------------------------------------->
+            <!-- МАТЕМАТИЧЕСКИЙ АНАЛИЗ / ЗАД. ТОМ 2 -->
+            <!--
+
+            <div class="id-block">
+                <div class="id-title" style="color:var(--seminar);">Математический анализ</div>
+
+                <div class="id-item" style="padding:15px;">
+                    <i class="material-symbols-outlined time-icon" style="color:var(--seminar);">functions</i>
+                    <span>Сборник задач по математике</span>
+                    <span>Том 2</span>
+                </div>
+                
+                <div class="id-item">
+                    <button id="linkDiff-btn" onClick="openBook(linkMathBook)">Открыть</button>
+                </div>
+            </div>
+
+
+            <div class="id-block">
+                <div class="id-title" style="color:var(--seminar);">Ряды: теория и практика</div>
+
+                <div class="id-item" style="padding:15px;">
+                    <i class="material-symbols-outlined time-icon" style="color:var(--seminar);">functions</i>
+                    <span>Учебно-методическое пособие</span>
+                </div>
+                
+                <div class="id-item">
+                    <button id="linkDiff-btn" onClick="openBook(booksURL.MATH_PWRQUE)">Открыть</button>
+                </div>
+            </div>
+
+
+            <div class="id-block">
+                <div class="id-title" style="color:var(--lecture);">Курс общей физики</div>
+
+                <div class="id-item" style="padding:15px;">
+                    <i class="material-symbols-outlined time-icon" style="color:var(--lecture);">hub</i>
+                    <span>И. В. Савельев</span>
+                    <span>Учебник</span>
+                    <span>Том 2</span>
+                </div>
+                
+                <div class="id-item">
+                    <button id="linkDiff-btn" onClick="openBook(booksURL.PHYSICS_BOOKT2)">Открыть</button>
+                </div>
+            </div>
+
+
+            <div class="id-block">
+                <div class="id-title" style="color:var(--seminar);">Электричество и магнетизм</div>
+
+                <div class="id-item" style="padding:15px;">
+                    <i class="material-symbols-outlined time-icon" style="color:var(--seminar);">hub</i>
+                    <span>И. Н. Горбатый</span>
+                    <span>Сборник вопросов</span>
+                </div>
+                
+                <div class="id-item">
+                    <button id="linkDiff-btn" onClick="openBook(booksURL.PHYSICS_QUE1)">Открыть</button>
+                </div>
+            </div>
+
+
+            <div class="id-block">
+                <div class="id-title" style="color:var(--seminar);">Электричество и магнетизм</div>
+
+                <div class="id-item" style="padding:15px;">
+                    <i class="material-symbols-outlined time-icon" style="color:var(--seminar);">hub</i>
+                    <span>Г. Н. Гайдуков</span>
+                    <span>Пособие для СР</span>
+                </div>
+                
+                <div class="id-item">
+                    <button id="linkDiff-btn" onClick="openBook(booksURL.PHYSICS_POSSR)">Открыть</button>
+                </div>
+            </div>
+
+
+            <div class="id-block">
+                <div class="id-title" style="color:var(--lab);">Лабараторные работы по физике</div>
+
+                <div class="id-item" style="padding:15px;">
+                    <i class="material-symbols-outlined time-icon" style="color:var(--lab);">hub</i>
+                    <span>Электричество и магнетизм</span>
+                </div>
+                
+                <div class="id-item">
+                    <button id="linkDiff-btn" onClick="openBook(linkPhysicsLabs)">Открыть</button>
+                </div>
+            </div>
+
+            <div class="id-block">
+                <div class="id-title" style="color:var(--lab);">Математический анализ</div>
+
+                <div class="id-item" style="padding:15px;">
+                    <i class="material-symbols-outlined time-icon" style="color:var(--lab);">functions</i>
+                    <span>Сборник видео-лекций по курсу</span>
+                </div>
+                
+                <div class="id-item">
+                    <button id="linkDiff-btn" onClick="openBook(VIDEO_MATH_LINK)">Открыть</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!---------------------------------------->
+
+        <!---------------------------------------->
+        <!--   СКРИПТ ONCLICK ACTION (BUTTON)   -->
+        <!---------------------------------------->
+
+        <script>
+            function returnToBase() {
+                window.location.href = 'index';
+            }
+
+            // Диффуры (Том 3)
+            // linkDiffBook = booksURL.mathsTh3
+
+            function openBook(link) {
+                window.open(link, '_blank');
+            }
+        </script>
+
+
+        <!---------------------------------------->
+        <!-- Текст в низу страницы -->
+        <!---------------------------------------->
+
+        <div class="footer-text" style="
+        padding-bottom: 20px;     
+        text-align: left;
+        padding-left: 20px;
+        margin-top: 10px;
+        font-size: 10px;
+        opacity: 0.5;"
+        >
+            БАЗА ИКТ-21 | МИЭТ 2024-2025
+            <br/>
+            <div class="alpha50"><div id="lastUpdate"></div></div>
+            <br />
+            <br />
+            <div id="version">Версия 3.X.X (...) | dev: @eagalts</div>
+
+            <script>
+                document.getElementById('lastUpdate').innerHTML = `ПОСЛЕДНЕЕ ОБНОВЛЕНИЕ: ${appInfo.lastUpdate}`;
+                document.getElementById('version').innerHTML = `ver: ${appInfo.version} | dev: @eagalts`;
+            </script>
+        </div>
+    </body>
+</html>

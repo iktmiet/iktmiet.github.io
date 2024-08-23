@@ -1,85 +1,235 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ИКТ МИЭТ | Конец 2 семестра</title>
-    
-    <!-- ШРИФТЫ -->
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <!-- ШРИФТЫ -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">  
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0 />
-    
-    <!-- PWA -->
-    <link rel="manifest" href="manifest.json">
-    <link rel="import" href="meta.html">
-
-    <!-- СТИЛИ -->
-        <link rel="stylesheet" href="styles/main.css" />
-        <style>
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        #update-info {
-            background-color: #007bff;
-            padding: 20px;
-            margin-left: 50px;
-            border-radius: 18px;
-            font-size: 18px;
-    		font-family: 'Nunito', sans-serif;
-            font-weight: 800;
-        }
-
-        #wish {
-            text-align: center;
-            font-family: 'Manrope', sans-serif;
-        }
-
-        #icon {
-            font-size: 50px;
-        }
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
         
-        header {
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            right: 0px;
-            height: 10%;
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <title>ИКТ-21 МИЭТ</title>
+    
+        <!-- PWA -->
+        <link rel="manifest" href="manifest.json">
+        <link rel="import" href="meta.html">
+
+        <!-- СТИЛИ -->
+        <link rel="stylesheet" href="styles/main.css" />
+        <link rel="stylesheet" href="styles/modalWindow.css" />
+        <link rel="stylesheet" href="styles/legend.css" />
+        <link rel="stylesheet" href="styles/stories.css" />
+        <link rel="stylesheet" href="styles/schedule.css" />
+        <link rel="stylesheet" href="styles/blocks.css" />
+
+        <!-- СКРИПТЫ -->
+        <script src="scripts/stories.js"></script>
+        <script src="scripts/modal_window.js"></script>
+        <script src="scripts/global_stories.js"></script>
+        <script src="scripts/getRandomJoke.js"></script>
+        <script src="scripts/getCurrentWeek.js"></script>
+        <script src="scripts/changeSchedule.js"></script>
+        <script src="scripts/goToCurrentDay.js"></script>
+
+        <script src="scripts/global_numerator_schedule.js"></script>
+        <script src="scripts/global_denominator_schedule.js"></script>
+
+        <!-- ИКОНКА -->
+        <link rel="icon"          type="image/x-icon" href="./icons/logo.ico">
+        <link rel="shortcut icon" type="image/x-icon" href="./icons/logo.ico">
+    </head>
+
+    <body>
+        <!-- Запуск приветственного окна при первом запуске приложения -->
+        <script>
+            // Проверяем, была ли страница уже открыта
+            var isNotFirstVisit = localStorage.getItem('isNotFirstVisit');
+
+            if (!isNotFirstVisit) {
+                // Если это первое посещение, переадресовываем
+                window.location.href = 'welcome';
+                // Устанавливаем флаг о том, что страница была открыта
+                localStorage.setItem('isNotFirstVisit', 'true');
+            }
+        </script>
+
+        <!-- ----------------- -->
+
+        <!--      .HEADER      -->
+
+        <!-- ----------------- -->
+
+        <header>
+            <h1>Расписание</h1>
+
+            <!-- Кнопки (верхний блок) -->
+
+            <div class="button-container">
+                <button style="margin-right:5px" id="numeratorBtn" class="active-button" onclick="changeSchedule('numerator')">
+                    Числитель
+                    <span id="numeratorCircle" class="num-notification"></span>
+                </button>
+
+                <button style="margin-left: 5px;" id="denominatorBtn" class="inactive-button" onclick="changeSchedule('denominator')">
+                    Знаменатель
+                    <span id="denominatorCircle" class="den-notification"></span>
+                </button>
+            </div>
+
+            <!-- РАЗДЕЛИТЕЛЬ -->
+
+            <br />
+
+            <!-- Кнопки (нижний блок) -->
+
+            <button id="booksBtn" style="margin-right: 5px; margin-bottom: 20px;" class="additional-button" onclick="redirectToBooksPage()">
+                📚
+                <script>
+                    function redirectToBooksPage() {
+                        window.location.href = 'books';
+                    }
+                </script>
+            </button>
+
+            <button id="linksBtn" style="margin-right: 5px; margin-bottom: 20px;" class="additional-button" onclick="redirectToLinksPage()">
+                🔗
+                <script>
+                    function redirectToLinksPage() {
+                        window.location.href = 'links';
+                    }
+                </script>
+            </button>
+
+            <button 
+                id="todayBtn" 
+                style="margin-right: 5px; margin-bottom: 20px;" 
+                class="additional-button" 
+                onclick="goToCurrentDay();"
+            >
+                Сегодня
+            </button>
+
+        </header>
+
+        
+        <!-- ----------------- -->
+        <!--    ТЕК. НЕДЕЛЯ    -->
+        <!-- ----------------- -->
+
+        <div class="day-block" style="width: auto; padding: 15px;">
+            <div class='my-legend'>
+                <div class='legend-scale'>
+                    <b id="weekLegend">Определение недели... Обождите...</b>
+                </div>
+            </div>
+        </div>
+
+        <!-- ----------------- -->
+        <!--   ОТОБР. ЛЕГЕНДЫ  -->
+        <!-- ----------------- -->
+
+        <div class="day-block" style="width: auto; padding: 15px 5px;">
+            <div class='my-legend'>
+                <div class='legend-scale'>
+                    <ul class='legend-labels'>
+                        <li><span style='background:var(--lecture);'></span>Лекция</li>
+                        <li><span style='background:var(--seminar);'></span>Семинар</li>
+                        <li><span style='background:var(--lab);'></span>Лабораторная</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- -------------- -->
+        <!--   РАСПИСАНИЕ   -->
+        <!-- -------------- -->
+
+        <!--    ЧИСЛИТЕЛЬ   -->
+        <script> var numeratorSchedule = NUMERATOR_SCHEDULE; </script>
+        <!--   ЗНАМЕНАТЕЛЬ  -->
+        <script> var denominatorSchedule = DENOMINATOR_SCHEDULE; </script>
+
+        <!-- ----------------- -->
+        <!--     СКРИПТ ДЛЯ    -->
+        <!--     ОПРЕДЕЛЕНИЯ   -->
+        <!--   ТЕКУЩЕЙ НЕДЕЛИ  -->
+        <!-- ----------------- -->
+
+        <script> document.addEventListener("DOMContentLoaded", function() {getCurrentWeek();}); </script>
+        
+        <!-- ----------------- -->
+
+        <!--  БЛОК РАСПИСАНИЯ  -->
+
+        <!-- ----------------- -->
+
+        <main class="schedule-container">
+            <!-- ----------------- -->
+            <!--     ИНФОРМАЦИЯ    -->
+            <!-- ----------------- -->
+            <script>
+                checkViews('pwaStory')
+            </script>
             
-            display: grid;
-            grid-template-columns: auto 1fr;
-  			justify-content: space-between;
-  			align-items: center;
-        }
-    </style>
+            <div class="stories-block">
+                <div 
+                    class="story unviewed" 
+                    onclick="openStoriesPage('Stories')" 
+                    data-story-id="Stories"
+                    style="background: linear-gradient(45deg, #a9c2f7, #a1fdc4);"
+                >
+                    <i class="material-symbols-outlined time-icon" style="font-size: 36px; color: black;">kid_star</i>
+                </div>
+            </div>
+        
+            <!-- ----------------- -->
+            <!--     РАСПИСАНИЕ    -->
+            <!--     НА НЕДЕЛЮ     -->
+            <!-- ----------------- -->
 
-    <!-- СКРИПТЫ -->
-    <script src="scripts/stories.js"></script>
-    <script src="scripts/global_stories.js"></script>
+            <div id="scheduleContainer" class="schedule-container"></div>
+        </main>
 
-    <!-- ИКОНКА -->
-    <link rel="icon"          type="image/x-icon" href="./icons/logo.ico">
-    <link rel="shortcut icon" type="image/x-icon" href="./icons/logo.ico">
-</head>
 
-<body>
-	<header>
-        <div id="icon">🎉</div>
-        <div id="update-info">Конец II семестра</div>
-    </header>
+        <!-------------------------->
 
-    <div id="wish">
-        <h1>Поздравляем с концом сессии!</h1>
-        <p><b>База будет закрыта на всё лето и вернётся в третьем семестре.</b><br/>
-		   Важная информация при необходимости будет публиковаться здесь.</p>
-    </div>
+        <!--       АНЕКДОТЫ       -->
 
-</body>
+        <!-------------------------->
+
+        <div class="schedule-container">
+            <div class="day-block" style="background-color: #212121;">
+                <div class="day-title" style="background-color: #2a2a2a;">АНЕКДОТ ДНЯ</div>
+                <div class="class-item practice">
+                    <div id="anekdotText">
+                        Ищем для вас самый смешной анекдот дня...
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // Загрузка случайного анекдота при загрузке страницы
+            window.addEventListener('load', loadRandomAnekdot);
+        </script>
+
+        <!-- Текст в низу страницы -->
+
+        <footer style="padding-bottom: 20px;">
+            БАЗА ИКТ-21 | МИЭТ 2024-2025
+            <br>
+            <div class="alpha50"><div id="lastUpdate">ПОСЛЕДНЕЕ ОБНОВЛЕНИЕ: 01.09.2024</div></div>
+            <br>
+            <br>
+            <div id="version">ver: 3.0.0 | dev: @eagalts</div>
+
+            <script src="scripts/global_var.js"></script>
+            <script>
+                document.getElementById('lastUpdate').innerHTML = `ПОСЛЕДНЕЕ ОБНОВЛЕНИЕ: ${appInfo.lastUpdate}`;
+                document.getElementById('version').innerHTML = `ver: ${appInfo.version} | dev: @eagalts`;
+            </script>
+        </footer>
+    </body>
 </html>

@@ -1,0 +1,51 @@
+span {
+    padding-right: 15px;
+}
+
+.id-container {
+    display: flex;
+    flex-wrap: wrap; /* Перенос на новую строку */
+    justify-content: space-between; /* Равномерное распределение блоков по контейнеру */
+}
+
+.id-block {
+    flex-grow: 1; /* Расширение блока для заполнения пустых пространств */
+
+    margin-bottom: 20px;
+    margin: 10px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #333333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.id-title {
+    padding: 18px; padding-bottom: 18px;
+    background-color: #333333;
+    font-weight: 600;
+
+    font-size: 20px; /* Размер шрифта заголовка */
+    margin-bottom: 0; /* Убран отступ снизу */
+
+    border-bottom: 1px solid #ffffff;
+
+    display: flex;
+    justify-content: space-between; /* Равномерное распределение блоков по контейнеру */
+
+    font-family: 'fugue', sans-serif;
+}
+
+.id-title span {
+padding-left: 10px;
+}
+
+.id-item {
+    display: flex;
+    justify-content: space-between; /* Равномерное распределение между элементами */
+    align-items: center; /* Центрирование вертикально */
+    padding: 0%;
+    padding-top: 20px;
+    padding-left: 10px;
+    border-bottom: 1px solid #555555;
+}
+

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap">
+        <meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, user-scalable=no">
+
+        <title>ИКТ МИЭТ</title>
+    
+        <!-- PWA -->
+        <link rel="manifest" href="manifest.json">
+        <link rel="import" href="meta.html">
+
+        <!-- СТИЛИ -->
+        <link rel="stylesheet" href="styles/stories.css" />
+        <link rel="stylesheet" href="styles/welcomeScreen.css" />
+
+        <!-- ИКОНКА -->
+        <link rel="icon" type="image/x-icon" href="./icons/logo.ico">
+
+        <!-- СКРИПТЫ -->
+        <script src="scripts/stories.js"></script>
+        <script src="scripts/global_stories.js"></script>
+        <script src="scripts/welcome_screen.js"></script>
+    </head>
+    <body>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const urlParams = new URLSearchParams(window.location.search);
+                const story = urlParams.get('story');
+                if (story) {
+                    storiesLoad(story, window)
+                }
+            });
+
+            window.onload = function() {
+                if (!story) {
+                    window.location.replace("index");
+                }
+            };
+        </script>
+
+        <div class="slide-indicator">
+            <!-- Индикаторы слайдов -->
+            <div class="indicator-dot active" onclick="goToSlide(0)"></div>
+            <div class="indicator-dot" onclick="goToSlide(1)"></div>
+            <div class="indicator-dot" onclick="goToSlide(2)"></div>
+            <div class="indicator-dot" onclick="goToSlide(3)"></div>
+            <div class="indicator-dot" onclick="goToSlide(4)"></div>
+        </div>
+
+        <div class="slide-container">
+            <!-- Слайд 1 -->
+            <div class="slide">
+                <img src="" id="img_current1">
+                <div class="slide-text">
+                    <p id="slide1">Загрузка...</p>
+                </div>
+            </div>
+
+            <!-- Слайд 2 -->
+            <div class="slide">
+                <img src="" id="img_current2">
+                <div class="slide-text">
+                    <p id="slide2">Загрузка...</p>
+                </div>
+            </div>
+
+            <!-- Слайд 3 -->
+            <div class="slide">
+                <img src="" id="img_current3">
+                <div class="slide-text">
+                    <p id="slide3">Загрузка...</p>
+                </div>
+            </div>
+
+            <!-- Слайд 4 -->
+            <div class="slide">
+                <img src="" id="img_current4">
+                <div class="slide-text">
+                    <p id="slide4">Загрузка...</p>
+                </div>
+            </div>
+
+            <!-- Слайд 5 -->
+            <div class="slide">
+                <img src="" id="img_current5">
+                <div class="slide-text">
+                    <p id="slide5">Загрузка...</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-buttons">
+            <div class="nav-button" onclick="prevSlide()">&#10094;</div>
+            <div class="nav-button" onclick="nextSlide()">&#10095;</div>
+        </div>
+
+        <button class="footer-button" onclick="redirectToBase()">Закрыть</button>
+
+        <script src="scripts/welcome_screen.js"></script>
+    </body>
+</html>

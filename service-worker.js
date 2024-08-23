@@ -12,7 +12,12 @@ if ('serviceWorker' in navigator) {
     event.waitUntil(
       caches.open('offline-cache').then(function(cache) {
         return cache.addAll([
-            'index.html'
+            'index.html',
+            'books.html',
+            'links.html',
+             'meta.html',
+          'stories.html',
+          'welcome.html'
         ]);
       })
     );
