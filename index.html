@@ -59,18 +59,8 @@
         <!--      .HEADER      -->
 
         <!-- ----------------- -->
-
-        <header style = "
-            header {
-                text-align: left;
-                padding: 10px;
-                padding-left: 30px;
-                background-color: #333333;
-
-                margin: 10px;
-                border-radius: 20px;
-            }"
-        >
+         
+        <header class="main-header">
             <h1>Расписание</h1>
 
             <!-- Кнопки (верхний блок) -->
@@ -227,14 +217,7 @@
 
         <!-- Текст в низу страницы -->
 
-        <div class="footer-text" style="
-            padding-bottom: 20px;     
-            text-align: left;
-            padding-left: 20px;
-            margin-top: 10px;
-            font-size: 10px;
-            opacity: 0.5;"
-        >
+        <div class="footer-text">
             БАЗА ИКТ-21 | МИЭТ 2024-2025
             <br/>
             <div class="alpha50"><div id="lastUpdate"></div></div>
@@ -242,6 +225,7 @@
             <br />
             <div id="version">Версия 3.X.X (...) | dev: @eagalts</div>
 
+            <script src="scripts/global_var.js"></script>
             <script>
                 document.getElementById('lastUpdate').innerHTML = `ПОСЛЕДНЕЕ ОБНОВЛЕНИЕ: ${appInfo.lastUpdate}`;
                 document.getElementById('version').innerHTML = `ver: ${appInfo.version} | dev: @eagalts`;

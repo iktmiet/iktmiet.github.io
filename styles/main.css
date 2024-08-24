@@ -1,4 +1,4 @@
-header {
+.main-header {
     text-align: left;
     padding: 10px;
     padding-left: 30px;
@@ -34,6 +34,15 @@ button {
 }
 
 footer {
+    text-align: left;
+    padding-left: 20px;
+    margin-top: 10px;
+    font-size: 10px;
+    opacity: 0.5;
+}
+
+.footer-text {
+    padding-bottom: 20px;     
     text-align: left;
     padding-left: 20px;
     margin-top: 10px;
@@ -101,8 +110,8 @@ footer {
 
 
 .num-notification {
-    width: 12px;
-    height: 12px;
+    /*width: 12px;*/
+    height: 15px;
     background-color: #00c825;
     position: absolute;
     border-radius: 50%;
@@ -113,8 +122,8 @@ footer {
 }
 
 .den-notification {
-    width: 12px;
-    height: 12px;
+    /*width: 12px;*/
+    height: 15px;
     background-color: #00c825;
     position: absolute;
     border-radius: 50%;

@@ -192,7 +192,7 @@ DENOMINATOR_SCHEDULE = `
 <div class="day-block">
     <div class="day-title">
         <span>ЧЕТВЕРГ</span>
-        <div style="font-weight: 50;opacity:50%;">5 ПАР</div>
+        <div style="font-weight: 50;opacity:50%;">3/5 ПАР</div>
     </div>
 
     <!-- ПАРА 1 -->
@@ -247,7 +247,7 @@ DENOMINATOR_SCHEDULE = `
     <div class="class-item lab">
         <strong class="num-block" style="color: #70ff38;">4 - 5</strong>
         <i class="material-symbols-outlined time-icon">bolt</i>
-        <strong>Теория электрических цепей</strong>
+        <strong>Теория эл. цепей</strong>
         <div class="indayblockdiv">
             <strong>Знаменатель-2</strong>
             <span>ауд. 3202</span>
