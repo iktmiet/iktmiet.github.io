@@ -10,13 +10,15 @@
     "orientation": "any",
     "icons": [
       {
-        "src": "https://iktmiet.github.io/icons/Icon-maskable-192.png",
+        "purpose": "maskable",
         "sizes": "192x192",
+        "src": "https://iktmiet.github.io/icons/Icon-maskable-192.png",
         "type": "image/png"
       },
       {
-        "src": "https://iktmiet.github.io/icons/Icon-maskable-512.png",
+        "purpose": "maskable",
         "sizes": "512x512",
+        "src": "https://iktmiet.github.io/icons/Icon-maskable-512.png",
         "type": "image/png"
       },
       {
