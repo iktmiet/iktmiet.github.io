@@ -143,7 +143,7 @@ NUMERATOR_SCHEDULE = `
 <div class="day-block">
     <div class="day-title">
         <span>СРЕДА</span>
-        <div style="font-weight: 50;opacity:50%;">УВЦ + 1 ПАРА</div>
+        <div style="font-weight: 50;opacity:50%;">ВУЦ + ФАКУЛЬТАТИВ</div>
     </div>
 
     <!-- ПАРА 1 -->
@@ -331,5 +331,8 @@ NUMERATOR_SCHEDULE = `
 <div class="day-block">
     <div class="weekend-title">ВОСКРЕСЕНЬЕ</div>
     <div class="class-item lecture">В этот день пар нет.</div>
+
+
+    <div id="curWeek" style="display:none;"><b>Неделя ...</b></div>
 </div>
 `;

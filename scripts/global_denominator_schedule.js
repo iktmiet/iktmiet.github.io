@@ -156,7 +156,7 @@ DENOMINATOR_SCHEDULE = `
 <div class="day-block">
     <div class="day-title">
         <span>СРЕДА</span>
-        <div style="font-weight: 50;opacity:50%;">УВЦ + 1 ПАРА</div>
+        <div style="font-weight: 50;opacity:50%;">ВУЦ + ФАКУЛЬТАТИВ</div>
     </div>
 
     <!-- ПАРА 1 -->
@@ -189,10 +189,10 @@ DENOMINATOR_SCHEDULE = `
 <!-- ЧЕТВЕРГ -->
 <a id="ThursdayLinkAnchor"></a>
 
-<div class="day-block">
+<div class="day-block" style="margin-bottom: 0px;">
     <div class="day-title">
         <span>ЧЕТВЕРГ</span>
-        <div style="font-weight: 50;opacity:50%;">3/5 ПАР</div>
+        <div style="font-weight: 50;opacity:50%;">3 ПАРЫ</div>
     </div>
 
     <!-- ПАРА 1 -->
@@ -242,6 +242,13 @@ DENOMINATOR_SCHEDULE = `
             <span>Морозова Т.</span>
         </div>
     </div>
+</div>
+
+<div class="day-block">
+    <div class="day-title">
+        <strong style="color:#ffff00">ЗНАМЕНАТЕЛЬ - [2]</strong>
+        <div style="font-weight: 50;opacity:50%;">5 ПАР</div>
+    </div>
 
     <!-- ПАРА 4-5 -->
     <div class="class-item lab">
@@ -249,14 +256,12 @@ DENOMINATOR_SCHEDULE = `
         <i class="material-symbols-outlined time-icon">bolt</i>
         <strong>Теория эл. цепей</strong>
         <div class="indayblockdiv">
-            <strong>Знаменатель-2</strong>
             <span>ауд. 3202</span>
             <span>14:00 - 16:50</span>
             <span>Устинов Ю.</span>
         </div>
     </div>
 </div>
-
 
 
 
