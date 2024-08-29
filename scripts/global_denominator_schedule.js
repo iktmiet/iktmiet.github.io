@@ -189,7 +189,7 @@ DENOMINATOR_SCHEDULE = `
 <!-- ЧЕТВЕРГ -->
 <a id="ThursdayLinkAnchor"></a>
 
-<div class="day-block" style="margin-bottom: 0px;">
+<div class="day-block" >
     <div class="day-title">
         <span>ЧЕТВЕРГ</span>
         <div style="font-weight: 50;opacity:50%;">3 ПАРЫ</div>
@@ -242,9 +242,7 @@ DENOMINATOR_SCHEDULE = `
             <span>Морозова Т.</span>
         </div>
     </div>
-</div>
 
-<div class="day-block">
     <div class="day-title">
         <strong style="color:#ffff00">ЗНАМЕНАТЕЛЬ - [2]</strong>
         <div style="font-weight: 50;opacity:50%;">5 ПАР</div>
