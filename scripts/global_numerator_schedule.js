@@ -34,6 +34,20 @@ NUMERATOR_SCHEDULE = `
     </div>
 
 
+
+    <!-- ПЕРЕМЕНА -->
+    <div class="break-item">
+        <strong class="num-block" style="color: #ffffff;">
+            <i class="material-symbols-outlined time-icon" style="vertical-align: middle;">schedule</i>
+        </strong>
+
+        <div>
+            <b>Большой перерыв</b>
+            <br>11:50 - 12:30
+        </div>
+    </div>
+
+
     <!-- ПАРА 3 -->
     <div class="class-item lecture">
         <strong class="num-block" style="color: #ffffff;">3</strong>
@@ -41,14 +55,14 @@ NUMERATOR_SCHEDULE = `
         <strong>Теория электрических цепей</strong>
         <div class="indayblockdiv">
             <span>ауд. 1205 (м)</span>
-            <span>12:00 - 13:20</span>
+            <span>12:30 - 13:50</span>
             <span>Самохин В.</span>
         </div>
     </div>
 
 
     <!-- ПАРА 4 -->
-    <div class="class-item lab">
+    <div class="class-item seminar">
         <strong class="num-block" style="color: #ffffff;">4</strong>
         <i class="material-symbols-outlined time-icon">schema</i>
         <strong>Дискретная математика</strong>
@@ -253,6 +267,22 @@ NUMERATOR_SCHEDULE = `
     <div class="day-title">
         <span>ПЯТНИЦА</span>
         <div style="font-weight: 50;opacity:50%;">3 ПАРЫ</div>
+    </div>
+
+    <!-- ДИСТАНТ -->
+    <div class="break-item">
+        <strong class="num-block" style="color: #FF9900;">
+            <i class="material-symbols-outlined time-icon" style="vertical-align: middle;">info</i>
+        </strong>
+
+        <div>
+            <b>6 сентября учимся дистанционно.</b>
+
+            <br>
+            <br>
+            
+            <button onclick="openAboutLink()">Подробнее...</button>
+        </div>
     </div>
 
     <!-- ПАРА 1 -->

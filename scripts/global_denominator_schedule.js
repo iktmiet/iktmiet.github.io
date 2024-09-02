@@ -34,6 +34,20 @@ DENOMINATOR_SCHEDULE = `
     </div>
 
 
+
+    <!-- ПЕРЕМЕНА -->
+    <div class="break-item">
+        <strong class="num-block" style="color: #ffffff;">
+            <i class="material-symbols-outlined time-icon" style="vertical-align: middle;">schedule</i>
+        </strong>
+
+        <div>
+            <b>Большой перерыв</b>
+            <br>11:50 - 12:30
+        </div>
+    </div>
+
+
     <!-- ПАРА 3 -->
     <div class="class-item lecture">
         <strong class="num-block" style="color: #ffffff;">3</strong>
@@ -41,7 +55,7 @@ DENOMINATOR_SCHEDULE = `
         <strong>Теория электрических цепей</strong>
         <div class="indayblockdiv">
             <span>ауд. 1205 (м)</span>
-            <span>12:00 - 13:20</span>
+            <span>12:30 - 13:50</span>
             <span>Самохин В.</span>
         </div>
     </div>
