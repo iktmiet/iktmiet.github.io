@@ -122,6 +122,18 @@ DENOMINATOR_SCHEDULE = `
         </div>
     </div>
 
+    <!-- ПАРА 3 -->
+    <div class="class-item lecture">
+        <strong class="num-block" style="color: #ffffff;">3</strong>
+        <i class="material-symbols-outlined time-icon">calculate</i>
+        <strong>Дискретная математика</strong>
+        <div class="indayblockdiv">
+            <span>ауд. 1205 (м)</span>
+            <span>12:00 - 13:20</span>
+            <span>Романова Е.</span>
+        </div>
+    </div>
+
     <!-- ПЕРЕМЕНА -->
     <div class="break-item">
         <strong class="num-block" style="color: #ffffff;">
@@ -130,19 +142,7 @@ DENOMINATOR_SCHEDULE = `
 
         <div>
             <b>Большой перерыв</b>
-            <br>11:50 - 12:30
-        </div>
-    </div>
-
-    <!-- ПАРА 3 -->
-    <div class="class-item lecture">
-        <strong class="num-block" style="color: #ffffff;">3</strong>
-        <i class="material-symbols-outlined time-icon">calculate</i>
-        <strong>Дискретная математика</strong>
-        <div class="indayblockdiv">
-            <span>ауд. 1205 (м)</span>
-            <span>12:30 - 13:50</span>
-            <span>Романова Е.</span>
+            <br>13:20 - 14:00
         </div>
     </div>
     
