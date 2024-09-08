@@ -337,7 +337,7 @@ DENOMINATOR_SCHEDULE = `
     -->
 
     <!-- ПАРА 4 -->
-    <div class="class-item lab">
+    <div class="class-item seminar">
         <strong class="num-block" style="color: #ffffff;">4</strong>
         <i class="material-symbols-outlined time-icon">schema</i>
         <strong>Дискретная математика</strong>

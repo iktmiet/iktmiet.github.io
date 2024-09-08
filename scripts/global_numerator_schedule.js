@@ -219,7 +219,6 @@ NUMERATOR_SCHEDULE = `
     </div>
 
     <!-- ПЕРЕМЕНА -->
-    <!--
     <div class="break-item">
         <strong class="num-block" style="color: #ffffff;">
             <i class="material-symbols-outlined time-icon" style="vertical-align: middle;">schedule</i>
@@ -230,7 +229,6 @@ NUMERATOR_SCHEDULE = `
             <br>11:50 - 12:30
         </div>
     </div>
-    -->
 
     <!-- ПАРА 3 -->
     <div class="class-item lab">
@@ -239,7 +237,7 @@ NUMERATOR_SCHEDULE = `
         <strong>Введение в специальность</strong>
         <div class="indayblockdiv">
             <span>ауд. 4231 (а)</span>
-            <span>12:00 - 13:20</span>
+            <span>12:30 - 13:50</span>
             <span>Бессонов А.</span>
         </div>
     </div>
@@ -270,6 +268,7 @@ NUMERATOR_SCHEDULE = `
     </div>
 
     <!-- ДИСТАНТ -->
+    <!--
     <div class="break-item">
         <strong class="num-block" style="color: #FF9900;">
             <i class="material-symbols-outlined time-icon" style="vertical-align: middle;">info</i>
@@ -284,6 +283,7 @@ NUMERATOR_SCHEDULE = `
             <button onclick="openAboutLink()">Подробнее...</button>
         </div>
     </div>
+    -->
 
     <!-- ПАРА 1 -->
     <div class="class-item practice">
