@@ -312,7 +312,7 @@ DENOMINATOR_SCHEDULE = `
     </div>
 
     <!-- ПАРА 3 -->
-    <div class="class-item practice">
+    <div class="class-item seminar">
         <strong class="num-block" style="color: #ffffff;">3</strong>
         <i class="material-symbols-outlined time-icon">translate</i>
         <strong>Иностранный язык</strong>

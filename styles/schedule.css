@@ -7,8 +7,8 @@
 }
 
 @font-face {
-    font-family: "fugue";
-    src: url("../fonts/fugue.ttf") format("truetype");
+    font-family: "sfpr";
+    src: url("../fonts/sfpr.otf") format("truetype");
 }
 
 @font-face {
@@ -17,8 +17,8 @@
 }
 
 @font-face {
-    font-family: "gilroy";
-    src: url("../fonts/gilroy.ttf") format("truetype");
+    font-family: "sfpr";
+    src: url("../fonts/sfpr.otf") format("truetype");
 }
 
 .lecture strong, .lecture .time-icon {
@@ -47,7 +47,7 @@
     border-radius:6px;
     padding:9px;
     margin-right: 15px;
-    font-family:'fugue', sans-serif;
+    font-family:'sfpr', sans-serif;
 }
 
 .day-title {
@@ -63,7 +63,7 @@
     display: flex;
     justify-content: space-between; /* Равномерное распределение блоков по контейнеру */
 
-    font-family: 'fugue', sans-serif;
+    font-family: 'sfpr', sans-serif;
 }
 
 .weekend-title {
@@ -79,7 +79,7 @@
     display: flex;
     justify-content: space-between; /* Равномерное распределение блоков по контейнеру */
 
-    font-family: 'fugue', sans-serif;
+    font-family: 'sfpr', sans-serif;
 }
 
 .class-item, .break-item {
@@ -95,12 +95,12 @@
 }
 
 .class-item strong {
-    font-size: 14px;
+    font-size: 15px;
     display: flex;
 
     align-items: center; /* Центрирование вертикально */
 
-    font-family: 'gilroy', sans-serif;
+    font-family: 'sfpr', sans-serif;
 }
 
 .class-item {

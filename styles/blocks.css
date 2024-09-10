@@ -32,7 +32,7 @@ span {
     display: flex;
     justify-content: space-between; /* Равномерное распределение блоков по контейнеру */
 
-    font-family: 'fugue', sans-serif;
+    font-family: 'sfpr', sans-serif;
 }
 
 .id-title span {
