@@ -135,7 +135,7 @@ NUMERATOR_SCHEDULE = `
     
 
     <!-- ПАРА 4 -->
-    <div class="class-item practice">
+    <div class="class-item seminar">
         <strong class="num-block" style="color: #ffffff;">4</strong>
         <i class="material-symbols-outlined time-icon">translate</i>
         <strong>Иностранный язык</strong>
@@ -230,26 +230,14 @@ NUMERATOR_SCHEDULE = `
         </div>
     </div>
 
-    <!-- ПАРА 3 -->
+    <!-- ПАРА 3-4 -->
     <div class="class-item lab">
-        <strong class="num-block" style="color: #ffffff;">3</strong>
+        <strong class="num-block" style="color: #ffffff;">3 - 4</strong>
         <i class="material-symbols-outlined time-icon">waving_hand</i>
         <strong>Введение в специальность</strong>
         <div class="indayblockdiv">
             <span>ауд. 4231 (а)</span>
-            <span>12:30 - 13:50</span>
-            <span>Бессонов А.</span>
-        </div>
-    </div>
-
-    <!-- ПАРА 4 -->
-    <div class="class-item lab">
-        <strong class="num-block" style="color: #ffffff;">4</strong>
-        <i class="material-symbols-outlined time-icon">waving_hand</i>
-        <strong>Введение в специальность</strong>
-        <div class="indayblockdiv">
-            <span>ауд. 4231 (а)</span>
-            <span>14:00 - 15:20</span>
+            <span>12:30 - 15:20</span>
             <span>Бессонов А.</span>
         </div>
     </div>
@@ -291,7 +279,7 @@ NUMERATOR_SCHEDULE = `
     </div>
 
     <!-- ПАРА 2 -->
-    <div class="class-item practice">
+    <div class="class-item lab">
         <strong class="num-block" style="color: #ffffff;">2</strong>
         <i class="material-symbols-outlined time-icon">architecture</i>
         <strong>Инж. и комп. графика</strong>

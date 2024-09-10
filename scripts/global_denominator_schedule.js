@@ -8,15 +8,16 @@ DENOMINATOR_SCHEDULE = `
         <div style="font-weight: 50;opacity:50%;">5 ПАР</div>
     </div>
 
+
     <!-- ПАРА 1 -->
-    <div class="class-item lecture">
+    <div class="class-item seminar">
         <strong class="num-block" style="color: #ffffff;">1</strong>
-        <i class="material-symbols-outlined time-icon">explosion</i>
-        <strong>Атомная физика, оптика</strong>
+        <i class="material-symbols-outlined time-icon">translate</i>
+        <strong>Иностранный язык</strong>
         <div class="indayblockdiv">
-            <span>ауд. 1202 (м)</span>
+            <span>ауд. 4303</span>
             <span>9:00 - 10:20</span>
-            <span>Морозова Т.</span>
+            <span>Юрченко Е.</span>
         </div>
     </div>
 
@@ -75,14 +76,14 @@ DENOMINATOR_SCHEDULE = `
 
 
     <!-- ПАРА 5 -->
-    <div class="class-item practice">
+    <div class="class-item lecture">
         <strong class="num-block" style="color: #ffffff;">5</strong>
-        <i class="material-symbols-outlined time-icon">translate</i>
-        <strong>Иностранный язык</strong>
+        <i class="material-symbols-outlined time-icon">explosion</i>
+        <strong>Атомная физика, оптика</strong>
         <div class="indayblockdiv">
-            <span>ауд. 4303</span>
+            <span>ауд. 1202 (м)</span>
             <span>15:30 - 16:50</span>
-            <span>Юрченко Е.</span>
+            <span>Морозова Т.</span>
         </div>
     </div>
 </div>
@@ -148,7 +149,7 @@ DENOMINATOR_SCHEDULE = `
     
 
     <!-- ПАРА 4-5 -->
-    <div class="class-item practice">
+    <div class="class-item lab">
         <strong class="num-block" style="color: #ffffff;">4 - 5</strong>
         <i class="material-symbols-outlined time-icon">architecture</i>
         <strong>Инж. и комп. графика</strong>
