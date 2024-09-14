@@ -195,6 +195,15 @@ DENOMINATOR_SCHEDULE = `
             <span>Муратчаев С.</span>
         </div>
     </div>
+
+    <div class="class-item lecture">
+        <button 
+            style="margin-bottom: 0px; margin-top: 0px" 
+            id="ftd" 
+            onclick="openLink('https://discord.com/invite/RCZb3J5F')">
+                Ссылка на факультатив
+        </button>
+    </div>
 </div>
 
 
@@ -233,7 +242,6 @@ DENOMINATOR_SCHEDULE = `
     </div>
 
     <!-- ПЕРЕМЕНА -->
-    <!--
     <div class="break-item">
         <strong class="num-block" style="color: #ffffff;">
             <i class="material-symbols-outlined time-icon" style="vertical-align: middle;">schedule</i>
@@ -244,7 +252,6 @@ DENOMINATOR_SCHEDULE = `
             <br>11:50 - 12:30
         </div>
     </div>
-    -->
 
     <!-- ПАРА 3 -->
     <div class="class-item lab">
@@ -253,8 +260,9 @@ DENOMINATOR_SCHEDULE = `
         <strong>Атомная физика, оптика</strong>
         <div class="indayblockdiv">
             <span>ауд. 3330</span>
-            <span>12:00 - 13:20</span>
-            <span>Морозова Т.</span>
+            <span>12:30 - 13:50</span>
+            <span>Румянцев А. В.</span>
+            <span>Корнеев В. А.</span>
         </div>
     </div>
 
@@ -311,20 +319,7 @@ DENOMINATOR_SCHEDULE = `
         </div>
     </div>
 
-    <!-- ПАРА 3 -->
-    <div class="class-item seminar">
-        <strong class="num-block" style="color: #ffffff;">3</strong>
-        <i class="material-symbols-outlined time-icon">translate</i>
-        <strong>Иностранный язык</strong>
-        <div class="indayblockdiv">
-            <span>ауд. 3107 (м)</span>
-            <span>12:00 - 13:20</span>
-            <span>Юрченко Е.</span>
-        </div>
-    </div>
-
     <!-- ПЕРЕМЕНА -->
-    <!--
     <div class="break-item">
         <strong class="num-block" style="color: #ffffff;">
             <i class="material-symbols-outlined time-icon" style="vertical-align: middle;">schedule</i>
@@ -332,10 +327,21 @@ DENOMINATOR_SCHEDULE = `
 
         <div>
             <b>Большой перерыв</b>
-            <br>13:20 - 14:00
+            <br>11:50 - 12:30
         </div>
     </div>
-    -->
+
+    <!-- ПАРА 3 -->
+    <div class="class-item seminar">
+        <strong class="num-block" style="color: #ffffff;">3</strong>
+        <i class="material-symbols-outlined time-icon">translate</i>
+        <strong>Иностранный язык</strong>
+        <div class="indayblockdiv">
+            <span>ауд. 3107 (м)</span>
+            <span>12:30 - 13:50</span>
+            <span>Юрченко Е.</span>
+        </div>
+    </div>
 
     <!-- ПАРА 4 -->
     <div class="class-item seminar">

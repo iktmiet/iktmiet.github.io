@@ -181,6 +181,15 @@ NUMERATOR_SCHEDULE = `
             <span>Муратчаев С.</span>
         </div>
     </div>
+
+    <div class="class-item lecture">
+        <button 
+            style="margin-bottom: 0px; margin-top: 0px" 
+            id="ftd" 
+            onclick="openLink('https://discord.com/invite/RCZb3J5F')">
+                Ссылка на факультатив
+        </button>
+    </div>
 </div>
 
 
