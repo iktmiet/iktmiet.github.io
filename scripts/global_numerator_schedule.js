@@ -312,7 +312,6 @@ NUMERATOR_SCHEDULE = `
     </div>
 
     <!-- ПЕРЕМЕНА -->
-    <!--
     <div class="break-item">
         <strong class="num-block" style="color: #ffffff;">
             <i class="material-symbols-outlined time-icon" style="vertical-align: middle;">schedule</i>
@@ -323,7 +322,6 @@ NUMERATOR_SCHEDULE = `
             <br>13:20 - 14:00
         </div>
     </div>
-    -->
 
     <!-- ПАРА 4 -->
     <div class="class-item seminar">
@@ -331,7 +329,7 @@ NUMERATOR_SCHEDULE = `
         <i class="material-symbols-outlined time-icon">explosion</i>
         <strong>Атомная физика, оптика</strong>
         <div class="indayblockdiv">
-            <span>ауд. 4303</span>
+            <span>ауд. 3325</span>
             <span>14:00 - 15:20</span>
             <span>Морозова Т.</span>
         </div>
