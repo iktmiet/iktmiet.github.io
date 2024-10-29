@@ -12,25 +12,18 @@ DENOMINATOR_SCHEDULE = `
     <!-- ПАРА 1 -->
     <div class="class-item seminar">
         <strong class="num-block" style="color: #ffffff;">1</strong>
-        <i class="material-symbols-outlined time-icon">translate</i>
-        <strong>Иностранный язык</strong>
-        <div class="indayblockdiv">
-            <span>ауд. 4303</span>
-            <span>9:00 - 10:20</span>
-            <span>Юрченко Е.</span>
-        </div>
     </div>
 
 
     <!-- ПАРА 2 -->
-    <div class="class-item lecture">
+    <div class="class-item seminar">
         <strong class="num-block" style="color: #ffffff;">2</strong>
-        <i class="material-symbols-outlined time-icon">architecture</i>
-        <strong>Инж. и комп. графика</strong>
+        <i class="material-symbols-outlined time-icon">translate</i>
+        <strong>Иностранный язык</strong>
         <div class="indayblockdiv">
-            <span>ауд. 1204 (м)</span>
+            <span>ауд. 4303</span>
             <span>10:30 - 11:50</span>
-            <span>Гудкова Т.</span>
+            <span>Юрченко Е.</span>
         </div>
     </div>
 
@@ -194,15 +187,6 @@ DENOMINATOR_SCHEDULE = `
             <span>18:30 - 19:50</span>
             <span>Муратчаев С.</span>
         </div>
-    </div>
-
-    <div class="class-item lecture">
-        <button 
-            style="margin-bottom: 0px; margin-top: 0px" 
-            id="ftd" 
-            onclick="openLink('https://discord.com/invite/RCZb3J5F')">
-                Ссылка на факультатив
-        </button>
     </div>
 </div>
 
