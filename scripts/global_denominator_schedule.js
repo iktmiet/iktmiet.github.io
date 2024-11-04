@@ -21,7 +21,7 @@ DENOMINATOR_SCHEDULE = `
         <i class="material-symbols-outlined time-icon">translate</i>
         <strong>Иностранный язык</strong>
         <div class="indayblockdiv">
-            <span>ауд. 4303</span>
+            <span>ауд. 4306</span>
             <span>10:30 - 11:50</span>
             <span>Юрченко Е.</span>
         </div>
