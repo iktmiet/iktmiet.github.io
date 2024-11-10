@@ -41,20 +41,6 @@
     </head>
 
     <body>
-        <!-- Запуск приветственного окна при первом запуске приложения -->
-        <script>
-            // Проверяем, была ли страница уже открыта
-            var isNotFirstVisit = localStorage.getItem('isNotFirstVisitSem3');
-
-            if (!isNotFirstVisit) {
-                // Если это первое посещение, переадресовываем
-                window.location.href = 'welcome';
-                // Устанавливаем флаг о том, что страница была открыта
-                localStorage.setItem('isNotFirstVisitSem3', 'true');
-            }
-        </script>
-
-
         <script>
             function openLink(link) {
                 window.open(link, '_blank');
@@ -202,33 +188,6 @@
 
             <div id="scheduleContainer" class="schedule-container"></div>
         </main>
-
-
-        <!-------------------------->
-
-        <!--       АНЕКДОТЫ       -->
-
-        <!-------------------------->
-
-        <!--
-
-        <div class="schedule-container">
-            <div class="day-block" style="background-color: #212121;">
-                <div class="day-title" style="background-color: #2a2a2a;">АНЕКДОТ ДНЯ</div>
-                <div class="class-item practice">
-                    <div id="anekdotText">
-                        Ищем для вас самый смешной анекдот дня...
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <script>
-            // Загрузка случайного анекдота при загрузке страницы
-            window.addEventListener('load', loadRandomAnekdot);
-        </script>
-
-        -->
 
         <!-- Текст в низу страницы -->
 
