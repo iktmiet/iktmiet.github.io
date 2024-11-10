@@ -5,7 +5,7 @@ NUMERATOR_SCHEDULE = `
 <div class="day-block">
     <div class="day-title">
         <span>ПОНЕДЕЛЬНИК</span>
-        <div style="font-weight: 50;opacity:50%;">4 ПАРЫ</div>
+        <div style="font-weight: 50;opacity:50%;">3 ПАРЫ</div>
     </div>
 
     <!-- ПАРА 1 -->
