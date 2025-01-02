@@ -25,12 +25,10 @@
 
         <!-- СКРИПТЫ -->
         <script src="scripts/stories.js"></script>
-        <script src="scripts/modal_window.js"></script>
-        <script src="scripts/global_stories.js"></script>
-        <script src="scripts/getRandomJoke.js"></script>
-        <script src="scripts/getCurrentWeek.js"></script>
-        <script src="scripts/changeSchedule.js"></script>
-        <script src="scripts/goToCurrentDay.js"></script>
+
+        <!-- СЕССИЯ -->
+        <link rel="stylesheet" href="styles/session.css" />
+        <script src="scripts/session.js"></script>
 
         <script src="scripts/global_numerator_schedule.js"></script>
         <script src="scripts/global_denominator_schedule.js"></script>
@@ -57,23 +55,9 @@
         <header class="main-header">
             <h1>Расписание</h1>
 
-            <!-- Кнопки (верхний блок) -->
-
-            <div class="button-container">
-                <button style="margin-right:5px" id="numeratorBtn" class="active-button" onclick="changeSchedule('numerator')">
-                    Числитель
-                    <span id="numeratorCircle" class="num-notification"></span>
-                </button>
-
-                <button style="margin-left: 5px;" id="denominatorBtn" class="inactive-button" onclick="changeSchedule('denominator')">
-                    Знаменатель
-                    <span id="denominatorCircle" class="den-notification"></span>
-                </button>
-            </div>
-
-            <!-- РАЗДЕЛИТЕЛЬ -->
-
-            <br />
+            <script>
+                changeSchedule('numerator')
+            </script>
 
             <!-- Кнопки (нижний блок) -->
 
@@ -95,99 +79,228 @@
                 </script>
             </button>
 
-            <button 
-                id="todayBtn" 
-                style="margin-right: 5px; margin-bottom: 20px;" 
-                class="additional-button" 
-                onclick="goToCurrentDay();"
-            >
-                Сегодня
+            <button id="candleBtn" style="margin-right: 5px; margin-bottom: 10px;" class="additional-button" onclick="redirectToCandlePage()">
+                🕯️
+                <script>
+                    function redirectToCandlePage() {
+                        window.location.href = 'https://new.online-chasovnya.ru/svechi-online/index.html';
+                    }
+                </script>
             </button>
-
         </header>
-
-        
-        <!-- ----------------- -->
-        <!--    ТЕК. НЕДЕЛЯ    -->
-        <!-- ----------------- -->
-
-        <div class="day-block" style="width: auto; padding: 15px;">
-            <div class='my-legend'>
-                <div class='legend-scale'>
-                    <b id="weekLegend">Определение недели... Обождите...</b>
-                </div>
-            </div>
-        </div>
-
-        <!-- ----------------- -->
-        <!--   ОТОБР. ЛЕГЕНДЫ  -->
-        <!-- ----------------- -->
-
-        <div class="day-block" style="width: auto; padding: 15px 5px;">
-            <div class='my-legend'>
-                <div class='legend-scale'>
-                    <ul class='legend-labels'>
-                        <li><span style='background:var(--lecture);'></span>Лекция</li>
-                        <li><span style='background:var(--seminar);'></span>Семинар</li>
-                        <li><span style='background:var(--lab);'></span>Лабораторная</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- -------------- -->
-        <!--   РАСПИСАНИЕ   -->
-        <!-- -------------- -->
-
-        <!--    ЧИСЛИТЕЛЬ   -->
-        <script> var numeratorSchedule = NUMERATOR_SCHEDULE; </script>
-        <!--   ЗНАМЕНАТЕЛЬ  -->
-        <script> var denominatorSchedule = DENOMINATOR_SCHEDULE; </script>
-
-        <!-- ----------------- -->
-        <!--     СКРИПТ ДЛЯ    -->
-        <!--     ОПРЕДЕЛЕНИЯ   -->
-        <!--   ТЕКУЩЕЙ НЕДЕЛИ  -->
-        <!-- ----------------- -->
-
-        <script> document.addEventListener("DOMContentLoaded", function() {getCurrentWeek();}); </script>
-        
         <!-- ----------------- -->
 
         <!--  БЛОК РАСПИСАНИЯ  -->
 
         <!-- ----------------- -->
 
-        <main class="schedule-container">
-            <!-- ----------------- -->
-            <!--     ИНФОРМАЦИЯ    -->
-            <!-- ----------------- -->
-
-            <!--
-            <script>
-                checkViews('pwaStory')
-            </script>
+        <div class="day-block" style="width: auto; padding: 5px; padding-left: 20px;">
+            <div class='my-legend'>
+                <p>⚠️ В данном расписании используется <b style="color:coral;">предварительная</b> информация, которая может в дальнейшем изменяться. Периодически проверяйте расписание.</p></li>
+            </div>
             
-            <div class="stories-block">
-                <div 
-                    class="story unviewed" 
-                    onclick="openStoriesPage('Stories')" 
-                    data-story-id="Stories"
-                    style="background: linear-gradient(45deg, #a9c2f7, #a1fdc4);"
-                >
-                    <i class="material-symbols-outlined time-icon" style="font-size: 36px; color: black;">kid_star</i>
+        </div>
+
+        <main class="schedule-container">
+            
+            <div id="scheduleContainer" class="schedule-container">
+                <a id="9"></a>
+                <div class="day-block">
+                    <div class="day-title" style="background-color: rgb(0, 73, 0);">09 января (Чт)</div>
+                    <div class="class-item lecture">Военный учебный центр</div>
+                </div>
+            
+                <a id="10"></a>
+                <div class="day-block">
+                    <div class="day-title" style="background-color: rgb(0, 73, 0);">10 января (Пт)</div>
+                    <div class="class-item lecture">Военный учебный центр</div>
+                </div>
+            
+                <a id="11"></a>
+                <div class="day-block">
+                    <div class="day-title" style="background-color: rgb(0, 73, 0);">11 января (Сб)</div>
+                    <div class="class-item lecture">Военный учебный центр</div>
+                </div>
+            
+                <a id="12"></a>
+                <div class="day-block">
+                    <div class="weekend-title">12 января (Вс)</div>
+                    <div class="class-item lecture">Выходной/неучебный день.</div>
+                </div>
+            
+                <a id="13"></a>
+                <div class="day-block">
+                    <div class="day-title">13 января (Пн)</div>
+                    <div class="class-item seminar">
+                        <strong class="num-block" style="color: var(seminar);">Конс</strong>
+                        <i class="material-symbols-outlined time-icon">bolt</i>
+                        <strong>Теория электрических цепей</strong>
+                        <div class="indayblockdiv">
+                            <span>ауд. 3213</span>
+                            <span>15:00</span>
+                            <span>Устинов Ю.</span>
+                            <span>Самохин В.</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <a id="14"></a>
+                <div class="day-block">
+                    <div class="day-title">14 января (Вт)</div>
+                    <div class="class-item event">
+                        <strong class="num-block" style="color: var(event);">Экз</strong>
+                        <i class="material-symbols-outlined time-icon">bolt</i>
+                        <strong>Теория электрических цепей</strong>
+                        <div class="indayblockdiv">
+                            <span>ауд. 3205</span>
+                            <span>09:00</span>
+                            <span>Устинов Ю.</span>
+                            <span>Самохин В.</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <a id="15"></a>
+                <div class="day-block">
+                    <div class="weekend-title">15 января (Ср)</div>
+                    <div class="class-item lecture">В этот день нет событий.</div>
+                </div>
+            
+                <a id="16"></a>
+                <div class="day-block">
+                    <div class="day-title">16 января (Чт)</div>
+                    <div class="class-item seminar">
+                        <strong class="num-block" style="color: var(seminar);">Конс</strong>
+                        <i class="material-symbols-outlined time-icon">calculate</i>
+                        <strong>Дискретная математика</strong>
+                        <div class="indayblockdiv">
+                            <span>ауд. 1202</span>
+                            <span>15:00</span>
+                            <span>Романова Е.</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <a id="17"></a>
+                <div class="day-block">
+                    <div class="weekend-title">17 января (Пт)</div>
+                    <div class="class-item lecture">В этот день нет событий.</div>
+                </div>
+            
+                <a id="18"></a>
+                <div class="day-block">
+                    <div class="day-title">18 января (Сб)</div>
+                    <div class="class-item event">
+                        <strong class="num-block" style="color: var(event);">Экз</strong>
+                        <i class="material-symbols-outlined time-icon">calculate</i>
+                        <strong>Дискретная математика</strong>
+                        <div class="indayblockdiv">
+                            <span>ауд. 1202</span>
+                            <span>09:00</span>
+                            <span>Романова Е.</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <a id="19"></a>
+                <div class="day-block">
+                    <div class="weekend-title">19 января (Вс)</div>
+                    <div class="class-item lecture">В этот день нет событий.</div>
+                </div>
+            
+                <a id="20"></a>
+                <div class="day-block">
+                    <div class="weekend-title">20 января (Пн)</div>
+                    <div class="class-item lecture">В этот день нет событий.</div>
+                </div>
+            
+                <a id="21"></a>
+                <div class="day-block">
+                    <div class="day-title">21 января (Вт)</div>
+                    <div class="class-item seminar">
+                        <strong class="num-block" style="color: var(seminar);">Конс</strong>
+                        <i class="material-symbols-outlined time-icon">calculate</i>
+                        <strong>СР математического анализа</strong>
+                        <div class="indayblockdiv">
+                            <span>ауд. 1202</span>
+                            <span>15:00</span>
+                            <span>Саркисян Р.</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <a id="22"></a>
+                <div class="day-block">
+                    <div class="weekend-title">22 января (Ср)</div>
+                    <div class="class-item lecture">В этот день нет событий.</div>
+                </div>
+            
+                <a id="23"></a>
+                <div class="day-block">
+                    <div class="day-title">23 января (Чт)</div>
+                    <div class="class-item seminar">
+                        <strong class="num-block" style="color: var(event);">Экз</strong>
+                        <i class="material-symbols-outlined time-icon">calculate</i>
+                        <strong>СР математического анализа</strong>
+                        <div class="indayblockdiv">
+                            <span>ауд. 1202</span>
+                            <span>09:00</span>
+                            <span>Саркисян Р.</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <a id="24"></a>
+                <div class="day-block">
+                    <div class="weekend-title">24 января (Пт)</div>
+                    <div class="class-item lecture">В этот день нет событий.</div>
+                </div>
+            
+                <a id="25"></a>
+                <div class="day-block">
+                    <div class="weekend-title">25 января (Сб)</div>
+                    <div class="class-item lecture">В этот день нет событий.</div>
+                </div>
+            
+                <a id="26"></a>
+                <div class="day-block">
+                    <div class="weekend-title">26 января (Вс)</div>
+                    <div class="class-item lecture">В этот день нет событий.</div>
+                </div>
+            
+                <a id="27"></a>
+                <div class="day-block">
+                    <div class="weekend-title">27 января (Пн)</div>
+                    <div class="class-item lecture">В этот день нет событий.</div>
+                </div>
+            
+                <a id="28"></a>
+                <div class="day-block">
+                    <div class="weekend-title">28 января (Вт)</div>
+                    <div class="class-item lecture">В этот день нет событий.</div>
+                </div>
+            
+                <a id="29"></a>
+                <div class="day-block">
+                    <div class="weekend-title">29 января (Ср)</div>
+                    <div class="class-item lecture">В этот день нет событий.</div>
+                </div>
+            
+                <a id="30"></a>
+                <div class="day-block">
+                    <div class="weekend-title">30 января (Чт)</div>
+                    <div class="class-item lecture">В этот день нет событий.</div>
+                </div>
+            
+                <a id="31"></a>
+                <div class="day-block">
+                    <div class="weekend-title">31 января (Пт)</div>
+                    <div class="class-item lecture">В этот день нет событий.</div>
                 </div>
             </div>
-            -->
-        
-            <!-- ----------------- -->
-            <!--     РАСПИСАНИЕ    -->
-            <!--     НА НЕДЕЛЮ     -->
-            <!-- ----------------- -->
-
-            <div id="scheduleContainer" class="schedule-container"></div>
         </main>
+
+        <button class="top-button" onclick="scrollToTop()">Подняться наверх</button>
 
         <!-- Текст в низу страницы -->
 
@@ -204,6 +317,11 @@
                 document.getElementById('lastUpdate').innerHTML = `ПОСЛЕДНЕЕ ОБНОВЛЕНИЕ: ${appInfo.lastUpdate}`;
                 document.getElementById('version').innerHTML = `ver: ${appInfo.version} | dev: @eagalts`;
             </script>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
         </div>
     </body>
 </html>
