@@ -1,327 +1,77 @@
 <!DOCTYPE html>
 <html lang="ru">
     <head>
+        <!-- Meta data -->
         <meta charset="UTF-8">
-        <!-- ШРИФТЫ -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">  
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-        
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-        <title>ИКТ-21 МИЭТ</title>
-    
-        <!-- PWA -->
-        <link rel="manifest" href="manifest.json">
-        <link rel="import" href="meta.html">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- СТИЛИ -->
-        <link rel="stylesheet" href="styles/main.css" />
-        <link rel="stylesheet" href="styles/modalWindow.css" />
-        <link rel="stylesheet" href="styles/legend.css" />
-        <link rel="stylesheet" href="styles/stories.css" />
-        <link rel="stylesheet" href="styles/schedule.css" />
-        <link rel="stylesheet" href="styles/blocks.css" />
+        <!-- Title -->
+        <title>Расписание</title>
 
-        <!-- СКРИПТЫ -->
-        <script src="scripts/stories.js"></script>
-
-        <!-- СЕССИЯ -->
-        <link rel="stylesheet" href="styles/session.css" />
-        <script src="scripts/session.js"></script>
-
-        <script src="scripts/global_numerator_schedule.js"></script>
-        <script src="scripts/global_denominator_schedule.js"></script>
-
-        <!-- ИКОНКА -->
+        <!-- Icons -->
         <link rel="icon"          type="image/x-icon" href="./icons/logo.ico">
         <link rel="shortcut icon" type="image/x-icon" href="./icons/logo.ico">
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="css/styles.css">
+
+        <!-- Scripts -->
+        <script src="scripts/joke.js"></script>
+        <script src="scripts/schedule.js"></script>
+
+        <!-- PWA -->
+        <link rel="manifest" href="pwa/manifest.json">
+        <link rel="import" href="pwa/meta.html">
     </head>
 
     <body>
-        <script>
-            function openLink(link) {
-                window.open(link, '_blank');
-            }
-        </script>
+        <div class="container">
 
+            <!-- Header block -->
 
-        <!-- ----------------- -->
+            <header>
+                <h1>Расписание</h1>
+                <div class="header-info">
+                <p><span>📅</span> Неделя 2 | <span>1-й знаменатель</span></p>
+                </div>
+            </header>
 
-        <!--      .HEADER      -->
+            <!------------------------------------------------------------------->
+            <!-- Schedule -->
 
-        <!-- ----------------- -->
+            <div class="schedule-block">
 
-        <header class="main-header">
-            <h1>Расписание</h1>
+                <!-- Week buttons -->
+                <div class="schedule-type">
+                    <button id="numerator-btn" class="active">Числитель</button>
+                    <button id="denominator-btn">Знаменатель</button>
+                    <!--<span class="red-dot" id="red-dot"></span>-->
+                </div>
 
-            <script>
-                changeSchedule('numerator')
-            </script>
+                <!-- Day buttons -->
+                <nav class="day-tabs">
+                    <button data-day="monday" class="active">Пн</button>
+                    <button data-day="tuesday">Вт</button>
+                    <button data-day="wednesday">Cp</button>
+                    <button data-day="thursday">Чт</button>
+                    <button data-day="friday">Пт</button>
+                    <button data-day="saturday">Сб</button>
+                </nav>
 
-            <!-- Кнопки (нижний блок) -->
+                <!-- Schedule container -->
+                <main id="schedule-container"></main>
 
-            <button id="booksBtn" style="margin-right: 5px; margin-bottom: 20px;" class="additional-button" onclick="redirectToBooksPage()">
-                📚
-                <script>
-                    function redirectToBooksPage() {
-                        window.location.href = 'books';
-                    }
-                </script>
-            </button>
-
-            <button id="linksBtn" style="margin-right: 5px; margin-bottom: 20px;" class="additional-button" onclick="redirectToLinksPage()">
-                🔗
-                <script>
-                    function redirectToLinksPage() {
-                        window.location.href = 'links';
-                    }
-                </script>
-            </button>
-
-            <button id="candleBtn" style="margin-right: 5px; margin-bottom: 10px;" class="additional-button" onclick="redirectToCandlePage()">
-                🕯️
-                <script>
-                    function redirectToCandlePage() {
-                        window.location.href = 'https://new.online-chasovnya.ru/svechi-online/index.html';
-                    }
-                </script>
-            </button>
-        </header>
-        <!-- ----------------- -->
-
-        <!--  БЛОК РАСПИСАНИЯ  -->
-
-        <!-- ----------------- -->
-
-        <div class="day-block" style="width: auto; padding: 5px; padding-left: 20px;">
-            <div class='my-legend'>
-                <p>⚠️ В данном расписании используется <b style="color:coral;">предварительная</b> информация, которая может в дальнейшем изменяться. Периодически проверяйте расписание.</p></li>
+                <!-- Joke container -->
+                <div class="joke-container">
+                    <h3>Анекдот дня</h3>
+                    <p id="joke-text">Ищем самый смешной анекдот...</p>
+                </div>
             </div>
             
-        </div>
-
-        <main class="schedule-container">
-            
-            <div id="scheduleContainer" class="schedule-container">
-                <a id="9"></a>
-                <div class="day-block">
-                    <div class="day-title" style="background-color: rgb(0, 73, 0);">09 января (Чт)</div>
-                    <div class="class-item lecture">Военный учебный центр</div>
-                </div>
-            
-                <a id="10"></a>
-                <div class="day-block">
-                    <div class="day-title" style="background-color: rgb(0, 73, 0);">10 января (Пт)</div>
-                    <div class="class-item lecture">Военный учебный центр</div>
-                </div>
-            
-                <a id="11"></a>
-                <div class="day-block">
-                    <div class="day-title" style="background-color: rgb(0, 73, 0);">11 января (Сб)</div>
-                    <div class="class-item lecture">Военный учебный центр</div>
-                </div>
-            
-                <a id="12"></a>
-                <div class="day-block">
-                    <div class="weekend-title">12 января (Вс)</div>
-                    <div class="class-item lecture">Выходной/неучебный день.</div>
-                </div>
-            
-                <a id="13"></a>
-                <div class="day-block">
-                    <div class="day-title">13 января (Пн)</div>
-                    <div class="class-item seminar">
-                        <strong class="num-block" style="color: var(seminar);">Конс</strong>
-                        <i class="material-symbols-outlined time-icon">bolt</i>
-                        <strong>Теория электрических цепей</strong>
-                        <div class="indayblockdiv">
-                            <span>ауд. 3213</span>
-                            <span>15:00</span>
-                            <span>Устинов Ю.</span>
-                            <span>Самохин В.</span>
-                        </div>
-                    </div>
-                </div>
-            
-                <a id="14"></a>
-                <div class="day-block">
-                    <div class="day-title">14 января (Вт)</div>
-                    <div class="class-item event">
-                        <strong class="num-block" style="color: var(event);">Экз</strong>
-                        <i class="material-symbols-outlined time-icon">bolt</i>
-                        <strong>Теория электрических цепей</strong>
-                        <div class="indayblockdiv">
-                            <span>ауд. 3205</span>
-                            <span>09:00</span>
-                            <span>Устинов Ю.</span>
-                            <span>Самохин В.</span>
-                        </div>
-                    </div>
-                </div>
-            
-                <a id="15"></a>
-                <div class="day-block">
-                    <div class="weekend-title">15 января (Ср)</div>
-                    <div class="class-item lecture">В этот день нет событий.</div>
-                </div>
-            
-                <a id="16"></a>
-                <div class="day-block">
-                    <div class="day-title">16 января (Чт)</div>
-                    <div class="class-item seminar">
-                        <strong class="num-block" style="color: var(seminar);">Конс</strong>
-                        <i class="material-symbols-outlined time-icon">calculate</i>
-                        <strong>Дискретная математика</strong>
-                        <div class="indayblockdiv">
-                            <span>ауд. 1202</span>
-                            <span>15:00</span>
-                            <span>Романова Е.</span>
-                        </div>
-                    </div>
-                </div>
-            
-                <a id="17"></a>
-                <div class="day-block">
-                    <div class="weekend-title">17 января (Пт)</div>
-                    <div class="class-item lecture">В этот день нет событий.</div>
-                </div>
-            
-                <a id="18"></a>
-                <div class="day-block">
-                    <div class="day-title">18 января (Сб)</div>
-                    <div class="class-item event">
-                        <strong class="num-block" style="color: var(event);">Экз</strong>
-                        <i class="material-symbols-outlined time-icon">calculate</i>
-                        <strong>Дискретная математика</strong>
-                        <div class="indayblockdiv">
-                            <span>ауд. 1202</span>
-                            <span>09:00</span>
-                            <span>Романова Е.</span>
-                        </div>
-                    </div>
-                </div>
-            
-                <a id="19"></a>
-                <div class="day-block">
-                    <div class="weekend-title">19 января (Вс)</div>
-                    <div class="class-item lecture">В этот день нет событий.</div>
-                </div>
-            
-                <a id="20"></a>
-                <div class="day-block">
-                    <div class="weekend-title">20 января (Пн)</div>
-                    <div class="class-item lecture">В этот день нет событий.</div>
-                </div>
-            
-                <a id="21"></a>
-                <div class="day-block">
-                    <div class="day-title">21 января (Вт)</div>
-                    <div class="class-item seminar">
-                        <strong class="num-block" style="color: var(seminar);">Конс</strong>
-                        <i class="material-symbols-outlined time-icon">calculate</i>
-                        <strong>СР математического анализа</strong>
-                        <div class="indayblockdiv">
-                            <span>ауд. 1202</span>
-                            <span>15:00</span>
-                            <span>Саркисян Р.</span>
-                        </div>
-                    </div>
-                </div>
-            
-                <a id="22"></a>
-                <div class="day-block">
-                    <div class="weekend-title">22 января (Ср)</div>
-                    <div class="class-item lecture">В этот день нет событий.</div>
-                </div>
-            
-                <a id="23"></a>
-                <div class="day-block">
-                    <div class="day-title">23 января (Чт)</div>
-                    <div class="class-item seminar">
-                        <strong class="num-block" style="color: var(event);">Экз</strong>
-                        <i class="material-symbols-outlined time-icon">calculate</i>
-                        <strong>СР математического анализа</strong>
-                        <div class="indayblockdiv">
-                            <span>ауд. 1202</span>
-                            <span>09:00</span>
-                            <span>Саркисян Р.</span>
-                        </div>
-                    </div>
-                </div>
-            
-                <a id="24"></a>
-                <div class="day-block">
-                    <div class="weekend-title">24 января (Пт)</div>
-                    <div class="class-item lecture">В этот день нет событий.</div>
-                </div>
-            
-                <a id="25"></a>
-                <div class="day-block">
-                    <div class="weekend-title">25 января (Сб)</div>
-                    <div class="class-item lecture">В этот день нет событий.</div>
-                </div>
-            
-                <a id="26"></a>
-                <div class="day-block">
-                    <div class="weekend-title">26 января (Вс)</div>
-                    <div class="class-item lecture">В этот день нет событий.</div>
-                </div>
-            
-                <a id="27"></a>
-                <div class="day-block">
-                    <div class="weekend-title">27 января (Пн)</div>
-                    <div class="class-item lecture">В этот день нет событий.</div>
-                </div>
-            
-                <a id="28"></a>
-                <div class="day-block">
-                    <div class="weekend-title">28 января (Вт)</div>
-                    <div class="class-item lecture">В этот день нет событий.</div>
-                </div>
-            
-                <a id="29"></a>
-                <div class="day-block">
-                    <div class="weekend-title">29 января (Ср)</div>
-                    <div class="class-item lecture">В этот день нет событий.</div>
-                </div>
-            
-                <a id="30"></a>
-                <div class="day-block">
-                    <div class="weekend-title">30 января (Чт)</div>
-                    <div class="class-item lecture">В этот день нет событий.</div>
-                </div>
-            
-                <a id="31"></a>
-                <div class="day-block">
-                    <div class="weekend-title">31 января (Пт)</div>
-                    <div class="class-item lecture">В этот день нет событий.</div>
-                </div>
-            </div>
-        </main>
-
-        <button class="top-button" onclick="scrollToTop()">Подняться наверх</button>
-
-        <!-- Текст в низу страницы -->
-
-        <div class="footer-text">
-            БАЗА ИКТ-21 | МИЭТ 2024-2025
-            <br/>
-            <div class="alpha50"><div id="lastUpdate"></div></div>
-            <br />
-            <br />
-            <div id="version">Версия 3.X.X (...) | dev: @eagalts</div>
-
-            <script src="scripts/global_var.js"></script>
-            <script>
-                document.getElementById('lastUpdate').innerHTML = `ПОСЛЕДНЕЕ ОБНОВЛЕНИЕ: ${appInfo.lastUpdate}`;
-                document.getElementById('version').innerHTML = `ver: ${appInfo.version} | dev: @eagalts`;
-            </script>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
+            <footer>
+                <p>База ИКТ-21</p>
+                <p>2025</p>
+            </footer>
         </div>
     </body>
 </html>

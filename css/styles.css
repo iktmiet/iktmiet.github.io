@@ -1,0 +1,240 @@
+@font-face {
+    font-family: "SF Pro Rounded Regular";
+    src: url('../fonts/SFProRoundedRegular.woff2') format('woff2');
+}
+
+body {
+    font-family: 'SF Pro Rounded Regular', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #272936;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+.container {
+    width: 375px;
+    background: #272936;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+header {
+    margin: -20px;
+    margin-bottom: -10px;
+
+    padding-bottom:15px;
+    padding-left:30px;
+    padding-top:100px;
+
+    background: linear-gradient(to right, #325661, #1F919A);
+    border-radius: 0px 0px 50px 50px;
+    text-align: left;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.header-info {
+    font-size: 14px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    color: #b3b3b3;
+}
+
+.header-info span{
+  margin-right: 5px;
+}
+
+.schedule-type{
+    display: flex;
+    background: #fff;
+    padding: 5px;
+    border-radius: 40px;
+    margin-bottom: 15px;
+    position: relative;
+    width:auto;
+    align-items: center;
+    
+}
+
+.schedule-type button {
+  background: none;
+  border: none;
+  padding: 20px 54px;
+  font-weight: 400;
+  border-radius: 40px;
+  color: #272936;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.schedule-type button.active {
+   background: #272936;
+   color: #fff;
+}
+
+/*
+.red-dot{
+  width: 10px;
+  height: 10px;
+  background: red;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+*/
+
+.day-tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.day-tabs button {
+    background: #fff;
+    color: #000;
+    border: none;
+    padding: 18px;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.day-tabs button.active {
+    background: #272936;
+    color: #fff;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.schedule-block {
+    padding: 20px;
+    margin: -20px;
+    margin-top: 20px;
+
+    background-color: #F1F1F1;
+
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.schedule-item {
+  display: flex;
+  align-items: center;
+  background: #ffffffff;
+  border-radius: 15px;
+  padding: 15px;
+  position: relative;
+}
+
+.schedule-item::before {
+    content: "";
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    bottom: 12px;
+    width: 3px;
+    border-radius: 15px;
+    background-color: #39e0a4;
+   }
+   
+   
+   .schedule-item.лекция::before {
+    background-color: #13B600;
+   }
+   
+   .schedule-item.семинар::before {
+    background-color: #2DA1D5;
+   }
+   
+   .schedule-item.лабораторная::before {
+    background-color: #DC9800;
+   }
+   
+   .schedule-item.мероприятие::before {
+    background-color: #DC0000;
+   }
+   
+   .schedule-item.занятие::before {
+    background-color: #A700DC;
+   }
+   
+   .schedule-item[style*="background-color: rgb(219, 199, 255)"]::before {
+    background-color: white;
+   }
+
+
+.schedule-item p{
+    margin: 0;
+    color: #000;
+}
+
+.schedule-item-info{
+    flex: 1;
+    padding-left: 10px;
+}
+.schedule-item-time{
+    text-align: right;
+    font-size: 16px;
+}
+
+.schedule-item-time span {
+  display: block;
+  font-size: 12px;
+  color: #b3b3b3;
+}
+
+.schedule-item-type {
+    color: #ffffff99;
+    font-size: 12px;
+}
+
+.joke-container{
+    background: #1d1d1d;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 15px;
+}
+
+.joke-container h3{
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.joke-container p{
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+p.time {
+    font-size: 19px;
+}
+
+span.time {
+    font-size: 16px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #b3b3b3;
+}
