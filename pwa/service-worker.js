@@ -13,9 +13,17 @@ if ('serviceWorker' in navigator) {
       caches.open('offline-cache').then(function(cache) {
         return cache.addAll([
             'index.html',
-             'meta.html',
-          'stories.html',
-          'welcome.html'
+            '../pwa/meta.html',
+            '../pwa/service-worker.js',
+            '../pwa/manifest.json',
+            '../scripts/schedule.js',
+            '../fonts/SFProRoundedRegular.woff2',
+            '../css/styles.css',
+            '../icons/favicon.png',
+            '../icons/Icon-maskable-192.png',
+            '../icons/Icon-maskable-512.png',
+            '../icons/monochrome-192.png',
+            '../icons/monochrome-512.png',
         ]);
       })
     );

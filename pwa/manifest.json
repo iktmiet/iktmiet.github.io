@@ -4,10 +4,10 @@
     "short_name": "ИКТ-21",
     "start_url": "/",
     "lang": "ru",
-    "theme_color": "#007bff",
+    "theme_color": "#277881",
     "display": "standalone",
-    "background_color": "#333333",
-    "orientation": "any",
+    "background_color": "#272936",
+    "orientation": "portrait",
     "icons": [
       {
         "purpose": "maskable",
