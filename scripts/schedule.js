@@ -10,7 +10,8 @@ const subject = new Map(
         ['emp', 'Электромагнитные поля и волны'],
         ['ots', 'Общая теория связи'],
         ['com', 'Командная работа и деловые коммуникации'],
-        ['ele', 'Электроника']
+        ['ele', 'Электроника'],
+        ['break', 'Перерыв']
     ]
 );
 
@@ -93,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 { name: subject.get('OIB'), teacher: teacher.get('Dush'), room: '1202', type: lect, time: start.get(1), endTime: end.get(1) },
                 { name: subject.get('phy'), teacher: '', room: '5 корпус', type: exmp, time: start.get(2), endTime: end.get(2) },
                 { name: subject.get('spr'), teacher: teacher.get('Sldk'), room: '4340л', type: labw, time: start.get(31), endTime: end.get(31) },
-                //{ name: 'Перерыв', type: ''},
+                //{ name: subject.get('break'), type: ''},
                 { name: subject.get('spr'), teacher: teacher.get('Sldk'), room: '4340л', type: labw, time: start.get(4), endTime: end.get(4) }
             ],
             tuesday: [
@@ -105,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
             wednesday: [
                 { name: subject.get('emp'), teacher: teacher.get('Korn'), room: '4203', type: lect, time: start.get(1), endTime: end.get(1) },
                 { name: subject.get('phy'), teacher: '', room: '5 корпус', type: exmp, time: start.get(2), endTime: end.get(2) },
-                { name: 'Перерыв', type: ''},
+                { name: subject.get('break'), type: ''},
                 { name: subject.get('ots'), teacher: teacher.get('Babk'), room: '1201', type: lect, time: start.get(32), endTime: end.get(32) },
                 { name: subject.get('ele'), teacher: teacher.get('Hisa'), room: '1205', type: lect, time: start.get(4), endTime: end.get(4) },
                 { name: subject.get('ele'), teacher: teacher.get('Babk'), room: '3201л', type: prac, time: start.get(5), endTime: end.get(5) },
@@ -126,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 { name: subject.get('OIB'), teacher: teacher.get('Dush'), room: '1202', type: lect, time: start.get(1), endTime: end.get(1) },
                 { name: subject.get('phy'), teacher: '', room: '5 корпус', type: exmp, time: start.get(2), endTime: end.get(2) },
                 { name: subject.get('phc'), teacher: teacher.get('Piro'), room: '4326 А', type: prac, time: start.get(31), endTime: end.get(31) },
-                //{ name: 'Перерыв', type: ''},
+                //{ name: subject.get('break'), type: ''},
                 { name: subject.get('ter'), teacher: teacher.get('Mihe'), room: '3220', time: start.get(4), endTime: end.get(4) }
             ],
             tuesday: [
@@ -139,7 +140,7 @@ document.addEventListener('DOMContentLoaded', function() {
             ],
             wednesday: [
                 { name: subject.get('phy'), teacher: '', room: '5 корпус', type: exmp, time: start.get(2), endTime: end.get(2) },
-                { name: 'Перерыв', type: ''},
+                { name: subject.get('break'), type: ''},
                 { name: subject.get('ots'), teacher: teacher.get('Babk'), room: '1201', type: lect, time: start.get(32), endTime: end.get(32) },
                 { name: subject.get('ele'), teacher: teacher.get('Hisa'), room: '1205', type: lect, time: start.get(4), endTime: end.get(4) },
             ],
@@ -221,7 +222,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     scheduleItem.querySelector('.schedule-item-info').prepend(scheduleType);
                 }
    
-                 if (item.name === "Перерыв") {
+                 if (item.name === subject.get('break')) {
                     scheduleItem.style.backgroundColor = '#DBC7FF';
                     scheduleItem.style.borderRadius = '10px';
                     scheduleItem.style.justifyContent = "center";
@@ -378,9 +379,9 @@ function openBottomSheet(item) {
         ${item.type ? `<p><strong>Тип:</strong> ${item.type}</p>` : ''}
         ${item.teacher ? `<p><strong>Преподаватель:</strong> ${item.teacher}</p>` : ''}
         ${item.room ? `<p><strong>Аудитория:</strong> ${item.room}</p>` : ''}
-        <p><strong>Время:</strong> ${item.time} - ${item.endTime}</p>
-        ${linksHTML}
-    `;
+        ${item.time ? `<p><strong>Время:</strong> ${item.time} - ${item.endTime}</p>` : ''}
+        ${item.type ? linksHTML : ''}
+    `; 
 
 
     // Формируем URL для поиска
