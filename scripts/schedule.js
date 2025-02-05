@@ -105,7 +105,8 @@ document.addEventListener('DOMContentLoaded', function() {
             wednesday: [
                 { name: subject.get('emp'), teacher: teacher.get('Korn'), room: '4203', type: lect, time: start.get(1), endTime: end.get(1) },
                 { name: subject.get('phy'), teacher: '', room: '5 корпус', type: exmp, time: start.get(2), endTime: end.get(2) },
-                { name: subject.get('ots'), teacher: teacher.get('Babk'), room: '1201', type: lect, time: start.get(31), endTime: end.get(31) },
+                { name: 'Перерыв', type: ''},
+                { name: subject.get('ots'), teacher: teacher.get('Babk'), room: '1201', type: lect, time: start.get(32), endTime: end.get(32) },
                 { name: subject.get('ele'), teacher: teacher.get('Hisa'), room: '1205', type: lect, time: start.get(4), endTime: end.get(4) },
                 { name: subject.get('ele'), teacher: teacher.get('Babk'), room: '3201л', type: prac, time: start.get(5), endTime: end.get(5) },
             ],
@@ -138,7 +139,8 @@ document.addEventListener('DOMContentLoaded', function() {
             ],
             wednesday: [
                 { name: subject.get('phy'), teacher: '', room: '5 корпус', type: exmp, time: start.get(2), endTime: end.get(2) },
-                { name: subject.get('ots'), teacher: teacher.get('Babk'), room: '1201', type: lect, time: start.get(31), endTime: end.get(31) },
+                { name: 'Перерыв', type: ''},
+                { name: subject.get('ots'), teacher: teacher.get('Babk'), room: '1201', type: lect, time: start.get(32), endTime: end.get(32) },
                 { name: subject.get('ele'), teacher: teacher.get('Hisa'), room: '1205', type: lect, time: start.get(4), endTime: end.get(4) },
             ],
             thursday: [
