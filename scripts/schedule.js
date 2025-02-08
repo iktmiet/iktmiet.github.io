@@ -131,7 +131,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 { name: subject.get('ter'), teacher: teacher.get('Mihe'), room: '3220', time: start.get(4), endTime: end.get(4) }
             ],
             tuesday: [
-                { name: subject.get('ter'), teacher: teacher.get('Mihe'), type: prac, room: '3305', time: start.get(1), endTime: end.get(1) },
                 { name: subject.get('cif'), teacher: teacher.get('Sldk'), type: lect, room: '4203', time: start.get(2), endTime: end.get(2) },
                 { name: subject.get('ter'), teacher: teacher.get('Mihe'), room: '1203', type: lect, time: start.get(31), endTime: end.get(31) },
                 { name: subject.get('OIB'), teacher: teacher.get('Pors'), room: '3101', type: prac, time: start.get(4), endTime: end.get(4) },
