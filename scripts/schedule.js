@@ -375,7 +375,7 @@ function openBottomSheet(item) {
         ${item.teacher ? `<p><strong>Преподаватель:</strong> ${item.teacher}</p>` : ''}
         ${item.room ? `<p><strong>Аудитория:</strong> ${item.room}</p>` : ''}
         ${item.time ? `<p><strong>Время:</strong> ${item.time} - ${item.endTime}</p>` : ''}
-        ${item.type ? linksHTML : ''}
+        ${item.room ? linksHTML : ''}
     `; 
 
 
