@@ -62,13 +62,9 @@ const end = new Map(
 );
 
 const customLinks = new Map([
-    /*
-    ['spr', [
-        { url: 'https://example.com/spr', description: 'Материалы' },
-        { url: 'https://drive.com/spr', description: 'Презентации' }
-    ]],
-    ['ter', []]
-    */
+    ['ter', [
+        { url: 'https://djvu.online/file/5TyB2hq7vGmJk', description: 'Сборник задач' }
+    ]]
 ]);
 
 const lect = 'Лекция';
