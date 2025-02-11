@@ -89,14 +89,15 @@ document.addEventListener('DOMContentLoaded', function() {
             monday: [
                 { name: subject.get('OIB'), teacher: teacher.get('Dush'), room: '1202', type: lect, time: start.get(1), endTime: end.get(1) },
                 { name: subject.get('phy'), teacher: '', room: '5 корпус', type: exmp, time: start.get(2), endTime: end.get(2) },
-                { name: subject.get('spr'), teacher: teacher.get('Sldk'), room: '4340л', type: labw, time: start.get(31), endTime: end.get(31) },
-                //{ name: subject.get('break'), type: ''},
+                { name: subject.get('break'), type: ''},
+                { name: subject.get('spr'), teacher: teacher.get('Sldk'), room: '4340л', type: labw, time: start.get(32), endTime: end.get(32) },
                 { name: subject.get('spr'), teacher: teacher.get('Sldk'), room: '4340л', type: labw, time: start.get(4), endTime: end.get(4) }
             ],
             tuesday: [
                 { name: subject.get('ter'), teacher: teacher.get('Mihe'), type: prac, room: '3305', time: start.get(1), endTime: end.get(1) },
                 { name: subject.get('cif'), teacher: teacher.get('Sldk'), type: lect, room: '4203', time: start.get(2), endTime: end.get(2) },
                 { name: subject.get('ter'), teacher: teacher.get('Mihe'), room: '1203', type: lect, time: start.get(31), endTime: end.get(31) },
+                { name: subject.get('break'), type: ''},
                 { name: subject.get('phc'), teacher: teacher.get('Piro'), room: '4203', type: lect, time: start.get(4), endTime: end.get(4) }
             ],
             wednesday: [
@@ -122,13 +123,14 @@ document.addEventListener('DOMContentLoaded', function() {
             monday: [
                 { name: subject.get('OIB'), teacher: teacher.get('Dush'), room: '1202', type: lect, time: start.get(1), endTime: end.get(1) },
                 { name: subject.get('phy'), teacher: '', room: '5 корпус', type: exmp, time: start.get(2), endTime: end.get(2) },
-                { name: subject.get('phc'), teacher: teacher.get('Piro'), room: '4326 А', type: prac, time: start.get(31), endTime: end.get(31) },
-                //{ name: subject.get('break'), type: ''},
+                { name: subject.get('break'), type: ''},
+                { name: subject.get('phc'), teacher: teacher.get('Piro'), room: '4326 А', type: prac, time: start.get(32), endTime: end.get(32) },
                 { name: subject.get('ter'), teacher: teacher.get('Mihe'), room: '3220', time: start.get(4), endTime: end.get(4) }
             ],
             tuesday: [
                 { name: subject.get('cif'), teacher: teacher.get('Sldk'), type: lect, room: '4203', time: start.get(2), endTime: end.get(2) },
                 { name: subject.get('ter'), teacher: teacher.get('Mihe'), room: '1203', type: lect, time: start.get(31), endTime: end.get(31) },
+                { name: subject.get('break'), type: ''},
                 { name: subject.get('OIB'), teacher: teacher.get('Pors'), room: '3101', type: prac, time: start.get(4), endTime: end.get(4) },
                 { name: '> [З-I]  ' + subject.get('cif'), teacher: teacher.get('Sldk'), room: '4340 Л', type: labw, time: start.get(5), endTime: end.get(6) },
                 { name: '> [З-II] ' + subject.get('ele'), teacher: teacher.get('Babk'), room: '3201 Л', type: labw, time: start.get(5), endTime: end.get(6) }
